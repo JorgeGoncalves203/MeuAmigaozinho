@@ -218,7 +218,7 @@ footer {
 
 #album {
     display: flex;
-    background-image: url(./Imagens/caes.jpg);
+    background-image: url(../img/caes.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -303,7 +303,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./Imagens/adocao.jpg);
+    background-image: url(../img/adocao.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
