@@ -11,7 +11,7 @@
 }
 
 root {
-    --azul-claro: rgb(127, 182, 255);
+    --azul-claro: #2582D8;
     --cinza-claro: rgb(197, 196, 196);
 }
 
@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(127, 182, 255);
+    background-color: #2582D8;
     height: 60px;
     font-family: Austie Bost;
 }
@@ -58,7 +58,7 @@ img[src*="logo"] {
 }
 
 footer {
-    background-color: rgb(127, 182, 255);
+    background-color:#2582D8;
     display: flex;
     justify-content: space-between;
     width: 100%;
