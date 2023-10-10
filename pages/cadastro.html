@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Amigãozinho</title>
+    <script type="text/javascript" src="../scripts/script.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -14,16 +16,34 @@
             <img src="../img/logo.png" alt="logo">
         </a>
         <ul id="navbar">
-            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Início</a></li>
             <li><a href="./quem-somos.html">Quem Somos</a></li>
-            <li><a href="./Mural.html">Mural</a></li>
+            <li><a href="./mural.html">Mural</a></li>
             <li><a href="./adotar.html">Adotar</a></li>
-            <li><a href="./Ongs.html">Ongs</a></li>
         </ul>
         <ul id="log">
             <li><a href="./login.html">Login</a></li>
             <li><a href="./cadastro.html">Cadastrar</a></li>
         </ul>
+        <h1 id="nome">Meu Amigãozinho</h1>
+        <button class="menu-button" onclick="openNav()">
+            <img src="../img/barra-de-menu.png" alt="menu">
+        </button>
+        <div id="borrar"></div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../img/fechar.png" alt=""></a>
+
+            <div class="loginnavmob">
+                <img src="../img/usuario.png" alt="">
+                <a href="./login.html"><h2>Faça seu login!</h2></a>
+            </div>
+            <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="./quem-somos.html">Quem Somos</a></li>
+            <li><a href="./mural.html">Mural</a></li>
+            <li><a href="./adotar.html">Adotar</a></li>
+            </ul>
+        </div>
       </header>
       <section id="registro">
             <form action="./login.html">
@@ -35,22 +55,12 @@
                 <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Cadastrar"></div>
             </form>
       </section>
+      <br>
       <footer>
-        <div class="footer1">
-            <h1>Início</h1>
-            <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./pages/quem-somos.html">Quem Somos</a></li>
-            <li><a href="./pages/galeria.html">Galeria</a></li>
-            <li><a href="./pages/adotar.html">Adotar</a></li>
-            <li><a href="./pages/apoiar.html">Apoiar</a></li>
-            </ul>
-        </div>
         <div class="footer1">
             <h1>Informações</h1>
             <ul>
             <li><a href="./pages/blog.html">Blog</a></li>
-            <li><a href="./pages/contato.html">Contato</a></li>
             <li><a href="mailto:adotemepe@gmail.com">Email</a></li>
             </ul>
         </div>
@@ -58,22 +68,16 @@
             <h1>Suporte</h1>
             <ul>
             <li><a href="./pages/faq.html">FAQ</a></li>
-            <li><a href="">Telefone</a></li>
-            <li><a href="">Chat</a></li>
+            <li><a href="https://web.whatsapp.com/send?phone=5599999999" target="_blank">Telefone</a></li>
             </ul>
-        </div>
-        <div class="footer1">
-            <h1>Sobre nós</h1>
-            <p>Somos uma organização criada para ajudar animais a encontrarem um lar que possa dar carinho e conforto a eles. Amamos os animais e acreditamos que eles tem muito a nos ensinarem, principalmente sobre amor e cuidado.</p>
         </div>
       </footer>
       <div id="baixo">
         <img src="../img/logo.png" alt="logo">
         <div class="sociais">
-            <div class="social"><a href=""><img src="../img/instagram.png" alt=""></a></div>
-            <div class="social"><a href=""><img src="../img/facebook.png" alt=""></a></div>
-            <div class="social"><a href=""><img src="../img/twitter.png" alt=""></a></div>
+        <div class="social"><a href=""><img src="../img/instagram.png" alt="instagram"></a></div>
+        <div class="social"><a href=""><img src="../img/facebook.png" alt="facebook"></a></div>
+        <div class="social"><a href=""><img src="../img/twitter.png" alt="twitter"></a></div>
         </div>
     </div>
 </body>
-</html>

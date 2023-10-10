@@ -1,0 +1,114 @@
+#paineis {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#adoção {
+    padding: 10px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    background-color: rgb(197, 196, 196);
+    border-radius: 30px;
+    width: 250px;
+    height: 400px;
+    margin: 100px;
+}
+
+.cards img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.cards button {
+    width: 70%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: 2px 2px 10px rgb(102, 102, 102);
+}
+
+.cards button:hover {
+    box-shadow: none;
+    background-color: white;
+}
+
+#adot {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/adocao.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding: 10px;
+    padding-top: 100px;
+}
+
+#adot-text h1 {
+    font-family: Austie Bost;
+    font-size: 500%;
+}
+
+#adot-text {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 700px;
+    text-align: center;
+}
+
+#filtro {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgb(197, 196, 196);
+}
+
+#filtro form select {
+    margin-left: 100px;
+    font-size: 15px;
+    width: 170px;
+    border: 1px solid rgba(120, 120, 120, 1);
+    border-radius: 5px;
+    padding: 10px;
+    color: rgba(120, 120, 120, 1);
+}
+
+#filtro form select:hover {
+    border: 1px solid orange;
+    box-shadow: 1px 1px 10px rgb(102, 102, 102);
+    color: black;
+}
+
+#filtro form input {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 1px solid orange;
+    background-color: orange;
+    box-shadow: 2px 2px 10px rgb(102, 102, 102);
+}
+
+#filtro form input:hover {
+    box-shadow: none;
+    background-color: white;
+}
