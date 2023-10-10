@@ -1,0 +1,52 @@
+#registro {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+#registro > form {
+    background-color: rgb(197, 196, 196); 
+    font-size: 20px;
+    padding: 10px 100px 10px 100px;
+    border: 3px solid orange;
+    border-radius: 30px;
+}
+
+#registro > form > h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#registro > form > input {
+    margin-bottom: 10px;
+    float: right;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#mandar {
+    margin-top: 20px;
+    text-align: center;
+}
+#mandar input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: 2px 2px 10px rgb(102, 102, 102);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#mandar input:hover {
+    box-shadow: none;
+    background-color: white;
+}
+
+#registro a {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}

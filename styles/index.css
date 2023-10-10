@@ -1,0 +1,36 @@
+#importancia {
+    display: flex;
+    background-color: rgb(197, 196, 196);
+    padding: 10px;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+#importancia-text {
+    margin-right: 10px;
+    align-self: flex-end;
+    width: 600px;
+}
+
+#importancia-img > img {
+    width: 500px;
+}
+
+#companheiro {
+    display: flex;
+    padding: 10px;
+    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#companheiro-text {
+    margin-left: 10px;
+    align-self: flex-end;
+    width: 600px;
+}
+
+#companheiro-img > img {
+    width: 500px;
+}

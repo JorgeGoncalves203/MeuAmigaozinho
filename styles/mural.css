@@ -1,0 +1,31 @@
+#album {
+    display: flex;
+    background-image: url(../img/caes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+}
+
+#album-text {
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    width: 500px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#album-text h1 {
+    font-family: Austie Bost;
+    font-size: 500%;
+}
+
+
+#album-imagem img {
+    margin: 20px;
+    float: left;
+    width: 30%;
+}
