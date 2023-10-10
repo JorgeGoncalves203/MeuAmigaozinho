@@ -24,6 +24,8 @@ header {
     background-color: #2582D8;
     height: 60px;
     font-family: Austie Bost;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 header a {
@@ -59,6 +61,110 @@ img[src*="logo"] {
     height: 40px;
 }
 
+/*Mobile*/
+
+#nome {
+    display: none;
+    font-size: 100%;
+}
+
+.menu-button {
+    background-color: transparent;
+    display: none;
+}
+
+.menu-button img {
+    height: 35px;
+}
+
+#myNav {
+    display: none;
+}
+
+#borrar {
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+@media(max-width: 950px) {
+    #navbar {
+        display: none;
+    }
+    #log {
+        display: none;
+    }
+    #nome {
+        display: block;
+    }
+    .menu-button {
+        display: block;
+    }
+    #myNav {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+        width: 0%;
+        height: 100%;
+        display: block;
+        background-color: #2582D8;
+        border-left: 1px solid black;
+        z-index: 9;
+        position: fixed;
+        right: 0;
+        top: 0;
+        overflow-x: hidden;
+        transition: all 0.5s;
+    }
+
+    #borrar {
+        display: block;
+        width: 0%;
+        height: 100%;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+        position: fixed;
+        right: 0;
+        top: 0;
+        overflow-x: hidden;
+    }
+
+    .overlay .closebtn {
+        position: absolute;
+        right: 3%;
+        top: 1.5%;
+    }
+
+    .overlay .closebtn img {
+        height: 30px;
+    }
+
+    #myNav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        list-style: none;
+        margin-left: 2%;
+    }
+
+    .loginnavmob img{
+        margin-right: 3%;
+    }
+
+    .loginnavmob {
+        display: flex;
+        align-items: center;
+        margin-top: 15%;
+        margin-left: 3%;
+        margin-bottom: 10%;
+    }
+
+}
 /*Footer*/
 
 footer {

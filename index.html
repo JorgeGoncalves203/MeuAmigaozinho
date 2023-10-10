@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Amigãozinho</title>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./scripts/script.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="icon do site" href="favicon.ico" type="image/x-icon">
@@ -23,24 +23,39 @@
             <li><a href="./pages/mural.html">Mural</a></li>
             <li><a href="./pages/adotar.html">Adotar</a></li>
         </ul>
-        <h1 id="nome">Meu Amigãozinho</h1>
         <ul id="log">
             <li><a href="./pages/login.html">Login</a></li>
             <li><a href="./pages/cadastro.html">Cadastrar</a></li>
         </ul>
+        <h1 id="nome">Meu Amigãozinho</h1>
         <button class="menu-button" onclick="openNav()">
             <img src="./img/barra-de-menu.png" alt="menu">
         </button>
+        <div id="borrar"></div>
         <div id="myNav" class="overlay">
-            <a href="javascript/void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./img/fechar.png" alt=""></a>
+
+            <div class="loginnavmob">
+                <img src="./img/usuario.png" alt="">
+                <h2>Faça seu login!</h2>
+            </div>
+            <ul>
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./pages/quem-somos.html">Quem Somos</a></li>
+            <li><a href="./pages/mural.html">Mural</a></li>
+            <li><a href="./pages/adotar.html">Adotar</a></li>
+            </ul>
         </div>
       </header>
+      <!--
       <section id="importancia">
             <div id="importancia-text">
                 <h1>Importância da Adoção</h1>
                 <p>A adoção salva a vida de milhares de bichinhos que, na maioria das vezes, foram resgatados das ruas ou de tutores violentos. Além disso, adotar um pet é uma boa opção para quem mora sozinho ou se sente só. Ainda que seja um filhote, adotar não vai fazer bem apenas para o animal, já que essa atitude é uma possibilidade do tutor ter um novo amigo, diminuir o estresse e problemas psicológicos e ser mais feliz.</p>
             </div>
+            -->
             <div id="importancia-img"><img src="./img/Imporancia.jpg" alt="Cachorro com dono"></div>
+            <!--
       </section>
       <section id="companheiro">
         <div id="companheiro-img"><img src="./img/companheiro.jpg" alt=""></div>
@@ -49,6 +64,7 @@
         <p>Os animais, principalmente os cachorros, são bichos fiéis e leais, que gostam de acompanhar o tutor aonde ele for e de estar por perto nos momentos tristes e felizes. Além disso, conviver com um animal incentiva a socialização, já que ele ajuda a pessoa a se tornar mais ativa e participativa da vida comunitária.</p>
         </div>
       </section>
+      -->
       <footer>
         <div class="footer1">
             <h1>Informações</h1>
