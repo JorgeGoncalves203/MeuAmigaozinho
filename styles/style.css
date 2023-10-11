@@ -22,10 +22,12 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #2582D8;
+    box-shadow: 0px 2px 20px rgb(125, 125, 125);
     height: 60px;
     font-family: Austie Bost;
     padding-left: 2%;
     padding-right: 2%;
+    width: 100%;
 }
 
 header a {
