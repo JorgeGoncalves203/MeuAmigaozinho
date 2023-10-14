@@ -1,6 +1,6 @@
 .slider {
     margin: 0 auto;
-    width: 100%;
+    width: 95%;
     height: auto;
     padding: 0 !important;
     overflow: hidden;
@@ -28,6 +28,7 @@
 
 .slide-box img {
     width: 100%;
+    border-radius: 10px;
 }
 
 .nav-manual, .nav-auto {
