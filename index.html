@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Amigãozinho</title>
     <script type="text/javascript" src="./scripts/script.js"></script>
+    <script src="./scripts/index.js" defer></script>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="icon do site" href="favicon.ico" type="image/x-icon">
@@ -47,8 +48,43 @@
             </ul>
         </div>
       </header>
-      
-            <div id="importancia-img"><img src="./img/Imporancia.jpg" alt="Cachorro com dono"></div>
+
+      <section class="slider">
+        <div class="slider-content">
+
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box primeiro">
+                <a href=""><img class="img-desktop" src="https://placehold.co/1800x600/orange/white" alt="slide 1"></a>
+                <a href=""><img class="img-mobile" src="https://placehold.co/1000x600/orange/white" alt="slide 1"></a>
+            </div>
+
+            <div class="slide-box">
+                <a href=""><img class="img-desktop" src="https://placehold.co/1800x600/blue/white" alt="slide 2"></a>
+                <a href=""><img class="img-mobile" src="https://placehold.co/1000x600/blue/white" alt="slide 2"></a>
+            </div>
+
+            <div class="slide-box">
+                <a href=""><img class="img-desktop" src="https://placehold.co/1800x600/green/white" alt="slide 3"></a>
+                <a href=""><img class="img-mobile" src="https://placehold.co/1000x600/green/white" alt="slide 3"></a>
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+        </div>
+    </section>
+
       <footer>
         <div class="footer1">
             <h1>Informações</h1>
