@@ -10,6 +10,11 @@
     src: url(../AustieBostKittenKlub.ttf);
 }
 
+@font-face {
+    font-family: Mulish;
+    src: url(../Mulish-VariableFont_wght.ttf);
+}
+
 root {
     --azul-claro: #2582D8;
     --cinza-claro: rgb(197, 196, 196);

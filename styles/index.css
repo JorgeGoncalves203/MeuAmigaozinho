@@ -1,11 +1,13 @@
+/*Carrossel*/
+
 .slider {
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
     height: auto;
     padding: 0 !important;
     overflow: hidden;
     margin-top: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 .slider-content {
@@ -81,4 +83,91 @@
     .nav-manual, .nav-auto {
         margin-top: 55%;
     }
+}
+
+/*Apresentação*/
+
+.apresentacao {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    font-family: Mulish;
+}
+
+.apresentacao h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+/*Porque adotar*/
+
+.porque-adotar {
+    padding: 5%;
+    background-image: linear-gradient(rgba(179, 193, 54, 1), rgba(179, 193, 54, 0));
+    margin-bottom: 5%;
+    font-family: Mulish;
+}
+
+.porque-adotar h1 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+.beneficios-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 1%;
+}
+
+.beneficio {
+    display: flex;
+    width: 33%;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 1%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.beneficio img {
+    width: 125px;
+    height: 125px;
+    padding: 10px;
+}
+
+.beneficio p {
+    font-size: 17px;
+    
+}
+
+@media(max-width: 950px) {
+    .beneficios-content {
+        flex-direction: column;
+    }
+
+    .beneficio {
+        width: auto;
+        height: 100px;
+        justify-content: left;
+    }
+
+    .beneficio p {
+        font-size: 12px;
+    }
+}
+
+/*Passo a Passo*/
+
+.passo-a-passo {
+    font-family: Mulish;
+}
+
+/*Depoimentos*/
+
+.depoimentos {
+    font-family: Mulish;
 }
