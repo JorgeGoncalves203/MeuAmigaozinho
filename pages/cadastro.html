@@ -45,22 +45,36 @@
             </ul>
         </div>
       </header>
-      <section id="registro">
-            <form action="./login.html">
-                <h1>Cadastro</h1>
-                <input type="text" name="Nome" id="nome" placeholder="Nome" required>
-                <br><input type="email" name="Email" id="email" placeholder="Email" required>
-                <br><input type="password" name="Senha" id="senha" placeholder="Senha" required>
-                <br><input type="tel" name="phone" id="phone" placeholder="Telefone de Contato" required>
-                <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Cadastrar"></div>
-            </form>
-      </section>
+<section id="registro" class="login-container">
+    <form action="./login.html" class="cadastro-form">
+        <div class="cadastro-container">
+            <h1>Cadastro</h1>
+            <br>
+            <p class="cad-label">Nome</p>
+            <input type="text" name="name" id="name" placeholder="Digite seu Nome Completo" required>
+            <br>
+            <p class="cad-label">Email</p>
+            <input type="email" name="Email" id="email" placeholder="Exemplo@gmail.com" required>
+            <br>
+            <p class="cad-label">Contato</p>
+            <input type="tel" name="phone" id="phone" placeholder="Telefone de Contato" required>
+            <br>
+            <p class="cad-label">Senha</p>
+            <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
+            <br>
+            <p class="cad-label">Confirmar Senha</p>
+            <input type="password" name="ConfirmarSenha" id="confirmar-senha" placeholder="Repita sua senha" required>
+            <br>
+            <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Cadastrar"></div>
+        </div>
+    </form>
+</section>
+
       <br>
       <footer>
         <div class="footer1">
             <h1>Informações</h1>
             <ul>
-            <li><a href="./pages/blog.html">Blog</a></li>
             <li><a href="mailto:adotemepe@gmail.com">Email</a></li>
             </ul>
         </div>
@@ -73,7 +87,7 @@
         </div>
       </footer>
       <div id="baixo">
-        <img src="../img/logo.png" alt="logo">
+        <img src="../img/logo.png" alt="logo"> <a href="index.html"></a>
         <div class="sociais">
         <div class="social"><a href=""><img src="../img/instagram.png" alt="instagram"></a></div>
         <div class="social"><a href=""><img src="../img/facebook.png" alt="facebook"></a></div>

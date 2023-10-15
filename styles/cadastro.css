@@ -1,3 +1,25 @@
+.login-container {
+    background-image: url('../img/gato-cachorro.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1000px;
+    border-radius: 10000px;
+    border-bottom: 100px;
+}
+
+.cadastro-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 #registro {
     display: flex;
     justify-content: center;
@@ -25,6 +47,12 @@
     font-size: 20px;
 }
 
+#cadastro-container {
+    background-image: url('./img/gato-cachorro.jpeg'); 
+    background-size: cover;
+    background-position: center;
+}
+
 #mandar {
     margin-top: 20px;
     text-align: center;
@@ -49,4 +77,8 @@
     margin-top: 20px;
     text-align: center;
     display: block;
+}
+
+.cad-label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
