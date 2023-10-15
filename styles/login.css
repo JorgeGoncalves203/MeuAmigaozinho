@@ -25,11 +25,11 @@
     font-size: 20px;
 }
 
-#mandar {
+#logar {
     margin-top: 20px;
     text-align: center;
 }
-#mandar input {
+#logar input {
     border-radius: 5px;
     padding: 5px;
     width: 100%;
@@ -40,7 +40,20 @@
     font-size: 20px;
 }
 
-#mandar input:hover {
+#logar input:hover {
+    box-shadow: none;
+    background-color: white;
+}
+
+#cadastro1 {
+    border-radius: 5px;
+    width: 100%;
+    background-color: orange;
+    box-shadow: 2px 2px 10px rgb(102, 102, 102);
+    margin-bottom: 5px;
+}
+
+#cadastro1 input:hover {
     box-shadow: none;
     background-color: white;
 }

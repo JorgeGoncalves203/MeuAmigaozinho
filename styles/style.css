@@ -56,12 +56,8 @@ header ul li {
     padding: 10px;
 }
 
-#log > li:first-child {
-    border-right: 1px solid orange;
-}
-
 #navbar > li {
-    padding: 25px;
+    padding: 30px;
 }
 
 img[src*="logo"] {
