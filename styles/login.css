@@ -1,5 +1,5 @@
 .login-container {
-    background-image: url('../img/gato-cachorro.jpeg'); /* Substitua pelo caminho real da sua imagem */
+    background-image: url('../img/gato-cachorro.jpeg'); 
     background-size: cover;
     background-position: center;
     height: 100vh;
