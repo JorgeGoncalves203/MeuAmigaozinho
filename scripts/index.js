@@ -3,11 +3,15 @@ var cont = 1;
 
 document.getElementById('radio1').checked = true;
 
-setInterval(() => {
+var myTimer = setInterval(() => {
     proximaImg(1)
 },5000)
 
 function proximaImg(x){
+    clearInterval(myTimer);
+    myTimer = setInterval(() => {
+        proximaImg(1)
+    },5000)
     if(x === 1) {
     cont++
     } else {
