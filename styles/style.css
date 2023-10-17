@@ -18,27 +18,27 @@ p {
 
 @font-face {
     font-family: Montserrat Semibold;
-    src: url(../Montserrat-SemiBold.otf);
+    src: url(../fonts/Montserrat-SemiBold.otf);
 }
 
 @font-face {
     font-family: Quicksand Bold;
-    src: url(../Quicksand-Bold.otf);
+    src: url(../fonts/Quicksand-Bold.otf);
 }
 
 @font-face {
     font-family: Quicksand;
-    src: url(../Quicksand-Regular.otf);
+    src: url(../fonts/Quicksand-Regular.otf);
 }
 
 @font-face {
     font-family: Poppins Semibold;
-    src: url(../Poppins-SemiBold.ttf);
+    src: url(../fonts/Poppins-SemiBold.ttf);
 }
 
 @font-face {
     font-family: Roboto;
-    src: url(../Roboto-Regular.ttf);
+    src: url(../fonts/Roboto-Regular.ttf);
 }
 
 root {
