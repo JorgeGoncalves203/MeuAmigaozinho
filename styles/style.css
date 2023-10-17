@@ -205,7 +205,7 @@ img[src*="logo"] {
 
 footer {
     width: 100%;
-    color: var(--cor-neutra-40);
+    color: var(--cor-neutra-0);
 }
 
 .footer-link{
@@ -272,21 +272,11 @@ footer {
 
 
 .footer-list .footer-link{
-color:var(--cor-neutra-30);
+color:var(--cor-neutra-0);
 }
 
 .footer-list .footer-link:hover {
-    color: #7f37c9;
-}
-
-#footer_subscribe {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-#footer_subscribe p{
-    color: var(--cor-neutra-30);
+    color: orange;
 }
 
 #input_group{
@@ -304,7 +294,7 @@ color:var(--cor-neutra-30);
 #input_group button{
     background-color: #7f37c9;
     border: none;
-    color: var(--cor-neutra-40);
+    color: var(--cor-neutra-0);
     padding: 0px 1.25rem;
     font-size: 1.125rem;
     height: 100%;
@@ -315,14 +305,6 @@ color:var(--cor-neutra-30);
 
 #input_group button:hover {
     opacity: 0.8;
-}
-
-#footer_copyright{
-    display: flex;
-
-    font-size:0.9rem;
-    padding: 1.5rem;
-    font-weight: 100;
 }
 
 @media screen and (max-width: 768px) {
@@ -337,4 +319,11 @@ color:var(--cor-neutra-30);
         grid-template-columns: repeat(1,1fr);
         padding: 3rem 2rem;
     }
+}
+
+#copyright {
+        text-align: center;
+        background-color: var(--azul-footer); 
+        padding: 10px; 
+      
 }
