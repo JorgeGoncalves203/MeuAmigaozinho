@@ -135,8 +135,7 @@
 
 .porque-adotar {
     padding: 5%;
-    background-image: linear-gradient(rgba(179, 193, 54, 1), rgba(179, 193, 54, 0));
-    margin-bottom: 5%;
+    background-color: #B6C137;
 }
 
 .porque-adotar h1 {
@@ -190,12 +189,39 @@
     }
 }
 
+/*Animais adoção*/
+
+#amigaozinhos {
+    padding: 5%;
+    height: 500px;
+    background-image: url(../img/fundo1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    weight: 100%;
+}
+
+.amigaozinhos h1 {
+    font-size: 1rem;
+}
+
 /*Passo a Passo*/
 
 .passo-a-passo {
+    padding: 5%;
+}
+
+.passo-a-passo h1 {
+    font-size: 2rem;
+    margin-bottom: 5%;
 }
 
 /*Depoimentos*/
 
 .depoimentos {
+    padding: 5%;
+}
+
+.depoimentos h1 {
+    font-size: 2rem;
 }
