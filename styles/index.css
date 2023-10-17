@@ -124,7 +124,6 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
-    font-family: Mulish;
 }
 
 .apresentacao h1 {
@@ -138,7 +137,6 @@
     padding: 5%;
     background-image: linear-gradient(rgba(179, 193, 54, 1), rgba(179, 193, 54, 0));
     margin-bottom: 5%;
-    font-family: Mulish;
 }
 
 .porque-adotar h1 {
@@ -195,11 +193,9 @@
 /*Passo a Passo*/
 
 .passo-a-passo {
-    font-family: Mulish;
 }
 
 /*Depoimentos*/
 
 .depoimentos {
-    font-family: Mulish;
 }

@@ -5,14 +5,40 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-family: Quicksand Bold;
+}
+h2 {
+    font-family: Poppins Semibold;
+}
+p {
+    font-family: Roboto;
+}
+
+
 @font-face {
-    font-family: Austie Bost;
-    src: url(../AustieBostKittenKlub.ttf);
+    font-family: Montserrat Semibold;
+    src: url(../Montserrat-SemiBold.otf);
 }
 
 @font-face {
-    font-family: Mulish;
-    src: url(../Mulish-VariableFont_wght.ttf);
+    font-family: Quicksand Bold;
+    src: url(../Quicksand-Bold.otf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../Quicksand-Regular.otf);
+}
+
+@font-face {
+    font-family: Poppins Semibold;
+    src: url(../Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../Roboto-Regular.ttf);
 }
 
 root {
@@ -29,7 +55,7 @@ header {
     background-color: #79B6E3;
     box-shadow: 0px 2px 20px rgb(125, 125, 125);
     height: 70px;
-    font-family: Mulish;
+    font-family: Montserrat Semibold;
     padding-left: 2%;
     padding-right: 2%;
     width: 100%;
