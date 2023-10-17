@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+main {
+        height: 80vh;
+}
+
 h1 {
     font-family: Quicksand Bold;
 }
@@ -217,6 +221,7 @@ footer {
 
 #footer_contacts h1{
     margin-bottom: 0.75rem;
+    text-align: right;
 }
 
 #footer_social_media {
@@ -287,7 +292,7 @@ color:var(--cor-neutra-30);
 #input_group{
     display: flex;
     align-items: center;
-    background-color: var(--cor-neutra-0);
+
 }
 
 #input_group input {
@@ -314,22 +319,22 @@ color:var(--cor-neutra-30);
 
 #footer_copyright{
     display: flex;
-    justify-content: center;
-    background-color: var(--cor-neutra-0);
+
     font-size:0.9rem;
     padding: 1.5rem;
     font-weight: 100;
 }
 
-@media(max-width: px) {
-    footer {
-        flex-direction: column;
+@media screen and (max-width: 768px) {
+    #footer_content{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
     }
-    footer .footer1 {
-        width: 100%;
-        text-align: center;
-    }
-    footer .footer1:nth-child(4) {
-        width: 100%;
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content{
+        grid-template-columns: repeat(1,1fr);
+        padding: 3rem 2rem;
     }
 }
