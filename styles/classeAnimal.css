@@ -1,0 +1,72 @@
+.animal {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 20px;
+    width: 290px;
+    height: 400px;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    background-color: #F7A2CB;
+    border-radius: 15px;
+}
+
+.animal:hover {
+    padding: 19px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 1px;
+}
+
+.animal img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.animal .nome {
+    min-width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.animal button {
+    padding: 5%;
+    font-size: 18px;
+    background-color: #B6C137;
+    border: none;
+    border-radius: 5px;
+}
+
+.animal button:hover {
+    cursor: pointer;
+}
+
+.animal .regiao {
+    font-size: 18px;
+}
+
+@media (max-width: 700px) {
+    .animal {
+        min-width: 25%;
+        grid-template-rows: 100px 3.6rem .8rem .8rem;
+    }
+
+    .animal .nome,
+    .animal img,
+    .animal .preco {
+        max-width: 100%;
+    }
+
+    .animal .nome {
+        font-size: .8rem;
+        -webkit-line-clamp: 4;
+    }
+
+    .animal .preco {
+        font-size: 1rem;
+    }
+}
