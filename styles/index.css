@@ -233,6 +233,11 @@
     margin-top: 3%;
 }
 
+.ver-mais-animais a {
+    text-decoration: none;
+    color: black;
+}
+
 .ver-mais-animais button{
     background-color: white;
     font-size: 1.5rem;
@@ -254,6 +259,7 @@
         padding-right: 0;
         height: 100%;
     }
+    
     #amigaozinhos h1 {
         padding-left: 5%;
         padding-right: 5%;
@@ -271,18 +277,19 @@
 
 .passo-a-passo {
     padding: 5%;
+    padding-top: 50px;
     height: 100%;
     width: 100%;
 }
 
 .passo-a-passo h1 {
     font-size: 3rem;
-    margin-bottom: 1%;
+    margin-bottom: 10px;
 }
 
 .passo-a-passo h2 {
     font-size: 1.3rem;
-    margin-bottom: 3%;
+    margin-bottom: 30px;
 }
 
 .passos-content {
@@ -296,7 +303,7 @@
 }
 
 .colocar-adocao {
-    margin-top: 3%;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -308,18 +315,27 @@
 @media(max-width: 950px) {
     .passos-content {
         flex-wrap: wrap;
+        row-gap: 30px;
     }
 
     .passos {
-        width: 50%;
+        width: 49%;
     }
 
-    .passos-content h1 {
+    .passo-a-passo h1 {
         font-size: 1.5rem;
     }
 
-    .passos-content h2 {
+    .passo-a-passo h2 {
         font-size: 1rem;
+    }
+
+    .passo-a-passo p {
+        font-size: 12px;
+    }
+
+    .passos h3 {
+        font-size: 17px;
     }
 }
 
@@ -327,7 +343,8 @@
 
 .depoimentos {
     padding: 5%;
-    padding-top: 5px;
+    padding-top: 50px;
+    padding-bottom: 0;
     background-image: url(../img/fundo1-desktop.png);
     background-size: 100%;
     background-position: bottom;
@@ -337,7 +354,7 @@
 
 .depoimentos h1 {
     font-size: 3rem;
-    margin-bottom: 1%;
+    margin-bottom: 10px;
 }
 
 .depoimentos p {
@@ -348,9 +365,20 @@
 @media(max-width: 950px) {
     .depoimentos {
         background-image: url(../img/fundo2-mobile.png);
+        text-align: center;
     }
 
     .depoimentos h1 {
         font-size: 1.5rem;
     }
+
+    .depoimentos p {
+        font-size: 12px;
+        width: 100%;
+        font-weight: bold;
+    }
+}
+
+main {
+    height: 0;
 }
