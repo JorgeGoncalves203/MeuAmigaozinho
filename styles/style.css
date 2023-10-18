@@ -11,12 +11,19 @@ main {
 
 h1 {
     font-family: Quicksand Bold;
+    color: rgb(50, 50, 50);
 }
 h2 {
     font-family: Poppins Semibold;
+    color: rgb(50, 50, 50);
+}
+h3 {
+    font-family: Poppins Semibold;
+    color: rgb(50, 50, 50);
 }
 p {
     font-family: Roboto;
+    color: rgb(50, 50, 50);
 }
 
 

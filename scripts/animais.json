@@ -25,5 +25,47 @@
         "imagem": "card-2.png",
         "vacinas": "muitas",
         "termperamento": "Dócil, se Acostumando com A vida ainda"
+    }, 
+
+    {
+        "id": 0,
+        "nome": "Amendoin",
+        "regiao": "Recife Pe",
+        "preco": 111,
+        "especie": "Maxo",
+        "sexo": "Maculino",
+        "raca": "vira-lata",
+        "idade": 5,
+        "imagem": "card-1.jpg",
+        "vacinas": "muitas",
+        "termperamento": "Dócil, se Acostumando com A vida ainda"
+    },
+
+    {
+        "id": 1,
+        "nome": "Lindinha",
+        "regiao": "Paulista Pe",
+        "preco": 111,
+        "especie": "Maxo",
+        "sexo": "Maculino",
+        "raca": "vira-lata",
+        "idade": 5,
+        "imagem": "card-2.png",
+        "vacinas": "muitas",
+        "termperamento": "Dócil, se Acostumando com A vida ainda"
+    },
+
+    {
+        "id": 0,
+        "nome": "Amendoin",
+        "regiao": "Recife Pe",
+        "preco": 111,
+        "especie": "Maxo",
+        "sexo": "Maculino",
+        "raca": "vira-lata",
+        "idade": 5,
+        "imagem": "card-1.jpg",
+        "vacinas": "muitas",
+        "termperamento": "Dócil, se Acostumando com A vida ainda"
     }
 ]

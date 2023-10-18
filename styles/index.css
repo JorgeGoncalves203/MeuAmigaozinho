@@ -131,6 +131,12 @@
     font-size: 2rem;
 }
 
+@media(max-width: 950px) {
+    .apresentacao h1 {
+        font-size: 1.5rem;
+    }
+}
+
 /*Porque adotar*/
 
 .porque-adotar {
@@ -187,13 +193,17 @@
     .beneficio p {
         font-size: 12px;
     }
+
+    .porque-adotar h1 {
+        font-size: 1.5rem;
+    }
 }
 
 /*Animais adoção*/
 
 #amigaozinhos {
     padding: 5%;
-    height: 500px;
+    height: 100%;
     background-image: url(../img/fundo1.png);
     background-size: cover;
     background-position: center;
@@ -201,17 +211,57 @@
     width: 100%;
 }
 
-.amigaozinhos h1 {
-    font-size: 1rem;
+#amigaozinhos h1 {
+    font-size: 2rem;
+    margin-bottom: 2%;
 }
+
 .animais-adotar {
     margin: 10px auto;
     padding: 0 3px 0 3px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    gap: 1%;
+    justify-content: space-between;
+    flex-direction: row;
+}
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.ver-mais-animais {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.ver-mais-animais button{
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 1%;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.ver-mais-animais button:hover{
+    cursor: pointer;
+    background-color: #F7A2CB;
+}
+
+@media(max-width: 950px) {
+    #amigaozinhos {
+        padding-left: 0;
+        padding-right: 0;
+        height: 100%;
+    }
+    #amigaozinhos h1 {
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1.5rem;
+    }  
+    
+    #amigaozinhos {
+        background-image: url(../img/fundo1-mobile.png);
+    }
 }
 
 /*Passo a Passo*/
@@ -222,13 +272,57 @@
 
 .passo-a-passo h1 {
     font-size: 2rem;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
+}
+
+.passo-a-passo h2 {
+    font-size: 1.3rem;
+    margin-bottom: 3%;
+}
+
+.passos-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.passos {
+    text-align: center;
+    width: 20%;
+}
+
+.colocar-adocao {
+    margin-top: 3%;
+    text-align: center;
+}
+
+.passos img {
+    width: 125px;
+    height: 125px;
+}
+
+@media(max-width: 950px) {
+    .passos-content {
+        flex-wrap: wrap;
+    }
+
+    .passos {
+        width: 50%;
+    }
+
+    .passos-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .passos-content h2 {
+        font-size: 1rem;
+    }
 }
 
 /*Depoimentos*/
 
 .depoimentos {
     padding: 5%;
+    padding-top: 0;
 }
 
 .depoimentos h1 {

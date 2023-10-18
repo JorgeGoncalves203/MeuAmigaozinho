@@ -33,7 +33,7 @@ function nextSlide() {proximaImg(1)}
 function prevSlide() {proximaImg(0)}
 
 
-adicionarAnimais(".animais-adotar", 4, "idade");
+adicionarAnimais(".animais-adotar", 5, "idade");
 
 
 function adicionarAnimais(local, quantidade, atributo = "") {
