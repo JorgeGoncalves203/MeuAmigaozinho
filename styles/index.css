@@ -204,15 +204,15 @@
 #amigaozinhos {
     padding: 5%;
     height: 100%;
-    background-image: url(../img/fundo1.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
+    background-image: url(../img/fundo1-desktop.png);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 #amigaozinhos h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 2%;
 }
 
@@ -240,6 +240,7 @@
     width: 250px;
     border-radius: 20px;
     border: 1px solid black;
+    transition: 500ms;
 }
 
 .ver-mais-animais button:hover{
@@ -261,6 +262,8 @@
     
     #amigaozinhos {
         background-image: url(../img/fundo1-mobile.png);
+        background-size: 100%;
+        
     }
 }
 
@@ -268,10 +271,12 @@
 
 .passo-a-passo {
     padding: 5%;
+    height: 100%;
+    width: 100%;
 }
 
 .passo-a-passo h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1%;
 }
 
@@ -322,9 +327,30 @@
 
 .depoimentos {
     padding: 5%;
-    padding-top: 0;
+    padding-top: 5px;
+    background-image: url(../img/fundo1-desktop.png);
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 500px;
 }
 
 .depoimentos h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 1%;
+}
+
+.depoimentos p {
+    width: 35%;
+}
+
+
+@media(max-width: 950px) {
+    .depoimentos {
+        background-image: url(../img/fundo2-mobile.png);
+    }
+
+    .depoimentos h1 {
+        font-size: 1.5rem;
+    }
 }
