@@ -279,8 +279,7 @@ footer {
     background-color: #4267b3;
 }
 
-
-.footer-list{
+.footer-list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -298,7 +297,7 @@ color:var(--cor-neutra-0);
     color: orange;
 }
 
-#input_group{
+#input_group {
     display: flex;
     align-items: center;
 
@@ -310,7 +309,7 @@ color:var(--cor-neutra-0);
     width:100%;
 }
 
-#input_group button{
+#input_group button {
     background-color: #7f37c9;
     border: none;
     color: var(--cor-neutra-0);
