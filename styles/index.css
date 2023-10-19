@@ -246,6 +246,7 @@
     border-radius: 20px;
     border: 1px solid black;
     transition: 500ms;
+    color: black;
 }
 
 .ver-mais-animais button:hover{
@@ -270,6 +271,19 @@
         background-image: url(../img/fundo1-mobile.png);
         background-size: 100%;
         
+    }
+
+    .animais-adotar {
+        overflow-x: auto;
+    }
+
+    .animais-adotar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .animais-adotar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }
 
