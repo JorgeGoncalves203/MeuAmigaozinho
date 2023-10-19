@@ -280,6 +280,7 @@
     padding-top: 50px;
     height: 100%;
     width: 100%;
+    background-color: #F7A2CB;
 }
 
 .passo-a-passo h1 {
@@ -345,7 +346,7 @@
     padding: 5%;
     padding-top: 50px;
     padding-bottom: 0;
-    background-image: url(../img/fundo1-desktop.png);
+    background-image: url(../img/fundo2-desktop.png);
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;

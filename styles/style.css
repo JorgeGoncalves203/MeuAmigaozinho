@@ -84,7 +84,7 @@ header a {
 }
 
 header a:hover {
-    color: orange;
+    color: #F7A2CB;
 }
 
 header > ul {
@@ -194,6 +194,8 @@ img[src*="logo"] {
         text-align: left;
         list-style: none;
         margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 15px;
     }
 
     .loginnavmob img{
@@ -203,9 +205,19 @@ img[src*="logo"] {
     .loginnavmob {
         display: flex;
         align-items: center;
-        margin-top: 15%;
-        margin-left: 3%;
-        margin-bottom: 10%;
+        padding: 15%;
+        padding-left: 3%;
+        padding-bottom: 10%;
+        border-bottom: 3px inset black;
+        background-color: #0194e4;
+    }
+
+    .loginnavmob h2{
+        color: black;
+    }
+
+    .overlay ul li {
+        border-bottom: 1px inset black;
     }
 
 }
