@@ -107,7 +107,7 @@ img[src*="logo"] {
 
 /*Mobile*/
 
-#nome {
+#nome-marca {
     display: none;
     font-size: 100%;
 }
@@ -140,7 +140,7 @@ img[src*="logo"] {
     #log {
         display: none;
     }
-    #nome {
+    #nome-marca {
         display: block;
     }
     .menu-button {
