@@ -1,31 +1,55 @@
-#album {
-    display: flex;
-    background-image: url(../img/caes.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    justify-content: center;
-    height: 500px;
-    align-items: center;
+main {
+    height: 10vh;
 }
 
-#album-text {
-    background-color: rgba(255, 255, 255, 0.4);
-    text-align: center;
-    width: 500px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 980px;
+    margin: 0 auto;
+    grid-gap: 40px;
+}
+
+.card {
+    background-color: #79B6E3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 40px;
+    box-shadow: 3px 3px 5px #00000061;
+    border-radius: 5%;
+}
+
+.card:hover {
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+.card .user {
+    width: 250px;
+    height: auto;
+    border-radius: 5%;
+}
+
+ .container {
+    display: flex;
+    align-items: center;
     padding: 10px;
 }
 
-#album-text h1 {
-    font-family: Austie Bost;
-    font-size: 500%;
+#titulo {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 5rem 0;
+    font-size: 65px
 }
 
+#user {
+    padding: 10px;
+    font-size: 25px
+}
 
-#album-imagem img {
-    margin: 20px;
-    float: left;
-    width: 30%;
+p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
 }

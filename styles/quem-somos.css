@@ -1,0 +1,53 @@
+main {
+    height: 30vh;
+}
+
+#membros {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 5rem 0;
+    font-size: 65px
+}
+
+.integrantes {
+    padding: 1%;
+    font-size: 25px
+}
+
+.texto {
+    padding: 1%;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+p {
+    padding: 1%;
+}
+
+.integrantes {
+    padding: 1%;
+    font-size: 25px
+}
+
+.texto {
+    padding: 1%;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+p {
+    padding: 1%;  
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+
+}
+.img {
+    display: flex;
+    justify-content: center;
+
+}
