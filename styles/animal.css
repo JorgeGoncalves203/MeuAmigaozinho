@@ -1,0 +1,59 @@
+#voltar button {
+    background-color: transparent;
+    position: absolute;
+    top: 105px;
+    left: 10px;
+}
+
+#voltar img {
+    width: 50px;
+}
+
+#animal-info {
+    display: flex;
+    justify-content: space-around;
+    row-gap: 100px;
+    padding-top: 3%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#img {
+    max-width: 500px;
+}
+
+#animal-info img{
+    float: left;
+    margin-left: 10px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#animal-info h3{
+    font-size: 15px;
+}
+
+#animal-content {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    background-color: rgb(255, 248, 208);
+    border-radius: 30px;
+    padding: 2%;
+    row-gap: 15px;
+}
+
+.info {
+    width: 30%;
+}
+
+#nome {
+    width: 100%;
+    font-size: 2rem;
+}
+
+#historico-saude {
+    width: 100%;
+    margin-top: 10px;
+}

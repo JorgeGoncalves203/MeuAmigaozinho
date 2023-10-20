@@ -2,65 +2,85 @@
     {
         "id": 0,
         "nome": "Amendoin",
+        "imagem": "card-1.jpg",
         "regiao": "Recife Pe",
         "especie": "Cachorro",
+        "porte": "Medio",
         "sexo": "Maculino",
-        "raca": "vira-lata",
+        "raca": "Vira-lata",
         "idade": 5,
-        "imagem": "card-1.jpg",
         "vacinas": "muitas",
-        "temperamento": "Dócil, se Acostumando com A vida ainda"
+        "tratamento-pulgas": "sim",
+        "castracao": "sim",
+        "temperamento": "Dócil, se Acostumando com A vida ainda",
+        "observacoes": "Não come ração"
     },
 
     {
         "id": 1,
         "nome": "Lindinha",
+        "imagem": "card-2.png",
         "regiao": "Paulista Pe",
         "especie": "Gato",
+        "porte": "Medio",
         "sexo": "Feminino",
         "raca": "Egipcia",
         "idade": 5,
-        "imagem": "card-2.png",
         "vacinas": "muitas",
-        "temperamento": "Dócil, se Acostumando com A vida ainda"
+        "tratamento-pulgas": "sim",
+        "castracao": "sim",
+        "temperamento": "Dócil, se Acostumando com A vida ainda",
+        "observacoes": "Não come ração"
     }, 
 
     {
         "id": 3,
         "nome": "Amendoin",
+        "imagem": "card-1.jpg",
         "regiao": "Recife Pe",
         "especie": "Cachorro",
+        "porte": "Medio",
         "sexo": "Maculino",
         "raca": "vira-lata",
         "idade": 5,
-        "imagem": "card-1.jpg",
         "vacinas": "muitas",
-        "temperamento": "Dócil, se Acostumando com A vida ainda"
+        "tratamento-pulgas": "sim",
+        "castracao": "sim",
+        "temperamento": "Dócil, se Acostumando com A vida ainda",
+        "observacoes": "Não come ração"
     },
 
     {
         "id": 4,
         "nome": "Lindinha",
+        "imagem": "card-2.png",
         "regiao": "Paulista Pe",
         "especie": "Gato",
+        "porte": "Medio",
         "sexo": "Maculino",
         "raca": "vira-lata",
         "idade": 5,
-        "imagem": "card-2.png",
         "vacinas": "muitas",
-        "temperamento": "Dócil, se Acostumando com A vida ainda"
+        "tratamento-pulgas": "sim",
+        "castracao": "sim",
+        "temperamento": "Dócil, se Acostumando com A vida ainda",
+        "observacoes": "Não come ração"
     },
 
     {
         "id": 5,
         "nome": "Amendoin",
+        "imagem": "card-1.jpg",
         "regiao": "Recife Pe",
         "especie": "Cachorro",
         "sexo": "Maculino",
+        "porte": "Medio",
         "raca": "vira-lata",
         "idade": 5,
-        "imagem": "card-1.jpg",
         "vacinas": "muitas",
-        "temperamento": "Dócil, se Acostumando com A vida ainda"
+        "tratamento-pulgas": "sim",
+        "castracao": "sim",
+        "temperamento": "Dócil, se Acostumando com A vida ainda",
+        "observacoes": "Não come ração"
     }
 ]
