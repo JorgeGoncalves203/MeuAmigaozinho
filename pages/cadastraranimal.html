@@ -50,7 +50,46 @@
             </ul>
         </div>
       </header>
-      <main></main>
+      <main>
+          <h1>Cadastro de Animal</h1>
+          <form id="animalForm" action="process_form.php" method="post">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required>
+          
+              <label for="especie">Espécie:</label>
+              <input type="text" id="especie" name="especie" required>
+          
+              <label for="sexo">Sexo:</label>
+              <select id="sexo" name="sexo">
+                  <option value="macho">Macho</option>
+                  <option value="femea">Fêmea</option>
+              </select>
+          
+              <label for="raca">Raça:</label>
+              <input type="text" id="raca" name="raca">
+          
+              <label for="idade">Idade:</label>
+              <input type="number" id="idade" name="idade">
+          
+              <label for="vacinas">Vacinas:</label>
+              <input type="text" id="vacinas" name="vacinas">
+          
+              <label for="tratamento">Tratamento contra pulgas:</label>
+              <input type="text" id="tratamento" name="tratamento">
+          
+              <label for="castracao">Castração:</label>
+              <input type="radio" id="castracao" name="castracao" value="sim">Sim
+              <input type="radio" name="castracao" value="nao">Não
+          
+              <label for="temperamento">Temperamento:</label>
+              <textarea id="temperamento" name="temperamento"></textarea>
+          
+              <label for="observacoes">Observações:</label>
+              <textarea id="observacoes" name="observacoes"></textarea>
+          
+              <input type="submit" value="Cadastrar">
+          </form>
+      </main>
       <footer>
              <div id="footer_content">
                  <div id="footer_contacs">
@@ -63,6 +102,7 @@
                          <i class="fa-brands fa-facebook-f" ></i>
                          </a>
              </div>
+
          </div>
              <ul class="footer-list">
                      <h1>Suporte</h1>
