@@ -11,59 +11,64 @@
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
-<body>
-      <header> 
-        <a href="../index.html">
-            <img src="../img/logo.png" alt="logo">
-        </a>
-        <ul id="navbar">
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="./quem-somos.html">Quem Somos</a></li>
-            <li><a href="./mural.html">Mural</a></li>
-            <li><a href="./adotar.html">Adotar</a></li>
-            <li><a href="./cadastraranimal.html">Cadastrar Animal</a></li>
-        </ul>
-        <ul id="log">
-            <li><a href="./login.html">Login</a></li>
-            <li><a href="./cadastro.html">Cadastrar</a></li>
-        </ul>
-        <h1 id="nome-marca">Meu Amigãozinho</h1>
-        <button class="menu-button" onclick="openNav()">
-            <img src="../img/barra-de-menu.png" alt="menu">
-        </button>
-        <div id="borrar"></div>
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../img/fechar.png" alt=""></a>
+<header> 
+    <a href="../index.html">
+        <img src="../img/logo.png" alt="logo">
+    </a>
+    <ul id="navbar">
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="./quem-somos.html">Quem Somos</a></li>
+        <li><a href="./mural.html">Mural</a></li>
+        <li><a href="./adotar.html">Adotar</a></li>
+        <li><a href="./cadastraranimal.html">Cadastrar Animal</a></li>
+    </ul>
+    <ul id="log">
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./cadastro.html">Cadastrar</a></li>
+    </ul>
+    <h1 id="nome-marca">Meu Amigãozinho</h1>
+    <button class="menu-button" onclick="openNav()">
+        <img src="../img/barra-de-menu.png" alt="menu">
+    </button>
+    <div id="borrar"></div>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../img/fechar.png" alt=""></a>
 
-            <div class="loginnavmob">
-                <img src="../img/usuario.png" alt="">
-                <a href="./login.html"><h2>Faça seu login!</h2></a>
-            </div>
-            <ul>
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="./quem-somos.html">Quem Somos</a></li>
-            <li><a href="./mural.html">Mural</a></li>
-            <li><a href="./adotar.html">Adotar</a></li>
-            <li><a href="./cadastraranimal.html">Cadastrar Animal</a></li>
-            </ul>
+        <div class="loginnavmob">
+            <img src="../img/usuario.png" alt="">
+            <a href="./login.html"><h2>Faça seu login!</h2></a>
         </div>
-      </header>
-      <section id="registro" class="login-container">
+        <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="./quem-somos.html">Quem Somos</a></li>
+        <li><a href="./mural.html">Mural</a></li>
+        <li><a href="./adotar.html">Adotar</a></li>
+        <li><a href="./cadastraranimal.html">Cadastrar Animal</a></li>
+        </ul>
+    </div>
+  </header>
+        <!-- body -->
+<body>
+      <section id="registro">
         <form action="./login.html" class="cadastro-form">
             <div class="login-form">
-                <h1>Login</h1>
+                <h1 id="titlelogin">Login</h1>
                 <br>
                 <p class="cad-label">Email</p>
                 <input type="email" name="Email" id="email" placeholder="Exemplo@gmail.com" required>
+                <br>
                 <br>
                 <p class="cad-label">Senha</p>
                 <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
                 <br>
                 <a href="recuperarsenha.html">esqueceu sua senha?</a>
-                <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="LOGIN"></div>
+                <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Login"></div>
+                <a href="/pages/cadastro.html" id="regis">Cadastre-se</a>
             </div>
         </form>
     </section>
+    <main></main>
+    <!-- footer -->
  <footer>
         <div id="footer_content">
             <div id="footer_contacs">
