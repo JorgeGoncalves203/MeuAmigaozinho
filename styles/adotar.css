@@ -30,7 +30,7 @@
     height: 550px;
     font-family: Roboto;
     display: flex;
-    flex-direction: column;
+    flex-direction: right 10px;
     row-gap: 5px;
     background-color: #79B6E3;
     border-radius: 20px;
@@ -49,6 +49,7 @@
     height: 250px;
     object-fit: cover;
     border-radius: 15%;
+    flex-direction: left;
 
 
 }
