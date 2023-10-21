@@ -19,12 +19,11 @@
 }
 
 #img {
-    max-width: 500px;
+    min-width: 400px;
+    width: 30%;
 }
 
 #animal-info img{
-    float: left;
-    margin-left: 10px;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -38,7 +37,7 @@
     display: flex;
     width: 50%;
     flex-wrap: wrap;
-    background-color: rgb(255, 248, 208);
+    background-color: #F7A2CB;
     border-radius: 30px;
     padding: 2%;
     row-gap: 15px;
@@ -56,4 +55,82 @@
 #historico-saude {
     width: 100%;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#mais-detalhes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#outros-animais {
+    padding-top: 50px;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+#outros-animais h1 {
+    padding-bottom: 30px;
+}
+
+#mais-animais {
+    margin: 10px auto;
+    padding: 0 3px 0 3px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    gap: 1%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+main {
+    height: 0;
+}
+
+@media(max-width: 950px) {
+    #animal-info {
+        display: flex;
+        flex-direction: row;
+        row-gap: 30px;
+    }
+
+    #animal-content {
+        width: 100%;
+        background-color: #F7A2CB;
+        border-radius: 0;
+        padding: 2%;
+        row-gap: 15px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    #img {
+        min-width: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #animal-info img{
+        width: 80%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    #mais-animais {
+        overflow-x: auto;
+    }
+
+    #mais-animais::-webkit-scrollbar {
+        display: none;
+    }
+
+    #mais-animais {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 }
