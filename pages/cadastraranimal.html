@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/cadastraranimal.css">
+    <script src="../scripts/cadastraranimal.js"></script>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -52,43 +53,55 @@
       </header>
       <main>
           <h1>Cadastro de Animal</h1>
+          <div id="cadastro-animal">
           <form id="animalForm" action="process_form.php" method="post">
-              <label for="nome">Nome:</label>
-              <input type="text" id="nome" name="nome" required>
-          
-              <label for="especie">Espécie:</label>
-              <input type="text" id="especie" name="especie" required>
-          
-              <label for="sexo">Sexo:</label>
-              <select id="sexo" name="sexo">
-                  <option value="macho">Macho</option>
-                  <option value="femea">Fêmea</option>
-              </select>
-          
-              <label for="raca">Raça:</label>
-              <input type="text" id="raca" name="raca">
-          
-              <label for="idade">Idade:</label>
-              <input type="number" id="idade" name="idade">
-          
-              <label for="vacinas">Vacinas:</label>
-              <input type="text" id="vacinas" name="vacinas">
-          
-              <label for="tratamento">Tratamento contra pulgas:</label>
-              <input type="text" id="tratamento" name="tratamento">
-          
-              <label for="castracao">Castração:</label>
-              <input type="radio" id="castracao" name="castracao" value="sim">Sim
-              <input type="radio" name="castracao" value="nao">Não
-          
-              <label for="temperamento">Temperamento:</label>
-              <textarea id="temperamento" name="temperamento"></textarea>
-          
-              <label for="observacoes">Observações:</label>
-              <textarea id="observacoes" name="observacoes"></textarea>
-          
-              <input type="submit" value="Cadastrar">
+                <div id="imagem-updade">
+                <label for="imagem-animal">Escolha uma imagem do animal</label>
+                <img id="blah"/>
+              <input type="file" id="imagem-animal" name="imagem-animal" accept="image/png, image/jpeg"  onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"/>
+                </div>
+                <div id="info-cadastroanimal">
+                <div id="coluna1">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                
+                    <label for="especie">Espécie:</label>
+                    <input type="text" id="especie" name="especie" required>
+                
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="macho">Macho</option>
+                        <option value="femea">Fêmea</option>
+                    </select>
+                
+                    <label for="raca">Raça:</label>
+                    <input type="text" id="raca" name="raca">
+                
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade">
+                
+                    <label for="vacinas">Vacinas:</label>
+                    <input type="text" id="vacinas" name="vacinas">
+                    </div>
+                    
+                    <div id="coluna2">
+                    <label for="tratamento">Tratamento contra pulgas:</label>
+                    <input type="text" id="tratamento" name="tratamento">
+                        
+                    <label for="castracao">Castração:</label>
+                    <p>Sim</p><input type="radio" id="castracao" name="castracao" value="sim">
+                    <p>Não</p><input type="radio" name="castracao" value="nao">
+                
+                    <label for="temperamento">Temperamento:</label>
+                    <input type="text" name="temperamento" id="temperamento">
+                
+                    <label for="observacoes">Observações:</label>
+                    <input type="text" name="observacoes" id="observacoes">
+                    </div>
+              <div id="submit-animal"><input type="submit" id="submit" value="Cadastrar"></div>
+            </div>
           </form>
+        </div>
       </main>
       <footer>
              <div id="footer_content">
