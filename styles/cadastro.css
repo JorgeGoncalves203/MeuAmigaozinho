@@ -4,17 +4,19 @@ main {
 
 .cad-label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .cadastro-container {
     Width: 400px;
     Height: 500px;
-    background: rgba(0, 0, 0, 0.25);
+    background: #79B6E3;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px; 
+    border-radius: 10px; 
 }
 
 #registro {
@@ -51,25 +53,20 @@ main {
     border-radius: 5px;
     padding: 5px;
     width: 100%;
-    background-color: orange;
-    border: 1px solid black;
+    background-color: #FEDA00;
+    box-shadow: 0px 2px  rgb(125, 125, 125);
     margin-bottom: 5px;
     font-size: 20px;
 }
 
 #mandar input:hover {
     box-shadow: none;
-    background-color: white;
 }
 
 #registro a {
     margin-top: 20px;
     text-align: center;
     display: block;
-}
-
-.cad-label{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #titlecad {
