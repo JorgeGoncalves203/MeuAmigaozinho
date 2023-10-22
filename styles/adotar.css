@@ -5,8 +5,9 @@
    row-gap: 10px;
    column-gap: 10px;
 }
-.filtro{
+#filtro{
     background-color: #F7A2CB;
+    border-bottom: 50px;
     
 }
 
