@@ -3,9 +3,19 @@ main {
 }
 
 #cabecalho-mural {
-    padding-bottom: 30px;
+    margin-top: 30px;
     margin-bottom: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cabecalho-mural1 {
     background-color: #F7A2CB;
+    padding: 30px;
+    border-radius: 15px;
+
 }
 
 .cards {
@@ -46,7 +56,7 @@ main {
 #titulo {
     display: flex;
     justify-content: center;
-    padding: 5rem 0 2rem 0;
+    padding: 2rem 0 2rem 0;
     font-size: 65px
 }
 
