@@ -9,12 +9,19 @@
     display: inline-block;
     padding: 20px 20px;
     background-color: #F7A2CB; /* Cor de fundo rosa */
-    color: white; /* Cor do texto branca */
-    border: 1px solid black; /* Borda rosa */
+    color: white; 
+    border: 1px solid black; 
     border-radius: 10px; /* Cantos arredondados */
     cursor: pointer;
     margin: 10px;
 }
+.Adote-text{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    
+}
+
 
 @media screen and (max-width: 900px) {
     .animal-adotar{
