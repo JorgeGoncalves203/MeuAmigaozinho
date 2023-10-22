@@ -1,0 +1,52 @@
+main {
+    height: 60vh;
+}
+
+.cad-label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.perfil-container {
+    Width: 300px;
+    Height: 400px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; 
+}
+
+.perfil-usuario {
+    width: 50%;
+    height: 50%;
+align-self: center;
+align-items: center;
+align-content: center;
+
+}
+
+
+
+#perfilp {
+    margin-top: 40px;
+    background-color: gray;
+    width: 200px;
+    border-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+#perfil-change{
+    text-decoration: none; 
+    color: #000;
+    border-radius: 5px;
+    width: 100%;
+    background-color:#FEDA00;
+    box-shadow: 0px 1px  rgb(125, 125, 125);
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-decoration: none; 
+    color: #000;
+}
