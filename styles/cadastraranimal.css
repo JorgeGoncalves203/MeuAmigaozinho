@@ -63,6 +63,7 @@ main h1 {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    flex-direction: column;
 }
 
 
@@ -83,16 +84,11 @@ main h1 {
     justify-content: center;
 }
 
-#blah {
-    width: 300px;
-    position: absolute;
-    top: 300px;
-}
-
 @media(max-width: 950px) {
 
     #info-cadastroanimal {
         width: 100%;
+        margin-top: 30px;
     }
 
     #imagem-updade {
