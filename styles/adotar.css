@@ -6,9 +6,14 @@
    column-gap: 10px;
 }
 #filtro{
-    background-color: #F7A2CB;
-    border-bottom: 50px;
-    
+    display: inline-block;
+    padding: 20px 20px;
+    background-color: #F7A2CB; /* Cor de fundo rosa */
+    color: white; /* Cor do texto branca */
+    border: 1px solid black; /* Borda rosa */
+    border-radius: 10px; /* Cantos arredondados */
+    cursor: pointer;
+    margin: 10px;
 }
 
 @media screen and (max-width: 900px) {
