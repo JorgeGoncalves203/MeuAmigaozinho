@@ -50,4 +50,39 @@ p {
     display: flex;
     justify-content: center;
 
+
+}
+
+#quem-somos-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#quem-somos-content1 {
+    width: 1000px;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+@media(max-width: 950px) {
+    #quem-somos-content1 {
+        width: 100%;
+    }
+
+    .img img{
+        width: 100%;
+    }
+
+    #quem-somos-content h1 {
+        font-size: 2rem;
+    }
+
+    #quem-somos-content p {
+        font-size: 15px;
+    }
 }
