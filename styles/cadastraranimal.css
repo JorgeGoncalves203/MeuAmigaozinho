@@ -1,0 +1,105 @@
+label {
+    font-family: Roboto;
+}
+
+main {
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+main h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#cadastro-animal {
+    width: 100%;
+}
+
+#animalForm {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#info-cadastroanimal {
+    display: flex;
+    border: 1px solid black;
+    width: 50%;
+    padding: 30px;
+    border-radius: 14px;
+    flex-wrap: wrap;
+    background-color: #79B6E3;
+}
+
+#coluna1,
+#coluna2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#info-cadastroanimal input,
+#info-cadastroanimal select {
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 90%;
+}
+
+#imagem-updade {
+    text-align: center;
+}
+
+#imagem-updade label {
+    background-color: rgb(197, 196, 196);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+
+#imagem-updade label:hover {
+    cursor: pointer;
+}
+
+#submit {
+    padding: 100px;
+}
+#submit:hover {
+    background-color: #F7A2CB;
+}
+
+#submit-animal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#blah {
+    width: 300px;
+    position: absolute;
+    top: 300px;
+}
+
+@media(max-width: 950px) {
+
+    #info-cadastroanimal {
+        width: 100%;
+    }
+
+    #imagem-updade {
+        width: 90%;
+    }
+
+    #imagem-updade label {
+        width: 100%;
+    }
+}
