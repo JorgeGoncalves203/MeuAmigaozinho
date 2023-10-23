@@ -52,23 +52,47 @@
             </ul>
         </div>
       </header>
-      
+      <div id="cabecalho-adotar">
+        <h1>Encontre seu amigãozinho</h1>
+        <p></p>
+      </div>
       <div id="filtro"> 
-        <form action="">
-            <label for="animal"></label>
-            <select name="epecie" id="especie">
+        <form action="" id="filtro-form">
+            <label for="filtro-especie"></label>
+            <select name="filtro-especie" id="filtro-especie">
                 <option value="todas-as-especies">Todas as espécies</option>
                 <option value="cachorro">Cachorro</option>
                 <option value="gato">Gato</option>
                 <option value="coelho">Coelho</option>
                 <option value="hamster">Hamster</option>
             </select>
-            <input type="submit" value="Filtrar">
+            <label for="filtro-porte"></label>
+            <select name="filtro-porte" id="filtro-porte">
+                <option value="todos-os-portes">Todos os portes</option>
+                <option value="pequeno"> Porte pequeno</option>
+                <option value="medio">Porte medio</option>
+                <option value="Grande">Porte grande</option>
+            </select>
+            <label for="filtro-sexo"></label>
+            <select name="filtro-sexo" id="filtro-sexo">
+                <option value="todos-os-sexos">Todos os sexos</option>
+                <option value="maxo">Maxo</option>
+                <option value="femea">Fêmea</option>
+            </select>
+            <label for="filtro-regiao"></label>
+            <select name="filtro-regiao" id="filtro-regiao">
+                <option value="todas-as-regioens">Todas as regiões</option>
+                <option value="recife">Recife</option>
+                <option value="paulista">Paulista</option>
+                <option value="abreu-e-lima">Abreu e Lima</option>
+                <option value="igarassu">Igarassu</option>
+            </select>
+            <input type="submit" value="Filtrar" id="submit-filtro">
         </form>
       </div>
         
     <div class="animal-adotar">
-        
+
     </div>
     
       </section>
