@@ -33,31 +33,15 @@ function nextSlide() {proximaImg(1)}
 function prevSlide() {proximaImg(0)}
 
 
-adicionarAnimais(".animais-adotar", 5, "idade");
+adicionarAnimais(".animais-adotar");
 
-
-function adicionarAnimais(local, quantidade, atributo = "") {
-    fetch("./scripts/animais.json")
+function adicionarAnimais(local) {
+    fetch("../scripts/animais.json")
         .then((json) => json.json())
         .then((animais) => {
-            if (atributo !== "") {
-                listaOrdenada = animais.sort((a, b) => {
-                if (a[atributo] > b [atributo]) {
-                    return -1;
-                } else if (a[atributo] < b[atributo]) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-                });
-                for (let i = 0; i < quantidade; i++) {
-                    adicionarElementos(local, listaOrdenada[i]);
-                }
-            } else {
-                for (let i = 0; i < quantidade; i++) {
-                    adicionarElementos(local, animais[i]);
-                }
-            }
+            animais.forEach((animal) => {
+                adicionarElementos(local, animal);
+            });
         });
 }
 

@@ -13,11 +13,12 @@
     row-gap: 5px;
     background-color: #79B6E3;
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px 1px;
 }
 
 .animal:hover {
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 1px;
+    box-shadow: none;
 }
 
 .animal img {
