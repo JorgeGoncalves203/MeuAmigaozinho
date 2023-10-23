@@ -6,7 +6,7 @@ main {
     display: flex;
     justify-content: center;
     margin: 5rem 0 5rem 0;
-    font-size: 65px
+    font-size: 65px;
 }
 
 .integrantes {
@@ -67,6 +67,7 @@ p {
     padding: 10px;
     margin: 10px;
     border-radius: 15px;
+    box-shadow: 0px 2px 20px rgb(125, 125, 125);
 }
 
 @media(max-width: 950px) {
