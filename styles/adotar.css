@@ -18,6 +18,30 @@ main {
     max-width: 1700px;
 }
 
+#titulo {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+    font-size: 50px
+}
+
+
+#cabecalho-adotar {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cabecalho-adotar1 {
+    background-color: #F7A2CB;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 20px rgb(125, 125, 125);
+}
+
 #filtro {
     background-color: #79B6E3;
     padding: 10px;

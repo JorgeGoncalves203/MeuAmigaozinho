@@ -5,9 +5,17 @@
     box-sizing: border-box;
 }
 
-main {
-        height: 80vh;
+body { 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
+
+main {
+    flex: 1; 
+  }
 
 h1 {
     font-family: Quicksand Bold;
