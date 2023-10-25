@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Amigãozinho</title>
     <script type="text/javascript" src="../scripts/script.js"></script>
+    <script type="text/javascript" src="../scripts/mostrarsenha.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/cadastro.css">
@@ -62,9 +63,10 @@
             <p class="cad-label">Contato</p>
             <input type="tel" name="phone" id="phone" placeholder="Telefone de Contato" required>
             <p class="cad-label">Senha</p>
-            <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
-            <p class="cad-label">Confirmar Senha</p>
-            <input type="password" name="ConfirmarSenha" id="confirmar-senha" placeholder="Confirme sua senha" required>
+            <div class="password-toggle">
+                <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
+                <span class="toggle-btn" onclick="mostrarOcultarSenha()"><i class="fas fa-eye" id="olho"></i></span>
+            </div>
             <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Cadastrar"></div>
         </div>
     </div>

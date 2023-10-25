@@ -82,3 +82,17 @@ main {
     border-radius: 10px;
     width: 100%;
 }
+
+.password-toggle {
+    position: relative;
+}
+.password-toggle input[type="password"] {
+    padding-right: 30px; /* Espaço para o ícone */
+}
+.password-toggle .toggle-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
