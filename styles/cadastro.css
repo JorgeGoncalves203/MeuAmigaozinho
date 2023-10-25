@@ -91,7 +91,7 @@ main {
 }
 .password-toggle .toggle-btn {
     position: absolute;
-    right: 5px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
