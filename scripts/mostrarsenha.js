@@ -12,3 +12,4 @@ function mostrarOcultarSenha() {
         olhoIcon.classList.add("fa-eye");
     }
 }
+
