@@ -75,21 +75,22 @@ main {
     text-align: center;
  }
 
-.cadastro-form input[type="text"],
-.cadastro-form input[type="email"],
-.cadastro-form input[type="tel"],
-.cadastro-form input[type="password"] {
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    width: 100%;
-}
+ .cadastro-form input[type="text"],
+ .cadastro-form input[type="email"],
+ .cadastro-form input[type="tel"],
+ .cadastro-form input[type="password"] {
+     padding: 10px;
+     border: 1px solid #000000;
+     border-radius: 10px;
+     width: 100%; 
+ }
 
 .password-toggle {
     position: relative;
 }
+
 .password-toggle input[type="password"] {
-    padding-right: 30px; /* Espaço para o ícone */
+    padding-right: 30px; 
 }
 .password-toggle .toggle-btn {
     position: absolute;

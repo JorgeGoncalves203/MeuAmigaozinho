@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="../scripts/script.js"></script>
     <script type="text/javascript" src="../scripts/mostrarsenha.js"></script>
-    <script type="text/javascript" src="../scripts/numerocadastro.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/cadastro.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
@@ -62,10 +61,10 @@
             <p class="cad-label">Email</p>
             <input type="email" name="Email" id="email" placeholder="Exemplo@gmail.com" required>
             <p class="cad-label">Contato</p>
-            <input type="tel" name="phone" id="phone" placeholder="Telefone de Contato" required>
+            <input type="tel" name="phone" id="phone" placeholder="81 9999-9999" autocomplete="tel" pattern="^[0-9]{2} [0-9]{4}-[0-9]{4}$">
             <p class="cad-label">Senha</p>
             <div class="password-toggle">
-                <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
+                <input type="password" name="Senha" id="senha" placeholder="Cadastre sua senha" required>
                 <span class="toggle-btn" onclick="mostrarOcultarSenha()"><i class="fas fa-eye" id="olho"></i></span>
             </div>
             <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Cadastrar"></div>
