@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "meu-amigaozinho",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
