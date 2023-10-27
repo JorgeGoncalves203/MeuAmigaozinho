@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Meu Amigãozinho</title>
-    <script type="text/javascript" src="../scripts/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="../scripts/script.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
@@ -50,20 +50,22 @@
         <!-- body -->
 <body>
       <section id="registro">
-        <form action="./login.html" class="login-form">
-            <div class="login-form">
-                <h1 id="titlelogin">Login</h1>
-                <br>
-                <p class="cad-label">Email</p>
-                <input type="email" name="Email" id="email" placeholder="Exemplo@gmail.com" required>
-                <br>
-                <br>
-                <p class="cad-label">Senha</p>
-                <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
-                <br>
-                <a href="recuperarsenha.html">esqueceu sua senha?</a>
-                <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Login"></div>
-                <a href="/pages/cadastro.html" id="regis">Cadastre-se</a>
+        <form action="./login.html">
+            <div class="login-container">
+                <div class="login-form">
+                    <h1 id="titlelogin">Login</h1>
+                    <br>
+                    <p class="cad-label">Email</p>
+                    <input type="email" name="Email" id="email" placeholder="Exemplo@gmail.com" required>
+                    <br>
+                    <br>
+                    <p class="cad-label">Senha</p>
+                    <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
+                    <br>
+                    <a href="recuperarsenha.html">esqueceu sua senha?</a>
+                    <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Login"></div>
+                    <a href="cadastro.html" id="regis">Cadastre-se</a>
+                </div>
             </div>
         </form>
     </section>

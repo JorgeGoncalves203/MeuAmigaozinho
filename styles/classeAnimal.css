@@ -5,19 +5,20 @@
     box-sizing: border-box;
     cursor: pointer;
     padding: 20px;
-    width: 325px;
-    height: 450px;
+    width: 300px;
+    height: 400px;
     font-family: Roboto;
     display: flex;
     flex-direction: column;
     row-gap: 5px;
     background-color: #79B6E3;
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px 1px;
 }
 
 .animal:hover {
     border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 1px;
+    box-shadow: none;
 }
 
 .animal img {
@@ -53,7 +54,7 @@
 
 @media(max-width: 950px) {
     .animal {
-        width: 200px;
+        width: 180px;
         height: 310px;
     }
     .animal .nome {
@@ -68,7 +69,7 @@
     .animal button {
         padding: 5%;
         font-size: 13px;
-        background-color: #B6C137;
+        background-color: #F7A2CB;
         border: none;
         border-radius: 5px;
     }

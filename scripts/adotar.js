@@ -1,28 +1,12 @@
-adicionarAnimais(".animal-adotar", 12, "idade");
+adicionarAnimais(".animal-adotar");
 
-
-function adicionarAnimais(local, quantidade, atributo = "") {
+function adicionarAnimais(local) {
     fetch("../scripts/animais.json")
         .then((json) => json.json())
         .then((animais) => {
-            if (atributo !== "") {
-                listaOrdenada = animais.sort((a, b) => {
-                if (a[atributo] > b [atributo]) {
-                    return -1;
-                } else if (a[atributo] < b[atributo]) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-                });
-                for (let i = 0; i < quantidade; i++) {
-                    adicionarElementos(local, listaOrdenada[i]);
-                }
-            } else {
-                for (let i = 0; i < quantidade; i++) {
-                    adicionarElementos(local, animais[i]);
-                }
-            }
+            animais.forEach((animal) => {
+                adicionarElementos(local, animal);
+            });
         });
 }
 

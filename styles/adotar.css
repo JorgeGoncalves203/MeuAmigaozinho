@@ -1,31 +1,112 @@
+main {
+    height: 10px;
+}
+
+#cabecalho-adotar {
+    max-width: 1700px;
+    padding: 3%;
+    margin: 0 auto;
+}
+
 .animal-adotar{
-    display: grid ;
-    justify-content: space-between;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-   row-gap: 10px;
-   column-gap: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin: 0 auto;
+    max-width: 1700px;
 }
-#filtro{
-    display: inline-block;
-    padding: 20px 20px;
-    background-color: #F7A2CB; /* Cor de fundo rosa */
-    color: white; 
-    border: 1px solid black; 
-    border-radius: 10px; /* Cantos arredondados */
-    cursor: pointer;
-    margin: 10px;
-}
-.Adote-text{
+
+#titulo {
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding: 2rem 0 2rem 0;
+    font-size: 50px
+}
+
+
+#cabecalho-adotar {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#cabecalho-adotar1 {
+    background-color: #F7A2CB;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 20px rgb(125, 125, 125);
+}
+
+#filtro {
+    background-color: #79B6E3;
+    padding: 10px;
+    max-width: 1700px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 20px rgb(125, 125, 125);
+}
+
+#filtro-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+#filtro select{
+    margin-right: 10px;
+    width: 30%;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: Roboto;
+}
+
+#submit-filtro {
+    background-color: #F7A2CB;
+    font-size: 1.5rem;
+    padding: 5px;
+    width: 200px;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: 500ms;
+    color: black;
     
 }
 
+#submit-filtro:hover {
+    cursor: pointer;
+    background-color: white;
+}
 
-@media screen and (max-width: 900px) {
-    .animal-adotar{
-        grid-template-columns: 1fr 1fr;
-        overflow: hidden;
+@media(max-width: 950px) {
+    #filtro-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 5px;
+        gap: 10px;
+    }
+
+    #filtro select{
+        margin-right: 0;
+        width: 45%;
+        font-size: 15px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px;
+        font-family: Roboto;
+    }
+
+    #cabecalho-adotar h1 {
+        font-size: 2rem;
     }
 }

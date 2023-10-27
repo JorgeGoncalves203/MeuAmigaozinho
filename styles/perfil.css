@@ -1,52 +1,107 @@
 main {
-    height: 60vh;
+    height: 40vh;
 }
 
 .cad-label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .perfil-container {
-    Width: 300px;
-    Height: 400px;
+    Width: 400px;
+    Height: 500px;
     background: rgba(0, 0, 0, 0.25);
     border: 1px solid black;
+    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px; 
 }
 
-.perfil-usuario {
-    width: 50%;
-    height: 50%;
-align-self: center;
-align-items: center;
-align-content: center;
-
+#registro {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
 }
 
+#registro > form {
 
-
-#perfilp {
-    margin-top: 40px;
-    background-color: gray;
-    width: 200px;
-    border-color: black;
-    border: 1px solid black;
+    font-size: 20px;
+    padding: 10px 100px 10px 100px;
     border-radius: 10px;
-    padding-bottom: 15px;
-    align-items: center;
 }
 
-#perfil-change{
+#registro > form > h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#registro > form > input {
+    margin-bottom: 10px;
+    float: right;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#mandar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#mandar input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: #FEDA00;
+    box-shadow: 0px 2px  rgb(125, 125, 125);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#regis {
     text-decoration: none; 
     color: #000;
     border-radius: 5px;
     width: 100%;
-    background-color:#FEDA00;
+    background-color:#ffd900;
     box-shadow: 0px 1px  rgb(125, 125, 125);
     margin-bottom: 5px;
     font-size: 20px;
     text-decoration: none; 
-    color: #000;
+}
+
+
+#mandar input:hover {
+    box-shadow: none;
+}
+
+#registro a {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+}
+
+#titlelogin {
+    text-align: center;
+    color: pink;
+ }
+
+ .perfil-form input[type="email"],
+ .perfil-form input[type="number"],
+ .perfil-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #d3d3d3;
+    color: black;
+}
+
+.perfil-foto{
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    margin: 0 auto;
 }

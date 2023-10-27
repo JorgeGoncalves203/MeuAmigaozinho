@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Meu Amigãozinho</title>
-    <script type="text/javascript" src="../scripts/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="../scripts/script.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/perfil.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
@@ -50,20 +50,25 @@
             </ul>
         </div>
       </header>
-      <section class="perfil">
-        <img src="/img/foto-usuario.png" alt="" class="profile-picture">
-            <div class="perfil-usuario">
-        <p id="perfilp">Nome <br> exemplo@email.com</p>
-        <br>
-        <p id="perfilp">Email <br> exemplo@email.com</p>
-        <br>
-        <p id="perfilp">Celular <br>
-            (81) 98456-7890</p>
-                <br>
-                <a href="#" id="perfil-change">Alterar Informações</a>
+      <section id="registro">
+        <form action="./login.html">
+            <div class="perfil-form">
+                <div class="perfil-foto"><img src="/img/foto-usuario.png" alt="foto de perfil" class="perfil-foto"></div>
+                <p class="cad-label">Nome</p>
+                <input type="email" name="nome" id="email" placeholder="Gustavo da Silva" required>
+                <p class="cad-label">Email</p>
+                <input type="email" name="email" id="senha" placeholder="exemplo@gmail.com" required>
+                <p class="cad-label">Telefone</p>
+                <input type="number" name="numero" id="number" placeholder="+55 81 981043422" required>
+                <p class="cad-label">Senha</p>
+                <input type="password" name="Senha" id="senha" placeholder="********" required>
+                <a href="/pages/perfileditar.html">
+                    <div id="mandar"><input type="button" name="EditInfo"  value="Editar Informações"></div>
+                </a>
             </div>
+        </form>
     </section>
-    <main></main>
+    <main></main> 
       <footer>
              <div id="footer_content">
                  <div id="footer_contacs">
