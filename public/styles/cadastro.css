@@ -11,8 +11,8 @@ main {
 
 .cadastro-container {
     width: 300px;
-    max-width: 500px; /* Defina a largura máxima para ocupar a largura da tela */
-    height: 450px; /* Defina a altura como "auto" para permitir acomodar o conteúdo */
+    max-width: 500px; 
+    height: 450px; 
     background-color: #79B6E3;
     border: 1px solid black;
     display: flex;
