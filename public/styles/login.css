@@ -24,7 +24,7 @@ button[disabled]{
 .login-container {
     width: 300px;
     max-width: 500px; 
-    height: 400px; 
+    height: 500px; 
     background-color: #79B6E3;
     border: 1px solid black;
     display: flex;
@@ -119,6 +119,12 @@ button[disabled]{
     border: 1px solid #000000;
     border-radius: 10px;
     width: 100%;
+}
+
+.error {
+    color: white;
+    background-color: red;
+    display: none;
 }
 
 

@@ -58,11 +58,14 @@
                     <br>
                     <div>
                         <div class="cad-label"><label class="cad-label">Email</label></div>
-                         <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" onchange="validateFields()" required>
+                         <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" onchange="OnChangeEmail()" required>
+                         <div class="error" id="email-required-error">Email é obrigatório</div>
+                         <div class="error" id="email-invalid-error">Email é inválido</div>
                     </div>
                     <div>
                         <div class="cad-label"><label class="cad-label">Senha</label></div>
-                        <input type="password" name="senha" id="password" placeholder="Digite sua senha" onchange="validateFields()" required>
+                        <input type="password" name="senha" id="password" placeholder="Digite sua senha" onchange="OnChangePassword()" required>
+                        <div class="error" id="password-required-error">Senha é obrigatória</div>
                     </div>
                     <div class="newpassword">
                         <a href="/public/pages/recuperarsenha.html"><button type="button" class="clear" id="recover-password-button" onchange="validateFields()" disabled="true">Esqueceu sua Senha?</button></a>
