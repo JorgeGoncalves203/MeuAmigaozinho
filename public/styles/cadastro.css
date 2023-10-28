@@ -6,6 +6,7 @@ main {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 5px;
     margin-bottom: 10px;
+    color: black;
 }
 
 .cadastro-container {
@@ -49,8 +50,8 @@ main {
 
 #mandar {
     margin-top: 20px;
-    text-align: center;
 }
+
 #mandar input {
     border-radius: 5px;
     padding: 5px;
@@ -59,6 +60,7 @@ main {
     box-shadow: 0px 2px  rgb(125, 125, 125);
     margin-bottom: 5px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 #mandar input:hover {

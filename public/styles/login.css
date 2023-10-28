@@ -2,6 +2,16 @@ main {
     height: 40vh;
 }
 
+input, button {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+
 .cad-label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 5px;
@@ -46,12 +56,12 @@ main {
     font-size: 20px;
 }
 
-#mandar {
+.entrar {
     margin-top: 20px;
     text-align: center;
 }
 
-#mandar input {
+.entrar input {
     border-radius: 5px;
     padding: 5px;
     width: 100%;
@@ -59,23 +69,47 @@ main {
     box-shadow: 0px 2px  rgb(125, 125, 125);
     margin-bottom: 5px;
     font-size: 20px;
+    cursor: pointer;
 }
 
-#regis {
-    text-decoration: none; 
-    color: #000;
+
+.outline {
+    background: #FEDA00;
     border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 2px  rgb(125, 125, 125);
+    margin-bottom: 5px;
+    cursor: pointer;
+    width: 100%; 
+    height: 100%;
+    font-size: 20px;
+}
+
+.clear {
+    background: none; 
+    color: blue; 
+    text-decoration: none;
+    cursor: pointer; 
+    border: none; 
+    outline: none; 
+}
+
+.solid {
+    border-radius: 3px;
+    padding: 5px;
     width: 100%;
-    background-color:#FEDA00;
-    box-shadow: 0px 1px  rgb(125, 125, 125);
+    background-color: #FEDA00;
+    box-shadow: 0px 2px  rgb(125, 125, 125);
     margin-bottom: 5px;
     font-size: 20px;
-    text-decoration: none; 
-    color: #000;
+    cursor: pointer;
 }
 
+.newpassword {
+    text-align: center;
+}
 
-#mandar input:hover {
+.entrar input:hover {
     box-shadow: none;
 }
 
@@ -96,3 +130,7 @@ main {
     border-radius: 10px;
     width: 100%;
 }
+
+
+
+

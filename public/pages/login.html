@@ -49,22 +49,29 @@
   </header>
         <!-- body -->
 <body>
-      <section id="registro">
+<section id="registro">
         <form action="./login.html">
             <div class="login-container">
                 <div class="login-form">
                     <h1 id="titlelogin">Login</h1>
                     <br>
-                    <p class="cad-label">Email</p>
-                    <input type="email" name="Email" id="email" placeholder="Exemplo@gmail.com" required>
-                    <br>
-                    <br>
-                    <p class="cad-label">Senha</p>
-                    <input type="password" name="Senha" id="senha" placeholder="Digite sua senha" required>
-                    <br>
-                    <a href="recuperarsenha.html">esqueceu sua senha?</a>
-                    <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Login"></div>
-                    <a href="cadastro.html" id="regis">Cadastre-se</a>
+                    <div>
+                        <div class="cad-label"><label class="cad-label">Email</label></div>
+                         <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" required>
+                    </div>
+                    <div>
+                        <div class="cad-label"><label class="cad-label">Senha</label></div>
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="newpassword">
+                        <a href="/public/pages/recuperarsenha.html"><button type="button" class="clear">Esqueceu sua Senha?</button></a>
+                    </div>
+                    <div>
+                        <button type="button" class="solid" id="entrar">Entrar</button>
+                    </div>
+                    <div>
+                        <a href="/public/pages/cadastro.html"><button type="button" class="outline">Registrar-se</button></a>
+                    </div>
                 </div>
             </div>
         </form>
