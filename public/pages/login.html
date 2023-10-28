@@ -7,6 +7,7 @@
     <title>Meu Amigãozinho</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="text/javascript" src="../scripts/script.js"></script>
+    <script type="text/javascript" src="../scripts/validarlogin.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
@@ -57,17 +58,17 @@
                     <br>
                     <div>
                         <div class="cad-label"><label class="cad-label">Email</label></div>
-                         <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" required>
+                         <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" onchange="validateFields()" required>
                     </div>
                     <div>
                         <div class="cad-label"><label class="cad-label">Senha</label></div>
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                        <input type="password" name="senha" id="password" placeholder="Digite sua senha" onchange="validateFields()" required>
                     </div>
                     <div class="newpassword">
-                        <a href="/public/pages/recuperarsenha.html"><button type="button" class="clear">Esqueceu sua Senha?</button></a>
+                        <a href="/public/pages/recuperarsenha.html"><button type="button" class="clear" id="recover-password-button" onchange="validateFields()" disabled="true">Esqueceu sua Senha?</button></a>
                     </div>
                     <div>
-                        <button type="button" class="solid" id="entrar">Entrar</button>
+                        <a href="/public/index.html"><button type="button" class="solid" id="login-button" disabled="true" >Entrar</button></a>
                     </div>
                     <div>
                         <a href="/public/pages/cadastro.html"><button type="button" class="outline">Registrar-se</button></a>
