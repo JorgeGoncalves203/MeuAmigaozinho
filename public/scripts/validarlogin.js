@@ -19,28 +19,17 @@ function isEmailValid() {
 
 function toggleEmailErros() {
     const email = form.email().value;
-    if (!email) {
-        form.emailRequiredError().style.display = "block";
-    } else {
-        form.emailRequiredError().style.display = "none";
-    }
+    form.emailRequiredError().style.display = email ? "none" : "block";
 
-    if (validateEmail(email)) {
-        form.emailInvalidError().style.display = "none";
-    } else {
-        form.emailInvalidError().style.display = "block";
-    }
+    form.emailInvalidError().style.display = validateEmail(email) ? "none" : "block";
+
 }
     
 
 
 function togglePasswordErros() {
     const password = form.password().value;
-    if (!password) {
-        form.passwordRequiredError().style.display = "block";
-    } else {
-        form.passwordRequiredError().style.display = "none";
-    }
+    form.passwordRequiredError().style.display = password ? "none" : "block";
 }
 
 function toggleButtonsDisable() {
@@ -58,10 +47,6 @@ function isPasswordValid() {
         return false;
     }
     return true;
-}
-
-function validateEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
 }
 
 
