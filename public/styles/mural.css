@@ -23,7 +23,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1500px;
     margin: 0 auto;
-    grid-gap: 40px;
+    grid-gap: 30px;
 }
 
 .card {
@@ -31,9 +31,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 35px 40px;
+    padding: 35px 30px;
     box-shadow: 3px 3px 5px #00000061;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 .card:hover {
