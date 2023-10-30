@@ -164,7 +164,6 @@ img[src*="logo"] {
         height: 100%;
         display: block;
         background-color:  #79B6E3;
-        border-left: 1px solid black;
         z-index: 9;
         position: fixed;
         right: 0;
