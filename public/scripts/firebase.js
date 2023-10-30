@@ -11,7 +11,7 @@
   firebase.initializeApp(firebaseConfig);   
 
   console.log('antes');
-  firebase.auth().SignInWithEmailAndPassword("mg4426231@gmail.com", "123456").then(response => {
+  firebase.auth().signInWithEmailAndPassword("mg4426231@gmail.com", "123456").then( response => {
     console.log('sucess', response)
   }).catch(error => {
     console.log('error'.error)
