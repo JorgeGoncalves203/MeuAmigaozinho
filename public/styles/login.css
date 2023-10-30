@@ -40,7 +40,7 @@ button[disabled]{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-
+    margin-bottom: 35%;
 }
 
 #registro {

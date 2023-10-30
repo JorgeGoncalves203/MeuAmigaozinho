@@ -9,6 +9,8 @@ main {
     color: black;
 }
 
+
+
 .cadastro-container {
     width: 300px;
     max-width: 500px; 
@@ -19,6 +21,7 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 10px; 
+    margin-bottom: 35%;
     
 }
 
@@ -51,7 +54,6 @@ main {
 #mandar {
     margin-top: 20px;
 }
-
 
 
 #mandar input:hover {
