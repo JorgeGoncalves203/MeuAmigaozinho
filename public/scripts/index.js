@@ -96,13 +96,3 @@ function adicionarBotao(local) {
     button.appendChild(buttonText);
     local.appendChild(button);
 }
-
-function login() {
-    window.location.href = "../index.html";
-
-}
-
-function register() {
-    window.location.href = "../pages/cadastro.html"
-
-}

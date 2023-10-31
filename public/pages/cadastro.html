@@ -12,6 +12,8 @@
     <script type="text/javascript" src="../scripts/script.js" defer></script>
     <script type="text/javascript" src="../scripts/mostrarsenha.js" defer></script>
     <script type="text/javascript" src="../scripts/validations.js" defer></script>
+    <script type="module" src="../scripts/firebaseConfig.js" defer></script>
+    <script type="module" src="../scripts/cadastro.js" defer></script>
 </head>
 <header> 
     <a href="../index.html">
@@ -60,14 +62,14 @@
             <p class="cad-label">Nome</p>
             <input type="text" name="name" id="name" placeholder="Digite seu Nome Completo" title="Digite seu nome completo"required>
             <p class="cad-label">Email</p>
-            <input type="email" name="Email" id="email" placeholder="Exemplo@gmail.com" title="Cadastre seu Email"required>
+            <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" title="Cadastre seu Email"required>
             <div>
                 <p class="cad-label">Telefone</p>
                 <input type="tel" class="form-control" id="phone" name="tel" placeholder="(99) 9999-9999" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" title="Número de telefone precisa ser no formato (99) 9999-9999" required="required" />
                 <p class="cad-label">Senha</p>
             </div>
             <div class="password-toggle">
-                <input type="password" name="Senha" id="senha" placeholder="Cadastre sua senha" title="cadastre sua senha" required>
+                <input type="password" name="senha" id="senha" placeholder="Cadastre sua senha" title="cadastre sua senha" required>
                 <span class="toggle-btn" onclick="mostrarOcultarSenha()"><i class="fas fa-eye" id="olho"></i></span>
             </div>
             <div id="mandar">

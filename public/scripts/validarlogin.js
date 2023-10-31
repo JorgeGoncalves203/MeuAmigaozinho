@@ -24,8 +24,6 @@ function toggleEmailErros() {
     form.emailInvalidError().style.display = validateEmail(email) ? "none" : "block";
 
 }
-    
-
 
 function togglePasswordErros() {
     const password = form.password().value;
@@ -47,6 +45,10 @@ function isPasswordValid() {
         return false;
     }
     return true;
+}
+
+function register() {
+    window.location.href = "../pages/cadastro.html"
 }
 
 

@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Meu Amigãozinho</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js" defer></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js" defer></script>
-    <script type="text/javascript" src="../scripts/firebaseConfig.js" defer></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script type="module" src="../scripts/firebaseConfig.js" defer></script>
+    <script type="module" src="../scripts/login.js" defer></script>
     <script type="text/javascript" src="../scripts/script.js" defer></script>
     <script type="text/javascript" src="../scripts/index.js" defer></script>
     <script type="text/javascript" src="../scripts/validarlogin.js" defer></script>
     <script type="text/javascript" src="../scripts/validations.js" defer></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/login.css">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <header> 
     <a href="../index.html">
@@ -56,9 +55,9 @@
         <!-- body -->
 <body>
 <section id="registro">
-        <form action="./login.html">
+        <form action="./login.html" class="login-form">
             <div class="login-container">
-                <div class="login-form">
+                <div class="login-div">
                     <h1 id="titlelogin">Login</h1>
                     <br>
                     <div class="form-field">
@@ -76,7 +75,7 @@
                         <a href="../pages/recuperarsenha.html"><button type="button" class="clear" id="recover-password-button" onchange="validateFields()" disabled="true">Esqueceu sua Senha?</button></a>
                     </div>
                     <div>
-                       <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+                       <button type="submit" class="solid" id="login-button" disabled="true" >Entrar</button>
                     </div>
                     <div>
                         <button type="button" class="outline" onclick="register()">Registrar-se</button>
