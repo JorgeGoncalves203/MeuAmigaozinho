@@ -17,10 +17,6 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase
   
   firebase.initializeApp(firebaseConfig);   
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-
   console.log('antes');
   firebase.auth().signInWithEmailAndPassword("mg4426231@gmail.com", "123456").then( response => {
     console.log('sucess', response)
