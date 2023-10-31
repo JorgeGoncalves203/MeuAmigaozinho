@@ -10,8 +10,8 @@ signupForm.addEventListener('submit', (e) => {
 
     createUserWithEmailAndPassword(auth, email, senha)
     .then((cred) => {
-        console.log('user created:', cred.user)
         alert('Usuario criado com sucesso!!')
+        window.location.href = "./login.html";
         signupForm.reset()
     })
     .catch((err) => {
