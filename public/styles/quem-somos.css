@@ -1,5 +1,6 @@
 main {
     height: 30vh;
+
 }
 
 #membros {
@@ -41,11 +42,7 @@ p {
     padding: 1%;  
 }
 
-.img {
-    display: flex;
-    justify-content: center;
 
-}
 .img {
     display: flex;
     justify-content: center;
@@ -66,6 +63,41 @@ p {
     background-color: rgb(240, 240, 240);
     padding: 10px;
     margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 20px rgb(125, 125, 125);
+    background-color: #79B6E3;
+}
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.photo {
+    text-align: center;
+    margin: 20px;
+   
+}
+
+.photo img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 2px 20px rgb(125, 125, 125);
+}
+
+.photo h3 {
+    margin-top: 10px;
+}
+
+.photo p {
+    margin-top: 5px;
+    
+}
+
+#cabecalho-quemsomos {
+    background-color: #F7A2CB;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0px 2px 20px rgb(125, 125, 125);
 }
