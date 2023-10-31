@@ -15,18 +15,18 @@ recuperarForm.addEventListener('submit', (e) => {
         alert('Email enviado com sucesso')
         recuperarForm.reset()
     })
-    .catch((err) => {
+    .catch((error) => {
         hideLoading()
-        alert(getErrorMessage(err))
+        alert(getErrorMessage(error))
     });
 })
 
-function getErrorMessage(err) {
-    if(err.code == 'auth/invalid-login-credentials') {
+function getErrorMessage(error) {
+    if(error.code == 'auth/invalid-login-credentials') {
         return 'Usuário não encontrado';
     }
-    if(err.code == 'auth/wrong-password') {
+    if(error.code == 'auth/wrong-password') {
         return 'Senha Inválida'
     }
-    return err.message;
+    return error.message;
 }

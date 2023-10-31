@@ -14,7 +14,7 @@ signupForm.addEventListener('submit', (e) => {
         window.location.href = "./login.html";
         signupForm.reset()
     })
-    .catch((err) => {
-        console.log(err.message)
+    .catch((error) => {
+        console.log(error.message)
     })
 })
