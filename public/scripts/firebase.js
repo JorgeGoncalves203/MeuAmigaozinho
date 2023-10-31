@@ -1,3 +1,9 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js"; 
+
+
+    
+  
     const firebaseConfig = {
     apiKey: "AIzaSyCNgXdY_zQBFLfyrmQ3OhKD-HKfZHu6VXc",
     authDomain: "meu-amigaozinho.firebaseapp.com",
@@ -8,7 +14,12 @@
     appId: "1:907656799680:web:7748c79a0c6c58276a1425",
     measurementId: "G-6RSJRY89HX"
   };
+  
   firebase.initializeApp(firebaseConfig);   
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
 
   console.log('antes');
   firebase.auth().signInWithEmailAndPassword("mg4426231@gmail.com", "123456").then( response => {
@@ -16,4 +27,7 @@
   }).catch(error => {
     console.log('error'.error)
   });
-    console.log('depois')
+    console.log('depois');
+
+
+
