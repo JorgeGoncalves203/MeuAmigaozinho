@@ -352,3 +352,20 @@ color:var(--cor-neutra-0);
         padding: 10px; 
       
 }
+
+.loading {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading label {
+    font-family: Quicksand Bold;
+    font-size: 32px;
+    color: white;
+}

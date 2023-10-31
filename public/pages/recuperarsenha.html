@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../styles/recuperarsenha.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="../scripts/script.js" defer></script>
+    <script type="module" src="../scripts/firebaseConfig.js" defer></script>
+    <script type="module" src="../scripts/recuperarsenha.js" defer></script>
+    <script type="text/javascript" src="../scripts/loading.js"></script>
 </head>
 <body>
       <header> 
@@ -48,12 +51,12 @@
             </ul>
         </div>
       </header>
-      <section id="registro" class="recuperarsenha-form">
+      <section id="registro" class="recuperar">
         <form action="./login.html" class="recuperarsenha-form">
             <div class="login-form">
                 <h1 id="titlerec">Recuperar Senha</h1>
                 <p class="cad-label">Email</p>
-                <input type="email" name="Email" id="email" placeholder="Digite o email da conta" required>
+                <input type="email" name="email" id="email" placeholder="Digite o email da conta" required>
                 <br>
                 <div id="mandar"><input type="submit" name="Enviar" id="enviar" value="Recuperar Senha"></div>
             </div>
