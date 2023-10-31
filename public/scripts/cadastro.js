@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { createUserWithEmailAndPassword,  onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
 import { auth } from "./firebaseConfig.js"
 
 const signupForm = document.querySelector('.cadastro-form')
@@ -18,3 +18,12 @@ signupForm.addEventListener('submit', (e) => {
         console.log(error.message)
     })
 })
+
+////Persistencia e Estado
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+      window.location.href = "../index.html";
+      const uid = user.uid;
+    } 
+  });

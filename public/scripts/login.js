@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
 import { auth } from "./firebaseConfig.js"
 
 const loginForm = document.querySelector('.login-form')
@@ -31,3 +31,12 @@ function getErrorMessage(error) {
     }
     return error.message;
 }
+
+//Persistencia e Estado
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    window.location.href = "../index.html";
+    const uid = user.uid;
+  } 
+});
