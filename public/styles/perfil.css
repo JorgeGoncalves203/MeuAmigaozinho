@@ -22,11 +22,31 @@ main {
 #registro {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 100px;
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+}
+
+.sair {
+    background-color: #F7A2CB;
+    font-size: 1.5rem;
+    padding: 1%;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: 500ms;
+    color: black;
+}
+
+.sair:hover {
+    cursor: pointer;
+    background-color: white;
 }
 
 #registro > form {
-
+    width: 500px;
     font-size: 20px;
     padding: 10px 100px 10px 100px;
     border-radius: 10px;
