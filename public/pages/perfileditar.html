@@ -50,26 +50,35 @@
             </ul>
         </div>
       </header>
-      <section id="registro">
-            <div class="perfil-form">
-                <div class="perfil-foto"><img src="/img/foto-usuario.png" alt="foto de perfil" class="perfil-foto"></div>
-                <p class="cad-label">Nome</p>
-                <input type="email" name="nome" id="email" placeholder="Gustavo da Silva" required>
-                <p class="cad-label">Email</p>
-                <input type="email" name="email" id="senha" placeholder="exemplo@gmail.com" required>
-                <p class="cad-label">Telefone</p>
-                <input type="password" name="numero" id="senha" placeholder="+55 81 981043422" required>
-                <p class="cad-label">Senha</p>
-                <input type="password" name="Senha" id="senha" placeholder="********" required>
-                <a href="/pages/perfil.html">
+      <section id="perfileditar-section">
+            <div class="perfileditar-container">
+                <div class="perfileditar-form">
+                    <div class="perfil-foto">
+                        <img src="../img/foto-usuario.png" alt="foto de perfil" class="perfil-foto">
+                    </div>
+                    <div>
+                        <div class="cad-label"><label>Nome</label></div>
+                        <input type="text" name="name" id="name" placeholder="Gustavo da Silva" required>
+                    </div>
+                    <div>
+                        <div class="cad-label"><label>Email</label></div>
+                        <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" required>
+                    </div>
+                    <div>
+                        <div class="cad-label"><label>Telefone</label></div>
+                        <input type="tel" name="numero" id="phone" placeholder="+55 81 981043422" required>
+                    </div>
+                    <div>
+                        <div class="cad-label"><label>Senha</label></div>
+                        <input type="password" name="Senha" id="senha" placeholder="********" required>
+                    </div>
                     <div id="mandar">
-                        <input type="button" name="EditInfo"  value="Salvar Informações">
+                            <a href="../pages/perfil.html"><input type="button" name="EditInfo" value="Salvar Informações"></a>
                     </div>
                     <div id="mandar2">
-                        <a href="../index.html"><input type="button" name="deletar conta" value="Excluir conta"></a>
+                            <a href="../index.html"><input type="button" name="deletar conta" value="Excluir conta"></a>
                     </div>
-                </a>
-
+                </div>
             </div>
     </section>
     <main></main> 

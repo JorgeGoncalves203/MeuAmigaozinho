@@ -59,21 +59,27 @@
         <div class="cadastro-form">
             <h1 id="titlecad">Cadastro</h1>
             <br>
-            <p class="cad-label">Nome</p>
-            <input type="text" name="name" id="name" placeholder="Digite seu Nome Completo" title="Digite seu nome completo"required>
-            <p class="cad-label">Email</p>
-            <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" title="Cadastre seu Email"required>
             <div>
-                <p class="cad-label">Telefone</p>
-                <input type="tel" class="form-control" id="phone" name="tel" placeholder="(99) 9999-9999" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" title="Número de telefone precisa ser no formato (99) 9999-9999" required="required" />
-                <p class="cad-label">Senha</p>
+                <div class="cad-label"><label>Nome</label></div>
+                <input type="text" name="name" id="name" placeholder="Digite seu Nome Completo" title="Digite seu nome completo"required>
+            </div>
+            <div>
+                <div class="cad-label"><label>Email</label></div>
+                <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" title="Cadastre seu Email" onchange="OnChangeEmail()" required>
+            </div>
+            <div>
+                <div class="cad-label"><label>Telefone</label></div>
+                <input type="tel" class="form-control" id="phone" name="tel" placeholder="(99) 9999-9999" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" title="Número de telefone precisa ser no formato (99) 9999-9999" required>
             </div>
             <div class="password-toggle">
+                <div class="cad-label"><label>Senha</label></div>
                 <input type="password" name="senha" id="senha" placeholder="Cadastre sua senha" title="cadastre sua senha" required>
+                <br>
                 <span class="toggle-btn" onclick="mostrarOcultarSenha()"><i class="fas fa-eye" id="olho"></i></span>
             </div>
+            
             <div id="mandar">
-                <button type="submit" class="outline" >Cadastrar</button></div>
+                <button type="submit" class="outline">Cadastrar</button></div>
         </div>
     </div>
 </form> 

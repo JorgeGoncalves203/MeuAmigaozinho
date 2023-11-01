@@ -12,7 +12,7 @@
     <script type="text/javascript" src="../scripts/script.js" defer></script>
     <script type="module" src="../scripts/firebaseConfig.js" defer></script>
     <script type="module" src="../scripts/perfil.js" defer></script>
-    <script type="text/javascript" src="../scripts/loading.js"></script>
+    <script type="text/javascript" src="../scripts/loading.js" defer></script>
 </head>
 <body>
       <header> 
@@ -53,26 +53,35 @@
             </ul>
         </div>
       </header>
-      <section id="registro">
-        <form action="./login.html">
-            <div class="perfil-form">
-                <div class="perfil-foto"><img src="/img/foto-usuario.png" alt="foto de perfil" class="perfil-foto"></div>
-                <p class="cad-label">Nome</p>
-                <input type="email" name="nome" id="email" placeholder="Gustavo da Silva" required>
-                <p class="cad-label">Email</p>
-                <input type="email" name="email" id="senha" placeholder="exemplo@gmail.com" required>
-                <p class="cad-label">Telefone</p>
-                <input type="number" name="numero" id="number" placeholder="+55 81 981043422" required>
-                <p class="cad-label">Senha</p>
-                <input type="password" name="Senha" id="senha" placeholder="********" required>
-                <a href="/pages/perfileditar.html">
-                    <div id="mandar"><input type="button" name="EditInfo"  value="Editar Informações"></div>
-                </a>
-            </div>
-        </form>
-        <button type="button" class="sair">Sair</button>
+      <section id="perfil-section">
+        <div class="perfil-container">
+                <div class="perfil-form">
+                    <div class="perfil-foto">
+                        <img src="../img/foto-usuario.png" alt="foto de perfil" class="perfil-foto">
+                    </div>
+                    <div class="cad-label"><label>Nome</label></div>
+                    <input type="text" name="name" id="name" placeholder="Gustavo da Silva" required>
+                    <div>
+                        <div class="cad-label"><label>Email</label></div>
+                        <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" required>
+                    </div>
+                    <div>
+                        <div class="cad-label"><label>Telefone</label></div>
+                        <input type="tel" name="numero" id="phone" placeholder="+55 81 981043422" required>
+                    </div>
+                    <div>
+                        <div class="cad-label"><label>Senha</label></div>
+                        <input type="password" name="Senha" id="senha" placeholder="********" required>
+                    </div>
+                    <a href="../pages/perfileditar.html">
+                        <div id="mandar"><input type="button" name="EditInfo"  value="Editar Informações"></div>
+                    </a>
+                    <button type="button" class="sair">Sair</button>
+                </div>
+
+        </div>
     </section>
-    <main></main> 
+
       <footer>
              <div id="footer_content">
                  <div id="footer_contacs">

@@ -1,7 +1,3 @@
-main {
-    height: 30vh;
-}
-
 .cad-label{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 5px;
@@ -80,18 +76,21 @@ main {
      width: 100%; 
  }
 
-.password-toggle {
+ .password-toggle {
     position: relative;
 }
 
 .password-toggle input[type="password"] {
-    padding-right: 30px; 
+    padding-right: 30px; /* Espaço para o ícone no canto direito */
+    border-radius: 10px;
 }
+
 .password-toggle .toggle-btn {
     position: absolute;
-    right: 10px;
-    top: 50%;
+    top: 50px;
     transform: translateY(-50%);
+    right: 5px; /* Ajuste o valor conforme necessário */
+
     cursor: pointer;
 }
 

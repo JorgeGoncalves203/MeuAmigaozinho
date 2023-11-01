@@ -8,36 +8,38 @@ main {
     margin-bottom: 10px;
 }
 
-.login-container {
-    Width: 400px;
-    Height: 500px;
-    background: rgba(0, 0, 0, 0.25);
+.perfileditar-container {
+    width: 400px;
+    max-width: 500px; 
+    height: 600px; 
+    background-color: #79B6E3;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px; 
+    border-radius: 10px;
+    margin-bottom: 5%;
 }
 
-#registro {
+#perfileditar-section {
     display: flex;
     justify-content: center;
     padding-top: 100px;
 }
 
-#registro > form {
+#perfilditar-section > form {
 
     font-size: 20px;
     padding: 10px 100px 10px 100px;
     border-radius: 10px;
 }
 
-#registro > form > h1 {
+#perfileditar-section> form > h1 {
     margin-bottom: 50px;
     text-align: center;
 }
 
-#registro > form > input {
+#perfileditar-section > form > input {
     margin-bottom: 10px;
     float: right;
     height: 20px;
@@ -81,7 +83,7 @@ main {
     box-shadow: none;
 }
 
-#registro a {
+#perfileditar-section a {
     margin-top: 20px;
     text-align: center;
     display: block;
@@ -92,16 +94,6 @@ main {
     color: pink;
  }
 
- .perfil-form input[type="email"],
- .perfil-form input[type="password"] {
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    width: 100%;
-    color: black;
-    background-color: rgb(196, 196, 196);
-}
-
 .perfil-foto{
     width: 100px;
     height: 100px;
@@ -109,3 +101,14 @@ main {
     margin: 0 auto;
 }
 
+.perfileditar-form input[type="text"],
+.perfileditar-form input[type="email"],
+.perfileditar-form input[type="tel"],
+.perfileditar-form input[type="password"] {
+   padding: 10px;
+   border: 1px solid #000000;
+   border-radius: 10px;
+   width: 100%;
+   background-color: white;
+   color: black;
+}
