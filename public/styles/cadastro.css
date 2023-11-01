@@ -10,7 +10,7 @@
 .cadastro-container {
     width: 300px;
     max-width: 500px; 
-    height: 450px; 
+    height: 500px; 
     background-color: #79B6E3;
     border: 1px solid black;
     display: flex;
@@ -47,12 +47,12 @@
 }
 
 
-#mandar {
+#solid {
     margin-top: 20px;
 }
 
 
-#mandar input:hover {
+#solid input:hover {
     box-shadow: none;
 }
 
@@ -106,7 +106,7 @@ button[disabled]{
     opacity: 0.7;
 }
 
-.outline {
+.solid {
     border-radius: 5px;
     padding: 5px;
     width: 100%;

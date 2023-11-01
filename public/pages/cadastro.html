@@ -12,6 +12,7 @@
     <script type="text/javascript" src="../scripts/script.js" defer></script>
     <script type="text/javascript" src="../scripts/mostrarsenha.js" defer></script>
     <script type="text/javascript" src="../scripts/validations.js" defer></script>
+    <script type="text/javascript" src="../scripts/validarcadastro.js" defer></script>
     <script type="module" src="../scripts/firebaseConfig.js" defer></script>
     <script type="module" src="../scripts/cadastro.js" defer></script>
 </head>
@@ -61,27 +62,32 @@
             <br>
             <div>
                 <div class="cad-label"><label>Nome</label></div>
-                <input type="text" name="name" id="name" placeholder="Digite seu Nome Completo" title="Digite seu nome completo"required>
+                <input type="text" name="name" id="name" 
+                placeholder="Digite seu Nome Completo" title="Digite seu nome completo"required>
             </div>
             <div>
-                <div class="cad-label"><label>Email</label></div>
-                <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com" title="Cadastre seu Email" onchange="OnChangeEmail()" required>
+                <div class="cad-label" ><label>Email</label></div>
+                <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com"
+                 title="Cadastre seu Email" onchange="OnChangeEmail()" required>
             </div>
             <div>
                 <div class="cad-label"><label>Telefone</label></div>
-                <input type="tel" class="form-control" id="phone" name="tel" placeholder="(99) 9999-9999" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" title="Número de telefone precisa ser no formato (99) 9999-9999" required>
+                <input type="tel" class="form-control" id="phone" name="tel" placeholder="(99) 9999-9999" 
+                pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" 
+                title="Número de telefone precisa ser no formato (99) 9999-9999" required>
             </div>
-            <div class="password-toggle">
-                <div class="cad-label"><label>Senha</label></div>
+            <div>
+                <div class="cad-label" ><label>Senha</label></div>
                 <input type="password" name="senha" id="senha" placeholder="Cadastre sua senha" title="cadastre sua senha" required>
-                <br>
-                <span class="toggle-btn" onclick="mostrarOcultarSenha()"><i class="fas fa-eye" id="olho"></i></span>
+                
             </div>
-            
-            <div id="mandar">
-                <button type="submit" class="outline">Cadastrar</button></div>
-        </div>
-    </div>
+            <div>
+                <div class="cad-label"><label>Confirmar Senha</label></div>
+                <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirme sua senha" title="confirme sua senha" required>
+            </div>
+            <div id="solid">
+                <button type="submit" class="solid">Cadastrar</button></div>
+            </div>
 </form> 
 </section>
 <main></main>
