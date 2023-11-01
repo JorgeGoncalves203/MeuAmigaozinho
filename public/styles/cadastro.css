@@ -116,3 +116,9 @@ button[disabled]{
     font-size: 20px;
     cursor: pointer;
 }
+
+.error {
+    color: white;
+    background-color: red;
+    display: none;
+}
