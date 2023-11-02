@@ -1,5 +1,9 @@
 import { createUserWithEmailAndPassword,  onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { auth } from "./firebaseConfig.js"
+import { db } from "./firebaseConfig.js";
+
+const colRef = collection(db, 'usuarios')
 
 const signupForm = document.querySelector('.cadastro-form')
 signupForm.addEventListener('submit', (e) => {
@@ -17,6 +21,13 @@ signupForm.addEventListener('submit', (e) => {
     .catch((error) => {
         console.log(error.message)
     })
+
+    addDoc(colRef, {
+        email: signupForm.email.value,
+        nome: signupForm.name.value,
+        telefone: signupForm.tel.value
+    })
+    
 })
 
 ////Persistencia e Estado
