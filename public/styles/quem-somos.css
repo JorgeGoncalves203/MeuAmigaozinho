@@ -81,9 +81,14 @@ p {
 
 .photo img {
     border-radius: 50%;
+    object-fit: cover;
     width: 150px;
     height: 150px;
     box-shadow: 0px 2px 20px rgb(125, 125, 125);
+}
+
+.photo img[src*="Imagem-andriw"] {
+    object-position: top;
 }
 
 .photo h3 {
