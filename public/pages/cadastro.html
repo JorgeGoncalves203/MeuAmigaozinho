@@ -67,7 +67,7 @@
             </div>
             <div>
                 <div class="cad-label" ><label>Email</label></div>
-                <input type="email" name="email" id="email" placeholder="Exemplo@gmail.com"
+                <input type="email" name="email" id="email" placeholder="seu@email.com"
                  title="Cadastre seu Email" onchange="OnChangeEmail()" required>
                  <div class="error" id="email-required-error">
                     Email é obrigatório
@@ -84,7 +84,7 @@
             </div>
             <div>
                 <div class="cad-label" ><label>Senha</label></div>
-                <input type="password" name="senha" id="senha" placeholder="Cadastre sua senha" title="cadastre sua senha" required>
+                <input type="password" name="senha"  id="password" onchange="OnChangePassword()" placeholder="Cadastre sua senha" title="cadastre sua senha" required>
                 <div class="error" id="password-required-error">
                     Senha é obrigatória
                 </div>
@@ -94,16 +94,13 @@
             </div>
             <div>
                 <div class="cad-label"><label>Confirmar Senha</label></div>
-                <input type="password" name="confirmarsenha" id="confirmarsenha" placeholder="Confirme sua senha" title="confirme sua senha" required>
-                <div class="error" id="password-required-error">
-                    Senha é obrigatória
-                </div>
+                <input type="password" name="confirmarsenha" id="confirmPassword" onchange="OnChangeConfirmPassword()" placeholder="Confirme sua senha" title="confirme sua senha" required>
                 <div class="error" id="password-doenst-match-error">
                     Senha e Confirmar senha devem ser iguais
                 </div>
             </div>
             <div id="solid">
-                <button type="submit" class="solid" disabled="true">
+                <button type="submit" class="solid" id = "register-button" disabled="true">
                     Cadastrar
                 </button>
                 </div>

@@ -8,9 +8,9 @@
 
 
 .cadastro-container {
-    width: 300px;
+    width: 500px;
     max-width: 500px; 
-    height: 500px; 
+    height: 700px; 
     background-color: #79B6E3;
     border: 1px solid black;
     display: flex;
@@ -70,10 +70,12 @@
  .cadastro-form input[type="email"],
  .cadastro-form input[type="tel"],
  .cadastro-form input[type="password"] {
-     padding: 10px;
-     border: 1px solid #000000;
-     border-radius: 10px;
-     width: 100%; 
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 350px;
+    background-color: white;
+    color: black;
  }
 
  .password-toggle {
@@ -81,7 +83,7 @@
 }
 
 .password-toggle input[type="password"] {
-    padding-right: 30px; /* Espaço para o ícone no canto direito */
+    padding-right: 20px; 
     border-radius: 10px;
 }
 
@@ -89,8 +91,7 @@
     position: absolute;
     top: 50px;
     transform: translateY(-50%);
-    right: 5px; /* Ajuste o valor conforme necessário */
-
+    right: 5px; 
     cursor: pointer;
 }
 
