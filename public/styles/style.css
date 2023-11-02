@@ -113,6 +113,10 @@ img[src*="logo"] {
     height: 40px;
 }
 
+#log img {
+    height: 40px;
+}
+
 /*Mobile*/
 
 #nome-marca {
