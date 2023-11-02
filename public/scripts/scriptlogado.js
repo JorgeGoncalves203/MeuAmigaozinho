@@ -36,6 +36,11 @@ function nomeUsuario(usuario) {
     
     usuario.forEach(usuario => {
         const ul = document.getElementById('log')
+        const username = usuario.nome
+        const nomeCompleto = username.split(' ')
+        const primeiroNomeInteito = nomeCompleto[0]
+        const tamanhoLimite = 12;
+        const primeiroNome = primeiroNomeInteito.slice(0, tamanhoLimite)
 
         if (ul) {
             const liElements = ul.getElementsByTagName('li')
@@ -48,7 +53,7 @@ function nomeUsuario(usuario) {
             const secondLi = liElements[1]
             const secondA = secondLi.querySelector('a')
             secondA.href = `../pages/perfil.html`
-            secondA.textContent = usuario.nome
+            secondA.textContent = primeiroNome
             fhirtA.appendChild(imagem)
             
     }
