@@ -6,6 +6,7 @@ logoutButton.addEventListener('click', () => {
     signOut(auth)
     .then(() => {
         window.location.href = "../index.html";
+        localStorage.removeItem('nomeDoUsuario');
         alert('O usuário foi deslogado!')
     })
     .catch((error) => {
