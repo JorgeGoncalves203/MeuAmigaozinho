@@ -56,23 +56,23 @@
       </header>
       <section id="perfil-section">
         <div class="perfil-container">
-                <div class="perfil-form">
+                <form class="perfil-form">
                     <div class="perfil-foto">
-                        <img src="../img/usuario.png" alt="foto de perfil" class="perfil-foto">
+                        <img src="../img/foto-usuario.png" alt="foto de perfil" class="perfil-foto">
                     </div>
                     <div class="cad-label"><label>Nome</label></div>
-                    <input type="text" name="name" id="name" placeholder="Gustavo da Silva" required>
+                    <input type="text" name="name" id="name" disabled> <button class="editar" id="editarNome"><img src="../img/editar.png" alt=""></button>
                     <div>
                         <div class="cad-label"><label>Email</label></div>
-                        <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" required>
+                        <input type="email" name="email" id="email" disabled> <button class="editar" id="editarEmail"><img src="../img/editar.png" alt=""></button>
                     </div>
                     <div>
                         <div class="cad-label"><label>Telefone</label></div>
-                        <input type="tel" name="numero" id="phone" placeholder="+55 81 981043422" required>
+                        <input type="tel" name="tel" id="phone" disabled> <button class="editar" id="editarTelefone"><img src="../img/editar.png" alt=""></button>
                     </div>
                     <div>
                         <div class="cad-label"><label>Senha</label></div>
-                        <input type="password" name="Senha" id="senha" placeholder="********" required>
+                        <input type="password" name="senha" id="senha" disabled> <button class="editar" id="editarSenha"><img src="../img/editar.png" alt=""></button>
                     </div>
                     <a href="../pages/perfileditar.html">
                         <div id="mandar"><input type="button" name="EditInfo"  value="Editar Informações"></div>
@@ -80,7 +80,7 @@
                     <div>
                         <button type="button" class="sair">Sair</button>
                     </div>
-                </div>
+                </form>
 
         </div>
     </section>
@@ -108,8 +108,8 @@
                  </li>
          </ul>
      </div>
-     <div id="copyright">
-        <strong>&copy; 2023 Todos os Direitos Reservados. Meu Amigãozinho &copy;</strong>
-    </div>
       </footer>
+      <div id="copyright">
+         &copy; 2023 Todos os Direitos Reservados. Meu Amigãozinho &copy;
+     </div>
      </body>
