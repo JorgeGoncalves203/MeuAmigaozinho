@@ -2,15 +2,8 @@ label {
     font-family: Roboto;
 }
 
-main {
-    height: 100%;
-    padding-bottom: 30px;
-}
-
-main h1 {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+main{
+    flex: 1px;
 }
 
 #cadastro-animal {
@@ -31,6 +24,11 @@ main h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+#descricao {
+    border-radius: 10px;
+    border-color: 0px 1px black;
 }
 
 #cabecalho-cadastraranimal1 {
@@ -57,6 +55,8 @@ main h1 {
     width: 50%;
 }
 
+
+
 #info-cadastroanimal input,
 #info-cadastroanimal select {
     margin-bottom: 10px;
@@ -78,7 +78,7 @@ main h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 5px;
     flex-direction: column;
     overflow: hidden;
 }
