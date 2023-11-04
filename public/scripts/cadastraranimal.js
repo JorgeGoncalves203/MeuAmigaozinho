@@ -32,18 +32,25 @@ const addAnimal = document.getElementById('animalForm')
 addAnimal.addEventListener('submit', (e) => {
     e.preventDefault()
 
+    const castSim = document.getElementById('castsim')
+    const tratamentoPulgasSim = document.getElementById('tratamento_pulgassim')
+
     onAuthStateChanged(auth, (user) => {
         if (user) {
             addDoc(colRef, {
-                nome: addAnimal.nome.value,
+                
+                nome: addAnimal.nomeAnimal.value,
                 especie: addAnimal.especie.value,
                 sexo: addAnimal.sexo.value,
-                idade: addAnimal.raca.value,
+                porte: addAnimal.porte.value,
+                raca: addAnimal.raca.value,
+                idade: addAnimal.idadeAnos.value,
                 vacinas: addAnimal.vacinas.value,
-                tratamento: addAnimal.tratamento.value,
-                castracao: addAnimal.castracao.value,
+                tratamentoPulgas: tratamentoPulgasSim.checked ? "Sim" : "Não",
+                castrado: castSim.checked ? "Sim" : "Não",
+                cidade: addAnimal.cidade.value,
                 temperamento: addAnimal.temperamento.value,
-                observacoes: addAnimal.observacoes.value,
+                descricao: addAnimal.descricao.value,
                 uid: user.uid
         
             })
