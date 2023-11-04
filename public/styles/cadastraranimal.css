@@ -100,6 +100,8 @@ textarea {
     text-align: center; /* Centraliza o conteúdo verticalmente */
     align-items: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #blah {

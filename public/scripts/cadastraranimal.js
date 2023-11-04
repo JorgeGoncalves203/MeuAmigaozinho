@@ -1,6 +1,6 @@
 import { collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
-import { ref } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
+import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
 import { db } from "./firebaseConfig.js";
 import { auth } from "./firebaseConfig.js"
 import { storage } from "./firebaseConfig.js"
@@ -32,13 +32,14 @@ const addAnimal = document.getElementById('animalForm')
 addAnimal.addEventListener('submit', (e) => {
     e.preventDefault()
 
+    
+    
     const castSim = document.getElementById('castsim')
     const tratamentoPulgasSim = document.getElementById('tratamento_pulgassim')
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            addDoc(colRef, {
-                
+            const docRef = addDoc(colRef, {
                 nome: addAnimal.nomeAnimal.value,
                 especie: addAnimal.especie.value,
                 sexo: addAnimal.sexo.value,
@@ -52,18 +53,18 @@ addAnimal.addEventListener('submit', (e) => {
                 temperamento: addAnimal.temperamento.value,
                 descricao: addAnimal.descricao.value,
                 uid: user.uid
-        
             })
             .then(() => {
                 addAnimal.reset()
                 alert('Animal adicionado com sucesso!')
-                console.log
             })
-
-            const inputImagem = document.querySelector("input[type=file]");
-
-            
         } 
       });
+      const file = e.target[0]?.files[0]
+        
+                const storageRef = ref(storage, `animais/${file.name}`)
+                    uploadBytes(storageRef, file).then(() => {
+                        console.log('Uploaded a blob or file!');
+                      });
 })
 
