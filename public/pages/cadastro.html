@@ -82,9 +82,10 @@
                 pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" 
                 title="Número de telefone precisa ser no formato (99) 9999-9999" required>
             </div>
-            <div>
+            <div class="password-toggle">
                 <div class="cad-label" ><label>Senha</label></div>
                 <input type="password" name="senha"  id="password" onchange="OnChangePassword()" placeholder="Cadastre sua senha" title="cadastre sua senha" required>
+                <span class="toggle-btn" onclick="mostrarOcultarSenha('password', 'olho1')"><i class="fas fa-eye" id="olho1"></i></span>
                 <div class="error" id="password-required-error">
                     Senha é obrigatória
                 </div>
@@ -92,9 +93,10 @@
                     Senha deve ter pelo menos 6 caracteres
                 </div>
             </div>
-            <div>
+            <div class="password-toggle">
                 <div class="cad-label"><label>Confirmar Senha</label></div>
-                <input type="password" name="confirmarsenha" id="confirmPassword" onchange="OnChangeConfirmPassword()" placeholder="Confirme sua senha" title="confirme sua senha" required>
+                <input type="password" name="confirmarsenha" id="confirmPassword" onchange="OnChangePassword()" placeholder="Confirme sua senha" title="confirme sua senha" required>
+                <span class="toggle-btn" onclick="mostrarOcultarSenha('confirmPassword', 'olho2')"><i class="fas fa-eye" id="olho2"></i></span>
                 <div class="error" id="password-doenst-match-error">
                     Senha e Confirmar senha devem ser iguais
                 </div>
