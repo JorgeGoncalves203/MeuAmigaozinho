@@ -60,11 +60,18 @@
           </div>
           <div id="formulario-container">
             <form id="animalForm" action="process_form.php" method="post">
+                <form id="animalForm" action="process_form.php" method="post">
+                    <h2>Adicione uma Imagem do Animal</h2>
+              
+                    <div id="imagem-updade">
+                    <label for="imagem-animal"><img id="blah"/></label>
+                  <input type="file" id="imagem-animal" name="imagem-animal" accept="image/png, image/jpeg"  onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"/>
+                  </div>
                 <div class="coluna">
-    
+                   
                     <div>
                         <label for="nome_animal" class="cad-label" >Nome do Animal (se possuir):</label>
-                        <input type="text" id="nomeAnimal" name="nomeAnimal" required>
+                         <input type="text" id="nomeAnimal" name="nomeAnimal" required>
                     </div>
 
                     <div>
@@ -99,7 +106,7 @@
                     </div>
     
                     <div>
-                        <label for="idadeanos">Idade (Anos):</label>
+                         <label for="idadeanos">Idade (Anos):</label>
                         <input type="number" id="idadeAnos" name="idadeAnos" required>
                     </div>
     
@@ -109,12 +116,11 @@
                     </div>
                 </div>
     
-                <div class="coluna">
-
+              
                     <div>
-                        <label for="castrado">Castrado:</label>
+                         <label for="castrado">Castrado:</label>
                         <label for="castradosim">
-                            <input type="radio" id="castsim" name="castrado" required>
+                             <input type="radio" id="castsim" name="castrado" required>
                             Sim
                         </label>
                         <label for="castradonao">
@@ -124,7 +130,7 @@
                     </div>
                     
                     <div>
-                        <label for="tratamentoPulgas">Tratamento contra pulgas:</label>
+                        <label for="tratamento_pulgas">Tratamento contra pulgas:</label>
                         <label for="tratamento_pulgassim">
                             <input type="radio" id="tratamento_pulgassim" name="tratamentoPulgas" required>
                             Sim
@@ -163,11 +169,12 @@
                     <div>
                         <label for="descricao" class="cad-label">Descrição de Temperamento (opcional)</label>
                         <textarea name="descricao" id="descricao" rows="7" cols="50"></textarea>
+
+                        <div id="submit-animal">
+                            <input type="submit" id="submit" value="Cadastrar">
+                        </div>
                     </div>
                 </div>
-
-                <div id="submit-animal"><input type="submit" id="submit" value="Cadastrar"></div>
-            </div>
             </form>
         </div>
   <main></main>

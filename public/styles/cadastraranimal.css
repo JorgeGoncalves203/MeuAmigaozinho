@@ -1,5 +1,20 @@
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+label {
+    font-family: Roboto;
+}
+
+main{
+    flex: 1px;
+}
+
+#cadastro-animal {
+    width: 100%;
+}
+
+#animalForm {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 #cabecalho-cadastraranimal {
@@ -79,6 +94,22 @@ textarea {
     margin-top: 20px; 
 }
 
+#imagem-updade {
+    max-height: 300px; /* Defina a altura máxima desejada */
+    overflow: hidden; /* Oculta o conteúdo que exceder o limite */
+    text-align: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center;
+    padding: 20px;
+}
+
+#blah {
+   
+    border-radius: 5px;
+    max-width: 300px; 
+    max-height: 300px; 
+    cursor: pointer;
+}
+
 input[type="submit"] {
     background-color: #F7A2CB;
     color: black;
@@ -116,4 +147,20 @@ input[type="submit"] {
 header, 
 footer {
     z-index: 10;
+}
+
+@media(max-width: 950px) {
+
+    #info-cadastroanimal {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    #imagem-updade {
+        width: 90%;
+    }
+
+    #imagem-updade label {
+        width: 100%;
+    }
 }
