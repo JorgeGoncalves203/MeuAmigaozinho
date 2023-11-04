@@ -150,6 +150,126 @@ editarNomeButton.addEventListener('click', (e) => {
     })
     })
     }
+})
+
+//Editar Email
+
+const editarEmailButton = document.getElementById('editarEmail')
+editarEmailButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const div = document.createElement('div')
+    div.classList.add('fundoModal')
+    
+    const div1 = document.createElement('div')
+    div1.classList.add('modalEditarNome')
+    
+    const h2 = document.createElement('h3')
+    h2.textContent = 'Altere seu Email:'
+
+    const buttonFechar = document.createElement('button')
+    buttonFechar.classList.add('botaoFechar')
+
+    const img = document.createElement('img')
+    img.src = `../img/fechar.png`
+
+    const formEmail = document.createElement('form')
+    formEmail.classList.add('formEmail')
+
+    const input = document.createElement('input')
+    input.type = 'email'
+    input.name = 'email'
+    input.id = 'emailn'
+
+    const buttonSalvar = document.createElement('button')
+    buttonSalvar.classList.add('botaoSalvar')
+    buttonSalvar.textContent = 'Salvar alterações'
+    
+    div.appendChild(div1)
+    div1.appendChild(h2)
+    div1.appendChild(buttonFechar)
+    buttonFechar.appendChild(img)
+    div1.appendChild(formEmail)
+    formEmail.appendChild(input)
+    formEmail.appendChild(buttonSalvar)
+    document.body.appendChild(div);
+    
+    
+    const fecharButton = document.querySelector('.botaoFechar')
+    fecharButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const fundoModal = document.getElementsByClassName('fundoModal');
+    if (fundoModal.length) {
+        fundoModal[0].remove();
+    }
+    })
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+        usuarioLogado(user)
+        } 
+    });
+
+    function usuarioLogado(user) {
+        const q = query(colRef, where("email", "==", user.email))
+        
+        onSnapshot(q, snapshot => {
+            const usuario = snapshot.docs.map(doc => doc.data()); 
+            informacoesUsuario(usuario)
+            })
+    } 
+
+    function informacoesUsuario(usuario) {
+        
+        usuario.forEach(usuario => {
+            const formEmail = document.querySelector('.formEmail')
+            
+            formEmail.email.value = usuario.email
+        })
+    }
+
+    const colRef = collection(db, 'usuarios')
+
+    const salvarButon = document.querySelector('.botaoSalvar')
+    salvarButon.addEventListener('click', (e) => {
+    e.preventDefault()
+
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+        usuarioLog(user)
+        } 
+    });
+
+    function usuarioLog(user) {
+        const q = query(colRef, where("email", "==", user.email))
+        
+        onSnapshot(q, snapshot => {
+            const usuario = snapshot.docs.map(doc => doc.id); 
+            fazerUpdate(usuario)
+            })
+    }
+    
+    })
+
+    function fazerUpdate(usuarioId) {
+
+        usuarioId.forEach(usuarioId => {
+        const docRef = doc(db, 'usuarios', usuarioId)
+
+        const formEmail = document.querySelector('.formEmail')
+
+        updateDoc(docRef, {
+            email: formEmail.email.value
+        })
+        .then(() => {
+            const fundoModal = document.getElementsByClassName('fundoModal');
+    if (fundoModal.length) {
+        fundoModal[0].remove();
+    }
+    })
+    })
+    }
 
 
 

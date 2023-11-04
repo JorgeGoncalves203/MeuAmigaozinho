@@ -1,4 +1,4 @@
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { onAuthStateChanged, updateProfile } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
 import { collection, getDocs, doc, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { auth } from "./firebaseConfig.js"
 import { db } from "./firebaseConfig.js";
@@ -59,7 +59,6 @@ function nomeUsuario(usuario) {
         const primeiroNome = primeiroNomeInteito.slice(0, tamanhoLimite)
         localStorage.setItem('nomeDoUsuario', primeiroNome);
         const nomeDoUsuario = localStorage.getItem('nomeDoUsuario');
-        console.log(nomeDoUsuario)
 
         const ul = document.getElementById('log')
 
