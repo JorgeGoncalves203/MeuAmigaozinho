@@ -1,122 +1,93 @@
-label {
-    font-family: Roboto;
-}
-
-main{
-    flex: 1px;
-}
-
-#cadastro-animal {
-    width: 100%;
-}
-
-#animalForm {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    flex-wrap: wrap;
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #cabecalho-cadastraranimal {
     margin-top: 30px;
     margin-bottom: 50px;
-    width: auto;
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-#descricao {
-    border-radius: 10px;
-    border-color: 0px 1px black;
+ 
 }
 
 #cabecalho-cadastraranimal1 {
     background-color: #F7A2CB;
     padding: 18px;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 0px 2px 10px rgb(125, 125, 125);
 }
 
-#info-cadastroanimal {
-    display: flex;
-    border: 1px solid black;
-    width: 50%;
-    padding: 30px;
-    border-radius: 14px;
-    flex-wrap: wrap;
+#formulario-container {
     background-color: #79B6E3;
-}
-
-#coluna1,
-#coluna2 {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-
-
-#info-cadastroanimal input,
-#info-cadastroanimal select {
-    margin-bottom: 10px;
-    font-size: 20px;
-    padding: 5px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-    width: 90%;
-}
-
-#imagem-updade {
-    text-align: center;
-}
-
-#imagem-updade label {
-    background-color: rgb(197, 196, 196);
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px;
     border-radius: 5px;
-    flex-direction: column;
-    overflow: hidden;
+    margin-bottom: 5%;
 }
 
 
-#imagem-updade label:hover {
-    cursor: pointer;
+.titulo2{
+    align-items: center;
+    justify-content: center;
+    color: black;
 }
 
-#submit {
-    padding: 100px;
+#cad-label{
+    color: black;
 }
-#submit:hover {
-    background-color: #F7A2CB;
+
+
+.coluna {
+    display: inline-block;
+    width: 48%; 
+    vertical-align: top;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 #submit-animal {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    margin-top: 20px; 
 }
 
-#blah {
-    width: 100%;
+input[type="submit"] {
+    background-color: #F7A2CB;
+    color: black;
+    padding: 15px 30px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
 }
-
-@media(max-width: 950px) {
-
-    #info-cadastroanimal {
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    #imagem-updade {
-        width: 90%;
-    }
-
-    #imagem-updade label {
-        width: 100%;
-    }
+#submit:hover {
+    background-color:#Fff;
 }

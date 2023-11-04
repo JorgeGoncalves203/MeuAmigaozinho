@@ -58,57 +58,117 @@
                   <h1>Cadastro de Animal</h1>
               </div>
           </div>
-          <div id="cadastro-animal">
-          <form id="animalForm" action="process_form.php" method="post">
-                <div id="imagem-updade">
-                <label for="imagem-animal"><img id="blah"/>Escolha uma imagem do animal</label>
-              <input type="file" id="imagem-animal" name="imagem-animal" accept="image/png, image/jpeg"  onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"/>
+          <div id="formulario-container">
+            <form id="animalForm" action="process_form.php" method="post">
+                <div class="coluna">
+    
+                    <div>
+                        <label for="nome_animal" class="cad-label" >Nome do Animal (se possuir):</label>
+                        <input type="text" id="nome_animal" name="nome_animal" required>
+                    </div>
+
+                    <div>
+                        <label for="especie" class="cad-label" >Espécie:</label>
+                        <select id="especie" name="especie" required>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="sexo" class="cad-label">Sexo:</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="porte">Porte:</label>
+                        <select id="porte" name="porte" required>
+                            <option value="Pequeno">Pequeno</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Grande">Grande</option>
+                        </select>        
+                    </div>
+
+                    <div>
+                        <label for="raca" class="cad-label">Raça:</label>
+                        <input type="text" id="raca" name="raca" required>
+                    </div>
+    
+                    <div>
+                        <label for="idade_anos">Idade (Anos):</label>
+                        <input type="number" id="idade_anos" name="idade_anos" required>
+                    </div>
+    
+                    <div>
+                        <label for="vacinas" class="cad-label">Vacinas:</label>
+                        <input type="text" id="vacinas" name="vacinas" required>
+                    </div>
                 </div>
-                <div id="info-cadastroanimal">
-                <div id="coluna1">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-                
-                    <label for="especie">Espécie:</label>
-                    <select id="especie" name="especies">
-                        <option value="Cachorro">Cachorro</option>
-                        <option value="Gato">Gato</option>
-                        <option value="Outros">Outros</option>
-                    </select>
-                
-                    <label for="sexo">Sexo:</label>
-                    <select id="sexo" name="sexo">
-                        <option value="macho">Macho</option>
-                        <option value="femea">Fêmea</option>
-                    </select>
-                
-                    <label for="raca">Raça:</label>
-                    <input type="text" id="raca" name="raca">
-                
-                    <label for="idade">Idade:</label>
-                    <input type="number" id="idade" name="idade">
-                
-                    <label for="vacinas">Vacinas:</label>
-                    <input type="text" id="vacinas" name="vacinas">
+    
+                <div class="coluna">
+
+                    <div>
+                        <label for="cadastrado">Castrado:</label>
+                        <label for="castradosim">
+                            <input type="radio" id="castsim" name="cast" required>
+                            Sim
+                        </label>
+                        <label for="castradonao">
+                            <input type="radio" id="castnao" name="cast">
+                            Não
+                        </label>
                     </div>
                     
-                    <div id="coluna2">
-                    <label for="tratamento">Tratamento contra pulgas:</label>
-                    <input type="text" id="tratamento" name="tratamento">
-                        
-                    <label for="castracao">Castração:</label>
-                    <p>Sim</p><input type="radio" id="castracao" name="castracao" value="sim">
-                    <p>Não</p><input type="radio" name="castracao" value="nao">
-                
-                    <label for="temperamento">Temperamento:</label>
-                    <input type="text" name="temperamento" id="temperamento">
-                
-                    <label for="observacoes">Observações:</label>
-                    <input type="text" name="observacoes" id="observacoes">
+                    <div>
+                        <label for="tratamento_pulgas">Tratamento contra pulgas:</label>
+                        <label for="tratamento_pulgassim">
+                            <input type="radio" id="tratamento_pulgassim" name="tratamento_pulgas" required>
+                            Sim
+                        </label>
+                        <label for="tratamento_pulgasnao">
+                            <input type="radio" id="tratamento_pulgasnao" name="tratamento_pulgas">
+                            Não
+                        </label>
                     </div>
-              <div id="submit-animal"><input type="submit" id="submit" value="Cadastrar"></div>
+
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <select id="cidade" name="cidade" required>
+                            <option value="Recife">Recife</option>
+                            <option value="Paulista">Paulista</option>
+                            <option value="Abreu e Lima">Abreu e Lima</option>
+                            <option value="Igarassu">Igarassu</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="temperamento" class="cad-label">Selecione o temperamento:</label>
+                        <select id="temperamento" name="temperamento" required>
+                            <option value="Calmo">Calmo</option>
+                            <option value="Brincalhão">Brincalhão</option>
+                            <option value="Tímido">Tímido</option>
+                            <option value="Sociável">Sociável</option>
+                            <option value="Independente">Independente</option>
+                            <option value="Agressivo">Agressivo</option>
+                            <option value="Afetuoso">Afetuoso</option>
+                            <option value="Energético">Energético</option>
+                            <option value="Descontraído">Descontraído</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="descricao" class="cad-label">Descrição de Temperamento (opcional)</label>
+                        <textarea name="descricao" id="descricao" rows="7" cols="50"></textarea>
+                    </div>
+                </div>
+
+                <div id="submit-animal"><input type="submit" id="submit" value="Cadastrar"></div>
             </div>
-          </form>
+            </form>
         </div>
   <main></main>
       <footer>
