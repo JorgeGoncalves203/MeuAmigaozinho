@@ -216,7 +216,7 @@
     width: 30px;
     position: relative;
     top: -40px;
-    left: 142px;
+    left: 138px;
  }
 
  .modalEditarNome .botaoFechar:hover {
@@ -234,7 +234,7 @@
     padding: 1%;
     width: 250px;
     border-radius: 5px;
-    border: 1px solid ;
+    border: 1px solid;
     transition: 500ms;
     background-color: #F7A2CB;
 }
