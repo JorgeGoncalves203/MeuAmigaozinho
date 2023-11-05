@@ -1,6 +1,6 @@
-import { collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+import { collection, getDocs, addDoc, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
-import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
+import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
 import { db } from "./firebaseConfig.js";
 import { auth } from "./firebaseConfig.js"
 import { storage } from "./firebaseConfig.js"
@@ -65,10 +65,29 @@ addAnimal.addEventListener('submit', (e) => {
 
       function adicionarImagem(idDoc) {
       const file = e.target[0]?.files[0]
+      const fileName = file.name;
+      const fileNameParts = fileName.split('.');
+      const fileExtension = fileNameParts[fileNameParts.length - 1];
         
-                const storageRef = ref(storage, `animais/${idDoc}.${file.name.split('.').pop()}`)
+                const storageRef = ref(storage, `animais/${idDoc}.${fileExtension}`)
                     uploadBytes(storageRef, file).then(() => {
                         console.log('Uploaded a blob or file!');
+                        getDownloadURL(storageRef).then((url) => {
+                            console.log('URL da imagem:', url);
+
+                            const animalDocRef = doc(db, "animais", idDoc);
+
+                            setDoc(animalDocRef, {
+                                imagem: url, 
+                              }, { merge: true })
+                                .then(() => {
+                                  console.log('URL da imagem adicionada ao documento no Firestore.');
+                                })
+                                .catch((error) => {
+                                  console.error('Erro ao adicionar a URL da imagem ao documento:', error);
+                                });
+                          });
+                        
                       });
                     }
 })

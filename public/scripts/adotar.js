@@ -53,7 +53,7 @@ function adicionarElementos(local, animal) {
 
 function adicionarImagem(local, nomeDaImagem) {
     const imagem = document.createElement("img");
-    imagem.src = `../img/card-1.jpg`
+    imagem.src = nomeDaImagem
     local.appendChild(imagem);
 }
 

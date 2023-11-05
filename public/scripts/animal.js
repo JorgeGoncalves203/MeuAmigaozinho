@@ -26,7 +26,7 @@ function carregarAnimal(animal) {
 
     carregarNome(animal.nome);
 
-    //carregarImagem(animal.imagem);
+    carregarImagem(animal.imagem);
 
     carregarRegiao(animal.cidade);
 
@@ -58,8 +58,8 @@ function carregarNome(nomeDoAnimal) {
 }
 
 function carregarImagem(nomeDaImagem) {
-    imagem = document.querySelector("#img img");
-    imagem.src = `../img/card-1.jpg`
+    const imagem = document.querySelector("#img img");
+    imagem.src = nomeDaImagem
 }
 
 function carregarRegiao(nomeDaRegiao) {
@@ -158,7 +158,7 @@ function adicionarElementos(local, animal) {
 
 function adicionarImagem(local, nomeDaImagem) {
     const imagem = document.createElement("img");
-    imagem.src = `../img/card-1.jpg`
+    imagem.src = nomeDaImagem
     local.appendChild(imagem);
 }
 
