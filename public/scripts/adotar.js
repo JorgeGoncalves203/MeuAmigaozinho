@@ -1,18 +1,36 @@
-adicionarAnimais(".animal-adotar");
+import { collection, getDocs, addDoc, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
+import { db } from "./firebaseConfig.js";
+import { auth } from "./firebaseConfig.js"
+import { storage } from "./firebaseConfig.js"
 
-function adicionarAnimais(local) {
-    fetch("../scripts/animais.json")
-        .then((json) => json.json())
-        .then((animais) => {
+//function adicionarAnimais(local) {
+//    setTimeout(() => {
+//        adicionarElementos(local, fakeAnimal);
+//    }), 1000
+//}
+const colRef = collection(db, 'animais')
+
+onSnapshot(colRef, snapshot => {
+    const animais = snapshot.docs.map(doc => {
+        return {
+            id: doc.id,
+            ...doc.data()
+        }
+    }); 
+    adicionarAnimais(".animal-adotar", animais);
+    })
+
+function adicionarAnimais(local, animais) {
             animais.forEach((animal) => {
                 adicionarElementos(local, animal);
             });
-        });
 }
 
 function adicionarElementos(local, animal) {
     const elemento = document.querySelector(local);
-    const id = animal["id"];
+    const id = animal.id;
     const link = document.createElement("a");
     link.href = `../pages/animal.html?id=${id}`;
     link.style["text-decoration"] = "none";
@@ -22,11 +40,11 @@ function adicionarElementos(local, animal) {
     const novoAnimal = document.createElement("div");
     novoAnimal.classList.add("animal");
 
-    adicionarImagem(novoAnimal, animal["imagem"]);
+    adicionarImagem(novoAnimal, animal.imagem);
 
-    adicionarNome(novoAnimal, animal["nome"]);
+    adicionarNome(novoAnimal, animal.nome);
 
-    adicionarRegiao(novoAnimal, animal["regiao"]);
+    adicionarRegiao(novoAnimal, animal.cidade);
 
     adicionarBotao(novoAnimal);
 
@@ -35,7 +53,7 @@ function adicionarElementos(local, animal) {
 
 function adicionarImagem(local, nomeDaImagem) {
     const imagem = document.createElement("img");
-    imagem.src = `../img/${nomeDaImagem}`
+    imagem.src = `../img/card-1.jpg`
     local.appendChild(imagem);
 }
 

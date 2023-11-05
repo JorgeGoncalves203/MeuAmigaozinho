@@ -1,46 +1,54 @@
+import { collection, getDocs, addDoc, onSnapshot, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
+import { db } from "./firebaseConfig.js";
+import { auth } from "./firebaseConfig.js"
+import { storage } from "./firebaseConfig.js"
+
 const url = new URL(window.location.href);
-const id = +url.searchParams.get("id");
+const id = url.searchParams.get("id");
 buscarAnimal(id);
-adicionarMaisAnimais(id);
+
+
+const colRef = collection(db, 'animais')
 
 function buscarAnimal(id) {
-    fetch("../scripts/animais.json")
-        .then((json) => json.json())
-        .then((animais) => {
-            for (let i = 0; i < animais.length; i++) {
-                if (animais[i]["id"] == id) {
-                    carregarAnimal(animais[i]);
-                }
-            };
-        });
+    const docRef = doc(db, 'animais', id)
+
+    getDoc(docRef)
+    .then((doc) => {
+        const animal = doc.data()
+        carregarAnimal(animal)
+    })
 }
 
 function carregarAnimal(animal) {
-    carregarNome(animal["nome"]);
 
-    carregarImagem(animal["imagem"]);
+    carregarNome(animal.nome);
 
-    carregarRegiao(animal["regiao"]);
+    //carregarImagem(animal.imagem);
 
-    carregarEspecie(animal["especie"]);
+    carregarRegiao(animal.cidade);
 
-    carregarPorte(animal["porte"]);
+    carregarEspecie(animal.especie);
 
-    carregarSexo(animal["sexo"]);
+    carregarPorte(animal.porte);
 
-    carregarRaca(animal["raca"]);
+    carregarSexo(animal.sexo);
 
-    carregarIdade(animal["idade"]);
+    carregarRaca(animal.raca);
 
-    carregarVacinas(animal["vacinas"]);
+    carregarIdade(animal.idade);
 
-    carregarTratamentoPulgas(animal["tratamento-pulgas"]);
+    carregarVacinas(animal.vacinas);
 
-    carregarCastracao(animal["castracao"]);
+    carregarTratamentoPulgas(animal.tratamentoPulgas);
 
-    carregarTemperamento(animal["temperamento"]);
+    carregarCastracao(animal.castrado);
 
-    carregarObservacoes(animal["observacoes"]);
+    carregarTemperamento(animal.temperamento);
+
+    carregarObservacoes(animal.descricao);
 
 }
 
@@ -51,7 +59,7 @@ function carregarNome(nomeDoAnimal) {
 
 function carregarImagem(nomeDaImagem) {
     imagem = document.querySelector("#img img");
-    imagem.src = `../img/${nomeDaImagem}`
+    imagem.src = `../img/card-1.jpg`
 }
 
 function carregarRegiao(nomeDaRegiao) {
@@ -109,33 +117,25 @@ function carregarObservacoes(nomeDasObsevacaoes) {
     observacoes.textContent = nomeDasObsevacaoes;
 }
 
-function adicionarMaisAnimais(id) {
-    fetch("../scripts/animais.json")
-    .then((json) => json.json())
-    .then((animais) => {
-        const listaSimilares = [];
-        const listaCategorias = animais[id]["especie"].split(", ");
-        for (let i = 0; i < animais.length; i++) {
-            let contador = 0;
-            for (let j = 0; j < listaCategorias.length; j++) {
-                if (animais[i]["especie"].includes(listaCategorias[j]) 
-                    && animais[i]["id"] !== id) {
-                    listaSimilares.push(animais[i]);
-                    contador++;
-                    break;
-                }
-            }
-            if (contador === 4) {
-                break;
-            }
+onSnapshot(colRef, snapshot => {
+    const animais = snapshot.docs.map(doc => {
+        return {
+            id: doc.id,
+            ...doc.data()
         }
-        listaSimilares.forEach(animal => {adicionarElementos("#mais-animais", animal);});
-    });
+    }); 
+    adicionarAnimais("#mais-animais", animais);
+    })
+
+function adicionarAnimais(local, animais) {
+            animais.forEach((animal) => {
+                adicionarElementos(local, animal);
+            });
 }
 
 function adicionarElementos(local, animal) {
     const elemento = document.querySelector(local);
-    const id = animal["id"];
+    const id = animal.id;
     const link = document.createElement("a");
     link.href = `../pages/animal.html?id=${id}`;
     link.style["text-decoration"] = "none";
@@ -145,11 +145,11 @@ function adicionarElementos(local, animal) {
     const novoAnimal = document.createElement("div");
     novoAnimal.classList.add("animal");
 
-    adicionarImagem(novoAnimal, animal["imagem"]);
+    adicionarImagem(novoAnimal, animal.imagem);
 
-    adicionarNome(novoAnimal, animal["nome"]);
+    adicionarNome(novoAnimal, animal.nome);
 
-    adicionarRegiao(novoAnimal, animal["regiao"]);
+    adicionarRegiao(novoAnimal, animal.cidade);
 
     adicionarBotao(novoAnimal);
 
@@ -158,7 +158,7 @@ function adicionarElementos(local, animal) {
 
 function adicionarImagem(local, nomeDaImagem) {
     const imagem = document.createElement("img");
-    imagem.src = `../img/${nomeDaImagem}`
+    imagem.src = `../img/card-1.jpg`
     local.appendChild(imagem);
 }
 
