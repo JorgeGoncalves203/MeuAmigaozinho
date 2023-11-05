@@ -31,16 +31,17 @@ button[disabled]{
 }
 
 .login-container {
-    width: 500px;
-    max-width: 500px; 
-    height: 700px; 
+    width: 100%; /* Reduza a largura para ocupar toda a largura da tela */
+    max-width: 400px; /* Defina uma largura máxima */
+    margin: 0 auto; /* Centralize o formulário horizontalmente */
+    padding: 20px; /* Adicione margens internas para afastar o conteúdo das bordas */
     background-color: #79B6E3;
     border: 1px solid black;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Alinhe verticalmente os elementos */
     align-items: center;
     border-radius: 10px;
-    margin-bottom: 35%;
+    margin-bottom: 40%;
 }
 
 #registro {
@@ -137,6 +138,8 @@ button[disabled]{
     background-color: red;
     display: none;
 }
+
+
 
 
 

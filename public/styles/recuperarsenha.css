@@ -10,11 +10,14 @@ main {
 }
 
 .recuperarsenha-container {
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #79B6E3;
+    font-size: 20px;
+    padding: 10px 100px 10px 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10%; 
+    
+    
 }
 
 #registro {
@@ -24,11 +27,7 @@ main {
 }
 
 #registro > form {
-    background-color: #79B6E3;
-    font-size: 20px;
-    padding: 10px 100px 10px 100px;
-    border: 1px solid black;
-    border-radius: 10px;
+    margin-bottom: 19%; 
 }
 
 #registro > form > h1 {
@@ -79,3 +78,18 @@ main {
     border-radius: 10px;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    #footer_content{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 426px) {
+    #footer_content{
+        grid-template-columns: repeat(1,1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+
