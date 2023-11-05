@@ -64,11 +64,11 @@ function adicionarNome(local, nomeDoAnimal) {
     local.appendChild(nome);
 }
 
-function adicionarRegiao(local, nomeDaRegiao) {
-    const regiao = document.createElement("p");
-    regiao.classList.add("regiao")
-    regiao.textContent = nomeDaRegiao;
-    local.appendChild(regiao);
+function adicionarRegiao(local, nomeDaCidade) {
+    const cidade = document.createElement("p");
+    cidade.classList.add("regiao")
+    cidade.textContent = nomeDaCidade;
+    local.appendChild(cidade);
 }
 
 function adicionarBotao(local) {
