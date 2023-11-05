@@ -7,7 +7,7 @@
 .perfil-container {
     width: 400px;
     max-width: 500px; 
-    height: 600px; 
+    height: 650px; 
     background-color: #79B6E3;
     border: 1px solid black;
     display: flex;
@@ -117,6 +117,38 @@
     margin: 0 auto;
 }
 
+#mandar2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#mandar2 input {
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: #e60000;
+    box-shadow: 0px 2px  rgb(125, 125, 125);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.excluir {
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 1%;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid red;
+    transition: 500ms;
+    color: white;
+}
+
+.excluir:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
 
 .perfil-form input[type="text"],
 .perfil-form input[type="email"],
@@ -193,7 +225,6 @@
 
  .modalEditarNome .botaoFechar img {
     width: 100%;
-
  }
 
  .modalEditarNome .botaoSalvar {
