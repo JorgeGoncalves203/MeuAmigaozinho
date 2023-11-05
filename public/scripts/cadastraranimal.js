@@ -54,17 +54,22 @@ addAnimal.addEventListener('submit', (e) => {
                 descricao: addAnimal.descricao.value,
                 uid: user.uid
             })
-            .then(() => {
+            .then((doc) => {
+                const idDoc = doc.id
+                adicionarImagem(idDoc)
                 addAnimal.reset()
                 alert('Animal adicionado com sucesso!')
             })
         } 
       });
+
+      function adicionarImagem(idDoc) {
       const file = e.target[0]?.files[0]
         
-                const storageRef = ref(storage, `animais/${file.name}`)
+                const storageRef = ref(storage, `animais/${idDoc}.${file.name.split('.').pop()}`)
                     uploadBytes(storageRef, file).then(() => {
                         console.log('Uploaded a blob or file!');
                       });
+                    }
 })
 
