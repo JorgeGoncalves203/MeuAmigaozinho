@@ -7,6 +7,7 @@ const colRef = collection(db, 'usuarios')
 
 const signupForm = document.querySelector('.cadastro-form')
 signupForm.addEventListener('submit', (e) => {
+    showLoading()
     e.preventDefault()
 
     const email = signupForm.email.value
@@ -14,27 +15,24 @@ signupForm.addEventListener('submit', (e) => {
 
     createUserWithEmailAndPassword(auth, email, senha)
     .then((cred) => {
-        alert('Usuario criado com sucesso!!')
-        window.location.href = "./login.html";
+        const user = cred.user
+        const userId = user.uid
+        addDoc(colRef, {
+            uid: userId,
+            email: signupForm.email.value,
+            nome: signupForm.name.value,
+            telefone: signupForm.tel.value
+        })
+        .then(() => {
+            hideLoading()
+            window.location.href = "../index.html";
+        })
         signupForm.reset()
     })
     .catch((error) => {
+        //Firebase: Error (auth/email-already-in-use).
         console.log(error.message)
     })
-
-    addDoc(colRef, {
-        email: signupForm.email.value,
-        nome: signupForm.name.value,
-        telefone: signupForm.tel.value
-    })
-    
 })
 
 ////Persistencia e Estado
-
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-      window.location.href = "../index.html";
-      const uid = user.uid;
-    } 
-  });

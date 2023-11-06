@@ -176,11 +176,6 @@ main {
     cursor: pointer;
  }
 
-header, 
-footer {
-    z-index: 10;
-}
-
 .gerarContato {
     position: fixed;
     background: rgba(0, 0, 0, 0.7);
