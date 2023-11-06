@@ -428,7 +428,7 @@ excluirContaButton.addEventListener('click', (e) => {
     div.appendChild(div1)
     
     const h2 = document.createElement('h3')
-    h2.textContent = 'Tem certeza de que deseja exluir a conta?'
+    h2.textContent = 'Tem certeza de que deseja excluir a conta?'
     div1.appendChild(h2)
 
     const buttonFechar = document.createElement('button')
@@ -461,6 +461,7 @@ excluirContaButton.addEventListener('click', (e) => {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             const q = query(collection(db, 'usuarios'), where('uid', '==', user.uid))
+            const qAnimais = query(collection(db, 'animais'), where('uid', '==', user.uid))
 
             getDocs(q)
             .then((doc) => {
@@ -476,6 +477,27 @@ excluirContaButton.addEventListener('click', (e) => {
                     deletarDocRef(usuarioId)
                 })
             })
+
+            getDocs(qAnimais)
+            .then((doc) => {
+                const animais = doc.docs.map(doc => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }); 
+                animais.forEach(animal => {
+                    const animalId = animal.id
+                    console.log(animalId)
+                    deletarAnimaisRef(animalId)
+                })
+            })
+            
+            function deletarAnimaisRef(animalId) {
+                deleteDoc(doc(db, "animais", animalId));
+            }
+
+
             function deletarDocRef(usuarioId) {
                 deleteDoc(doc(db, "usuarios", usuarioId));
 
