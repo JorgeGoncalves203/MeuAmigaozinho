@@ -12,19 +12,64 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
 
     } else {
-        const div = document.createElement('div');
-        div.classList.add('impedirAcesso');
-        
-        const div1 = document.createElement('div');
-        div1.classList.add('modalImpedir');
+      const div = document.createElement('div');
+      div.classList.add('impedirAcesso');
+      
+      const div1 = document.createElement('div');
+      div1.classList.add('modalImpedir');
 
-        const h2 = document.createElement('h2');
-        h2.innerHTML = "O usuario precisa estar logado!";
+      const buttonFechar = document.createElement('button')
+      buttonFechar.classList.add('botaoFechar')
 
-        div1.appendChild(h2);
-        div.appendChild(div1)
+      const img = document.createElement('img')
+      img.src = `../img/fechar.png`
 
-        document.body.appendChild(div);
+      const h3 = document.createElement('h3');
+      h3.innerHTML = "O usuario precisa estar logado para ter acesso!";
+
+      const buttonDiv = document.createElement('div')
+      buttonDiv.classList.add('buttonDiv')
+
+      const aLogin = document.createElement('a')
+      aLogin.href = `../pages/login.html`
+      aLogin.classList.add('aLogin')
+
+      const buttonLogin = document.createElement('button')
+      buttonLogin.classList.add('buttonLogin')
+      buttonLogin.textContent = 'Login'
+
+      const aCadastro = document.createElement('a')
+      aCadastro.href = `../pages/cadastro.html`
+      aCadastro.classList.add('aCadastro')
+
+      const buttonCadastro = document.createElement('button')
+      buttonCadastro.classList.add('buttonCadastro')
+      buttonCadastro.textContent = 'Cadastrar'
+
+
+      
+      
+      div1.appendChild(h3)
+      div.appendChild(div1)
+      buttonFechar.appendChild(img)
+      div1.appendChild(buttonFechar)
+      aLogin.appendChild(buttonLogin)
+      buttonDiv.appendChild(aLogin)
+      aCadastro.appendChild(buttonCadastro)
+      buttonDiv.appendChild(aCadastro)
+      div1.appendChild(buttonDiv)
+
+      document.body.appendChild(div);
+
+      const fecharButton = document.querySelector('.botaoFechar')
+      fecharButton.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      const impedirAcesso = document.getElementsByClassName('impedirAcesso');
+      if (impedirAcesso.length) {
+          impedirAcesso[0].remove();
+      }
+      })
     }
   });
 

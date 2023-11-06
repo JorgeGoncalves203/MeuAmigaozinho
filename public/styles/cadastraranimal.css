@@ -138,13 +138,56 @@ input[type="submit"] {
 
 .modalImpedir {
     background-color: #79B6E3;
-    width: 500px;
-    height: 100px;
+    width: 600px;
+    height: 200px;
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
+.modalImpedir .botaoFechar {
+    background: transparent;
+    width: 30px;
+    position: relative;
+    top: -70px;
+    left: 270px;
+ }
+
+ .modalImpedir .botaoFechar:hover {
+    cursor: pointer;
+ }
+
+ .modalImpedir .botaoFechar img {
+    width: 100%;
+ }
+
+ .modalImpedir .buttonLogin,
+ .modalImpedir .buttonCadastro {
+    background-color: #F7A2CB;
+    font-size: 1.5rem;
+    padding: 1%;
+    width: 200px;
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: 500ms;
+    color: black;
+ }
+
+ .buttonDiv {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .modalImpedir .buttonLogin:hover,
+ .modalImpedir .buttonCadastro:hover {
+    background-color: white;
+    cursor: pointer;
+ }
 
 header, 
 footer {
@@ -165,6 +208,40 @@ footer {
     #imagem-updade label {
         width: 100%;
     }
+
+    .modalImpedir {
+        width: 350px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    .modalImpedir h3 {
+        font-size: 17px;
+    }
+
+    .buttonDiv {
+        gap: 5px;
+    }
+
+    .modalImpedir .buttonLogin,
+    .modalImpedir .buttonCadastro {
+    background-color: #F7A2CB;
+    font-size: 1.2rem;
+    padding: 1%;
+    width: 150px;
+    border-radius: 15px;
+    border: 1px solid black;
+    transition: 500ms;
+    color: black;
+ }
+
+ .modalImpedir .botaoFechar {
+    background: transparent;
+    width: 30px;
+    position: relative;
+    top: -85px;
+    left: 145px;
+ }
 }
 
 

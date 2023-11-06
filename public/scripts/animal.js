@@ -12,6 +12,8 @@ buscarAnimal(id);
 
 const colRef = collection(db, 'animais')
 
+//Carregar Informações dos animais
+
 function buscarAnimal(id) {
     const docRef = doc(db, 'animais', id)
 
@@ -116,6 +118,85 @@ function carregarObservacoes(nomeDasObsevacaoes) {
     const observacoes = document.querySelector("#observacoes p");
     observacoes.textContent = nomeDasObsevacaoes;
 }
+
+//Informação de contato
+
+const confirmarButton = document.getElementById('confirmarButton')
+
+confirmarButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            
+        } else {
+            const div = document.createElement('div');
+            div.classList.add('impedirAcesso');
+            
+            const div1 = document.createElement('div');
+            div1.classList.add('modalImpedir');
+
+            const buttonFechar = document.createElement('button')
+            buttonFechar.classList.add('botaoFechar')
+
+            const img = document.createElement('img')
+            img.src = `../img/fechar.png`
+    
+            const h3 = document.createElement('h3');
+            h3.innerHTML = "O usuario precisa estar logado para ter acesso!";
+
+            const buttonDiv = document.createElement('div')
+            buttonDiv.classList.add('buttonDiv')
+
+            const aLogin = document.createElement('a')
+            aLogin.href = `../pages/login.html`
+            aLogin.classList.add('aLogin')
+
+            const buttonLogin = document.createElement('button')
+            buttonLogin.classList.add('buttonLogin')
+            buttonLogin.textContent = 'Login'
+
+            const aCadastro = document.createElement('a')
+            aCadastro.href = `../pages/cadastro.html`
+            aCadastro.classList.add('aCadastro')
+
+            const buttonCadastro = document.createElement('button')
+            buttonCadastro.classList.add('buttonCadastro')
+            buttonCadastro.textContent = 'Cadastrar'
+
+
+            
+            
+            div1.appendChild(h3)
+            div.appendChild(div1)
+            buttonFechar.appendChild(img)
+            div1.appendChild(buttonFechar)
+            aLogin.appendChild(buttonLogin)
+            buttonDiv.appendChild(aLogin)
+            aCadastro.appendChild(buttonCadastro)
+            buttonDiv.appendChild(aCadastro)
+            div1.appendChild(buttonDiv)
+    
+            document.body.appendChild(div);
+
+            const fecharButton = document.querySelector('.botaoFechar')
+            fecharButton.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const impedirAcesso = document.getElementsByClassName('impedirAcesso');
+            if (impedirAcesso.length) {
+                impedirAcesso[0].remove();
+            }
+            })
+                }
+      });
+    
+
+})
+
+
+
+//Carregar outros animais
 
 onSnapshot(colRef, snapshot => {
     const animais = snapshot.docs.map(doc => {
