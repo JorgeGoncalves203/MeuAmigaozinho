@@ -1,4 +1,4 @@
-import { collection, getDocs, addDoc, onSnapshot, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+import { collection, getDocs, addDoc, onSnapshot, getDoc, doc, query, where } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
 import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
 import { db } from "./firebaseConfig.js";
@@ -128,7 +128,14 @@ confirmarButton.addEventListener('click', (e) => {
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            
+            const docRef = doc(db, 'animais', id)
+
+            getDoc(docRef)
+            .then((doc) => {
+                const animal = doc.data()
+                const uidUserAnimal = animal.uid
+                pegarTelefone(uidUserAnimal)
+            })
         } else {
             const div = document.createElement('div');
             div.classList.add('impedirAcesso');
@@ -190,10 +197,77 @@ confirmarButton.addEventListener('click', (e) => {
             })
                 }
       });
+      function pegarTelefone(uidUserAnimal) {
+        const userRef = collection(db, 'usuarios')
+        const q = query(userRef, where('uid', '==', uidUserAnimal))
     
+            getDocs(q)
+            .then((doc) => {
+                const usuario = doc.docs.map(doc => doc.data()); 
+                criarModal(usuario)
+            })
+      }
+    
+      function criarModal(usuario) {
+        usuario.forEach(usuario => {
+            const telefone = usuario.telefone
+            const email = usuario.email
 
+            const div = document.createElement('div')
+            div.classList.add('gerarContato')
+            document.body.appendChild(div)
+
+            const modalContato = document.createElement('div')
+            modalContato.classList.add('modalContato')
+            div.appendChild(modalContato)
+
+            const buttonFechar = document.createElement('button')
+            buttonFechar.classList.add('botaoFechar')
+            modalContato.appendChild(buttonFechar)
+
+            const img = document.createElement('img')
+            img.src = `../img/fechar.png`
+            buttonFechar.appendChild(img)
+
+            const h2 = document.createElement('h2')
+            h2.textContent = 'Quer adotar?'
+            modalContato.appendChild(h2)
+
+            const p = document.createElement('p')
+            p.textContent = 'Para adotar entre em contato com o dono:'
+            modalContato.appendChild(p)
+
+            const aEmail = document.createElement('a')
+            aEmail.href = `mailto:${email}`
+            aEmail.target = '_black'
+            aEmail.textContent = email
+            aEmail.classList.add('aEmail')
+            modalContato.appendChild(aEmail)
+
+            const numerosApenas = telefone.replace(/\D/g, '');
+            console.log(numerosApenas)
+
+            const aTelefone = document.createElement('a')
+            aTelefone.href = `https://api.whatsapp.com/send?phone=55${numerosApenas}`
+            aTelefone.target = '_black'
+            aTelefone.textContent = telefone
+            aTelefone.classList.add('aTelefone') 
+            modalContato.appendChild(aTelefone)
+            
+            const fecharButton = document.querySelector('.botaoFechar')
+            fecharButton.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const gerarContato = document.getElementsByClassName('gerarContato');
+            if (gerarContato.length) {
+                gerarContato[0].remove();
+            }
+            })
+
+
+        })
+      }
 })
-
 
 
 //Carregar outros animais
