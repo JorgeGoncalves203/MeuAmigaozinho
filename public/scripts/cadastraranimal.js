@@ -18,12 +18,6 @@ onAuthStateChanged(auth, (user) => {
       const div1 = document.createElement('div');
       div1.classList.add('modalImpedir');
 
-      const buttonFechar = document.createElement('button')
-      buttonFechar.classList.add('botaoFechar')
-
-      const img = document.createElement('img')
-      img.src = `../img/fechar.png`
-
       const h3 = document.createElement('h3');
       h3.innerHTML = "O usuario precisa estar logado para ter acesso!";
 
@@ -51,8 +45,6 @@ onAuthStateChanged(auth, (user) => {
       
       div1.appendChild(h3)
       div.appendChild(div1)
-      buttonFechar.appendChild(img)
-      div1.appendChild(buttonFechar)
       aLogin.appendChild(buttonLogin)
       buttonDiv.appendChild(aLogin)
       aCadastro.appendChild(buttonCadastro)
@@ -61,15 +53,6 @@ onAuthStateChanged(auth, (user) => {
 
       document.body.appendChild(div);
 
-      const fecharButton = document.querySelector('.botaoFechar')
-      fecharButton.addEventListener('click', (e) => {
-      e.preventDefault()
-
-      const impedirAcesso = document.getElementsByClassName('impedirAcesso');
-      if (impedirAcesso.length) {
-          impedirAcesso[0].remove();
-      }
-      })
     }
   });
 
