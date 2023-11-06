@@ -265,6 +265,50 @@
     align-items: center;
 }
 
+.modalConfirmarExclusao .buttonConfirmar {
+    margin-top: 10px;
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 1%;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid;
+    transition: 500ms;
+    background-color: #F7A2CB;
+}
+
+.modalConfirmarExclusao .buttonConfirmar:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+.modalConfirmarExclusao {
+    background-color: #79B6E3;
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalConfirmarExclusao .botaoFecharExcluir {
+    background: transparent;
+    width: 30px;
+    position: relative;
+    top: -70px;
+    left: 225px;
+ }
+
+ .modalConfirmarExclusao .botaoFecharExcluir:hover {
+    cursor: pointer;
+ }
+
+ .modalConfirmarExclusao .botaoFecharExcluir img {
+    width: 100%;
+ }
+
 
 @media screen and (max-width: 768px) {
     #footer_content{

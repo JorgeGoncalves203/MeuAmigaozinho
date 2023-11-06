@@ -1,5 +1,5 @@
-import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
-import { collection, getDocs, doc, query, where, onSnapshot, updateDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+import { signOut, onAuthStateChanged, deleteUser } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { collection, getDocs, doc, query, where, onSnapshot, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { auth } from "./firebaseConfig.js"
 import { db } from "./firebaseConfig.js";
 
@@ -398,6 +398,7 @@ editarTelefoneButton.addEventListener('click', (e) => {
 
 })
 
+//Sair
 
 const logoutButton = document.querySelector('.sair')
 logoutButton.addEventListener('click', () => {
@@ -409,5 +410,83 @@ logoutButton.addEventListener('click', () => {
     })
     .catch((error) => {
         console.log(error.message)
+    })
+})
+
+//Excluir Conta 
+
+const excluirContaButton = document.querySelector('.excluir')
+excluirContaButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const div = document.createElement('div')
+    div.classList.add('fundoModal')
+    document.body.appendChild(div);
+    
+    const div1 = document.createElement('div')
+    div1.classList.add('modalConfirmarExclusao')
+    div.appendChild(div1)
+    
+    const h2 = document.createElement('h3')
+    h2.textContent = 'Tem certeza de que deseja exluir a conta?'
+    div1.appendChild(h2)
+
+    const buttonFechar = document.createElement('button')
+    buttonFechar.classList.add('botaoFecharExcluir')
+    div1.appendChild(buttonFechar)
+
+    const img = document.createElement('img')
+    img.src = `../img/fechar.png`
+    buttonFechar.appendChild(img)
+
+    const buttonConfirmar = document.createElement('button')
+    buttonConfirmar.classList.add('buttonConfirmar')
+    buttonConfirmar.textContent = 'Confirmar'
+    div1.appendChild(buttonConfirmar)
+
+    const fecharButton = document.querySelector('.botaoFecharExcluir')
+    fecharButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const fundoModal = document.getElementsByClassName('fundoModal');
+    if (fundoModal.length) {
+        fundoModal[0].remove();
+    }
+    })
+
+    const confirmarButton = document.querySelector('.buttonConfirmar')
+    confirmarButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const q = query(collection(db, 'usuarios'), where('uid', '==', user.uid))
+
+            getDocs(q)
+            .then((doc) => {
+                const usuario = doc.docs.map(doc => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }); 
+                usuario.forEach(usuario => {
+                    const usuarioId = usuario.id
+                    console.log(usuarioId)
+                    deletarDocRef(usuarioId)
+                })
+            })
+            function deletarDocRef(usuarioId) {
+                deleteDoc(doc(db, "usuarios", usuarioId));
+
+                deleteUser(user).then(() => {
+                    window.location.href = "../index.html";
+                    localStorage.removeItem('nomeDoUsuario');
+                }).catch((error) => {
+                });
+            }
+        } 
+      });
+    
     })
 })
