@@ -86,15 +86,14 @@ function nomeUsuario(usuario) {
     })
 }
 
-onSnapshot(collection(db, 'animais'), snapshot => {
-    const animais = snapshot.docs.map(doc => {
+const querySnapshot = await getDocs(collection(db, 'animais'));
+    const animais = querySnapshot.docs.map(doc => {
         return {
             id: doc.id,
             ...doc.data()
         }
     }); 
     adicionarAnimais(".animais-adotar", animais);
-    })
 
 
 function adicionarAnimais(local, animais) {
@@ -107,7 +106,7 @@ function adicionarElementos(local, animal) {
 const elemento = document.querySelector(local);
 const id = animal.id;
 const link = document.createElement("a");
-link.href = `../pages/animal.html?id=${id}`;
+link.href = `./pages/animal.html?id=${id}`;
 link.style["text-decoration"] = "none";
 link.style["color"] = "inherit";
 elemento.appendChild(link);
