@@ -1,26 +1,64 @@
-import { collection, getDocs, addDoc, onSnapshot, doc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+import { collection, getDocs, addDoc, onSnapshot, doc, query, where } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
 import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"
 import { db } from "./firebaseConfig.js";
 import { auth } from "./firebaseConfig.js"
 import { storage } from "./firebaseConfig.js"
 
-//function adicionarAnimais(local) {
-//    setTimeout(() => {
-//        adicionarElementos(local, fakeAnimal);
-//    }), 1000
-//}
+
 const colRef = collection(db, 'animais')
 
-onSnapshot(colRef, snapshot => {
-    const animais = snapshot.docs.map(doc => {
-        return {
-            id: doc.id,
-            ...doc.data()
-        }
-    }); 
-    adicionarAnimais(".animal-adotar", animais);
-    })
+const filtrosSelect = [
+    document.getElementById('filtroEspecie'),
+    document.getElementById('filtroPorte'),
+    document.getElementById('filtroSexo'),
+    document.getElementById('filtroCidade'),
+  ];
+  
+  const filtroForm = document.querySelector('#filtro-form')
+  
+  function atualizarResultados() {
+    const container = document.querySelector(".animal-adotar");
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+    const filtros = {};
+  
+    filtrosSelect.forEach((select) => {
+      const valor = select.value;
+      if (valor !== 'todas') {
+        const filtro = select.id.replace('filtro', '');
+        filtros[filtro] = valor;
+      }
+    });
+  
+    let q = query(colRef);
+  
+    for (const filtro in filtros) {
+        const valor = filtros[filtro];
+        const campoFirestore = filtro.charAt(0).toLowerCase() + filtro.slice(1);
+        q = query(q, where(campoFirestore, '==', valor));
+      }
+  
+    onSnapshot(q, snapshot => {
+        const animais = snapshot.docs.map(doc => {
+            return {
+                id: doc.id,
+                ...doc.data()
+            }
+        }); 
+        adicionarAnimais(".animal-adotar", animais);
+        })
+  }
+
+  filtroForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    atualizarResultados();
+  });
+
+  atualizarResultados();
+
 
 function adicionarAnimais(local, animais) {
             animais.forEach((animal) => {
