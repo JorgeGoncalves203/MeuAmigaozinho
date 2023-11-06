@@ -12,7 +12,6 @@ loginForm.addEventListener('submit', (e) => {
     signInWithEmailAndPassword(auth, email, senha)
     .then((cred) => {
         hideLoading()
-        alert('Usuario logado!!')
         window.location.href = "../index.html";
         loginForm.reset()
     })
