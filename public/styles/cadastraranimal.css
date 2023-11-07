@@ -24,7 +24,6 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
- 
 }
 
 #cabecalho-cadastraranimal1 {
@@ -64,12 +63,12 @@ main{
 label {
     display: block;
     margin-top: 10px;
-    
 }
 
 input[type="text"],
 input[type="number"],
 select {
+    font-family: Roboto;
     width: 100%;
     padding: 5px;
     margin: 5px 0;
@@ -104,8 +103,7 @@ textarea {
     flex-direction: column;
 }
 
-#blah {
-   
+#prevImg {
     border-radius: 5px;
     max-width: 300px; 
     max-height: 300px; 
@@ -121,6 +119,7 @@ input[type="submit"] {
     cursor: pointer;
     display: inline-block;
 }
+
 #submit:hover {
     background-color:#Fff;
 }
@@ -197,17 +196,20 @@ footer {
 
 @media(max-width: 950px) {
 
-    #info-cadastroanimal {
+    #formulario-container {
         width: 100%;
-        margin-top: 30px;
+        padding: 20px;
     }
 
-    #imagem-updade {
-        width: 90%;
+    #animalForm {
+        flex-direction: column;
+        width: 100%;
     }
 
-    #imagem-updade label {
+    .coluna {
+        display: inline-block;
         width: 100%;
+        vertical-align: top;
     }
 
     .modalImpedir {
