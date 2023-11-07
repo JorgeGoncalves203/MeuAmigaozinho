@@ -194,24 +194,9 @@ footer {
     z-index: 10;
 }
 
+
+
 @media(max-width: 950px) {
-
-    #formulario-container {
-        width: 100%;
-        padding: 20px;
-    }
-
-    #animalForm {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .coluna {
-        display: inline-block;
-        width: 100%;
-        vertical-align: top;
-    }
-
     .modalImpedir {
         width: 350px;
         height: 200px;
@@ -246,6 +231,32 @@ footer {
     left: 145px;
  }
 }
+
+@media(max-width: 800px) {
+    #formulario-container {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media(max-width: 550px) {
+    #formulario-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #animalForm {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .coluna {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+    }
+}
+
 
 
 @media screen and (max-width: 768px) {

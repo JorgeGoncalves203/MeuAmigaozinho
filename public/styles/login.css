@@ -54,7 +54,6 @@ button[disabled]{
 
 #registro > form {
     font-size: 20px;
-    padding: 10px 100px 10px 100px;
     border-radius: 10px;
 }
 
@@ -142,7 +141,27 @@ button[disabled]{
 }
 
 
+@media(max-width: 550px) {
+    .login-container {
+        width: 100%;
+        max-width: none;
+    }
 
+    #registro > form {
+        width: 100%;
+    }
 
+    #registro > form > input {
+        width: 100%;
+    }
 
+    .login-div {
+        width: 100%;
+    }
 
+    .login-div input[type="email"],
+    .login-div input[type="password"] {
+    padding: 10px;
+    width: 100%;
+}
+ }

@@ -29,7 +29,6 @@
 
 #registro > form {
     font-size: 20px;
-    padding: 10px 100px 10px 100px;
     border-radius: 30px;
 }
 
@@ -135,4 +134,30 @@ button[disabled]{
         grid-template-columns: repeat(1,1fr);
         padding: 3rem 2rem;
     }
+
+    .cadastro-container {
+        width: 100%;
+    }
+
+    #registro > form {
+        width: 100%;
+    }
+
+    #registro > form > input {
+        width: 100%;
+        float: right;
+    }
+
+    .cadastro-form {
+        width: 100%;
+    }
+
+    .cadastro-form input[type="text"],
+    .cadastro-form input[type="email"],
+    .cadastro-form input[type="tel"],
+    .cadastro-form input[type="password"] {
+    padding: 10px;
+    width: 100%;
+ }
 }
+
