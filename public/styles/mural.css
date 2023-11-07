@@ -216,5 +216,16 @@ main {
     .formPublicacao {
         width: 100%;
     }
+
+    #cabecalho-mural1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #cabecalho-mural {
+        text-align: center;
+    }
+
+
 }
 
