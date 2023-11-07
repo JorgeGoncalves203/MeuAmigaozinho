@@ -36,10 +36,6 @@ main {
     border-radius: 10px;
 }
 
-.card:hover {
-    transform: scale3d(1.1, 1.1, 1);
-}
-
 .card .user {
     width: 250px;
     height: 250px;
@@ -71,6 +67,126 @@ p {
     font-size: 18px;
 }
 
+.botaoAdicionar {
+    position: fixed;
+    width: fit-content;
+    height: 64px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+    background: transparent;
+}
+
+.botaoAdicionar:hover {
+    cursor: pointer;
+}
+
+.botaoAdicionar img {
+    width: 100%;
+    height: 100%;
+}
+
+.fundoModal {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCriarPostagem {
+    background-color: #79B6E3;
+    border-radius: 15px;
+    padding: 10px;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.modalCriarPostagem h2 {
+    border-bottom: 3px inset black;
+    padding: 5px;
+}
+
+.formPublicacao #textoPublicacao {
+    font-family: Roboto;
+    letter-spacing: .1rem;
+    font-size: 15px;
+    resize: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.formPublicacao #textoPublicacao:active {
+    border: none;
+}
+
+
+.divAddImg {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border: 1px solid black;
+}
+
+  
+.formPublicacao input[type="file"] {
+    padding: 10px;
+    font-size: 15px;
+    font-family: Roboto;
+  }
+
+#prevImg {
+    width: 150px;
+    max-width: 200px;
+}
+
+#prevImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modalCriarPostagem .botaoFechar {
+    background: transparent;
+    width: 20px;
+    position: relative;
+    left: 120px;
+    bottom: 10px;
+ }
+
+.modalCriarPostagem .botaoFechar:hover {
+    cursor: pointer;
+}
+
+.modalCriarPostagem .botaoFechar img {
+    width: 100%;
+}
+
+.publicarButton {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    padding: 1%;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid;
+    transition: 500ms;
+    background-color: #F7A2CB;
+}
+
+.publicarButton:hover {
+    cursor: pointer;
+    background-color: white;
+}
+
+
+
 @media(max-width: 950px) { 
     .cards {
         grid-template-columns: 1fr;
@@ -79,6 +195,19 @@ p {
     .card .user {
         width: 300px;
         height: 300px;
+    }
+
+    .modalCriarPostagem .botaoFechar {
+        left: 45px;
+        bottom: 10px;
+     }
+
+    .modalCriarPostagem {
+        width: 350px;
+    }
+
+    .formPublicacao {
+        width: 100%;
     }
 }
 
