@@ -6,9 +6,6 @@ main {
     margin-top: 30px;
     margin-bottom: 10px;
     width: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 #cabecalho-mural1 {
@@ -16,6 +13,20 @@ main {
     padding: 15px;
     border-radius: 15px;
     box-shadow: 0px 2px 20px rgb(125, 125, 125);
+    padding: 60px;
+}
+
+#titulo {
+    margin-bottom: 30px;
+    font-size: 50px
+}
+
+#cabecalho-mural1 p {
+    margin-bottom: 20px;
+}
+
+#cabecalho-mural1 h2 {
+    margin-bottom: 10px;
 }
 
 .cards {
@@ -49,19 +60,12 @@ main {
     padding: 10px;
 }
 
-#titulo {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0 2rem 0;
-    font-size: 50px
-}
-
 #user {
     padding: 10px;
     font-size: 25px
 }
 
-p {
+#user p {
     margin-top: 20px;
     text-align: center;
     font-size: 18px;
