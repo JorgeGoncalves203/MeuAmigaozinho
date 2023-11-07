@@ -275,6 +275,7 @@
 
     .animais-adotar {
         overflow-x: auto;
+        gap: 5px;
     }
 
     .animais-adotar::-webkit-scrollbar {
@@ -383,9 +384,6 @@
     padding-right: 20px;
 }
 
-
-
-
 .depoimentos a {
     
     text-decoration: none;
@@ -409,15 +407,10 @@
     background-color: #F7A2CB;
 }
 
-
-
-
-
 .publicacoes {
     display: flex;
     gap: 30px;
     overflow: hidden;
-    overflow-x: auto;
 }
 
 .publicacoes .cardPubli {
@@ -468,6 +461,8 @@
     .depoimentos {
         background-image: url(../img/fundo2-mobile.png);
         text-align: center;
+        flex-direction: column;
+        padding-bottom: 90px;
     }
 
     .depoimentos h1 {
@@ -478,6 +473,26 @@
         font-size: 12px;
         width: 100%;
         font-weight: bold;
+    }
+
+    .buttonMaisPubli {
+        margin-top: 0px;
+        position: relative;
+        top: 545px;
+        font-size: 1.4rem;
+        padding: 5px;
+    }
+
+    .publicacoes {
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+    .cardPubli .imagemPubli {
+        width: 100%;
+        height: 150px;
+        border-radius: 5%;
+        object-fit: cover;
     }
 }
 

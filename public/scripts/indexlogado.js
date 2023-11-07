@@ -221,6 +221,10 @@ local.appendChild(imagem);
 
 function adicionarTextoPubli(local, textPublicacao) {
 const text = document.createElement("p");
-text.textContent = textPublicacao;
+if (textPublicacao.length > 250 ) {
+    text.textContent = textPublicacao.slice(0, 250) + "...";
+} else {
+    text.textContent = textPublicacao;
+}
 local.appendChild(text);
 }
