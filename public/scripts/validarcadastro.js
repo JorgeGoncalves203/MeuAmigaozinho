@@ -1,3 +1,8 @@
+function validateEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+}
+
+
 function OnChangeEmail() {
     const email = form.email().value;
     form.emailRequiredError().style.display = email ? "none" : "block";

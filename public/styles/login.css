@@ -1,6 +1,8 @@
+
 main {
-    height: 40vh;
-}
+    flex: 1; 
+  }
+
 
 input, button {
     padding: 10px;
