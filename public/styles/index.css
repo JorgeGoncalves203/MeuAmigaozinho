@@ -358,13 +358,15 @@
 
 .depoimentos {
     padding: 5%;
+    padding-right: 0;
     padding-top: 50px;
-    padding-bottom: 0;
+    padding-bottom: 10px;
     background-image: url(../img/fundo2-desktop.png);
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 500px;
+    height: auto;
+    display: flex;
 }
 
 .depoimentos h1 {
@@ -373,7 +375,92 @@
 }
 
 .depoimentos p {
-    width: 35%;
+    display: block;
+    width: 400px;
+}
+
+.depoimentosText {
+    padding-right: 20px;
+}
+
+
+
+
+.depoimentos a {
+    
+    text-decoration: none;
+    color: black;
+}
+
+.buttonMaisPubli {
+    margin-top: 100px;
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 1%;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: 500ms;
+    color: black;
+}
+
+.buttonMaisPubli:hover{
+    cursor: pointer;
+    background-color: #F7A2CB;
+}
+
+
+
+
+
+.publicacoes {
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.publicacoes .cardPubli {
+    width: 500px;
+    background-color: #79B6E3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 30px;
+    box-shadow: 3px 3px 5px #00000061;
+    border-radius: 10px;
+}
+
+.cardPubli .imagemPubli {
+    width: 100%;
+    height: 250px;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.containerPubli {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.cardPubli #titulo {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2rem 0;
+    font-size: 50px
+}
+
+.cardPubli #user {
+    padding: 10px;
+    font-size: 25px
+}
+
+.cardPubli p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    width: 350px;
 }
 
 

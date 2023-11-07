@@ -87,19 +87,21 @@ function nomeUsuario(usuario) {
 }
 
 const querySnapshot = await getDocs(collection(db, 'animais'));
-    const animais = querySnapshot.docs.map(doc => {
-        return {
-            id: doc.id,
-            ...doc.data()
-        }
-    }); 
-    adicionarAnimais(".animais-adotar", animais);
+const animais = querySnapshot.docs.map(doc => {
+    return {
+        id: doc.id,
+        ...doc.data()
+    };
+});
 
+const primeiros5Animais = animais.slice(0, 5);
+
+adicionarAnimais(".animais-adotar", primeiros5Animais);
 
 function adicionarAnimais(local, animais) {
-        animais.forEach((animal) => {
-            adicionarElementos(local, animal);
-        });
+    animais.forEach((animal) => {
+        adicionarElementos(local, animal);
+    });
 }
 
 function adicionarElementos(local, animal) {
@@ -152,4 +154,73 @@ const buttonText = document.createElement("p");
 buttonText.textContent = "Quero Adotar";
 button.appendChild(buttonText);
 local.appendChild(button);
+}
+
+
+
+
+const querySnap = await getDocs(collection(db, 'publicacoes'));
+    const publicacoes = querySnap.docs.map(doc => {
+        return {
+            id: doc.id,
+            ...doc.data()
+        }
+    }); 
+
+const primeiras5Publicacoes = publicacoes.slice(0, 4);
+
+adicionarPublicacoes(".publicacoes", primeiras5Publicacoes);
+
+
+function adicionarPublicacoes(local, publicacoes) {
+    publicacoes.forEach(publicacao => {
+        adicionarElementosPubli(local, publicacao);
+    });
+}
+
+function adicionarElementosPubli(local, publicacao) {
+const elemento = document.querySelector(local);
+
+const novaPublicacao = document.createElement("div");
+novaPublicacao.classList.add("cardPubli");
+elemento.appendChild(novaPublicacao);
+
+const infoUser = document.createElement("div");
+infoUser.classList.add('containerPubli')
+novaPublicacao.appendChild(infoUser);
+
+adicionarImagemUser(infoUser)
+
+adicionarNomePubli(infoUser, publicacao.nome);
+
+adicionarImagemPubli(novaPublicacao, publicacao.imagem);
+
+adicionarTextoPubli(novaPublicacao, publicacao.text);
+}
+
+function adicionarImagemUser(local) {
+    const imagem = document.createElement("img")
+    imagem.src = `./img/usuario.png`
+    imagem.classList.add('ftuser')
+    local.appendChild(imagem);
+}
+
+function adicionarNomePubli(local, nomeDoUsuario) {
+    const nome = document.createElement("h3");
+    nome.id = 'user'
+    nome.textContent = nomeDoUsuario;
+    local.appendChild(nome);
+}
+
+function adicionarImagemPubli(local, nomeDaImagem) {
+const imagem = document.createElement("img");
+imagem.src = nomeDaImagem
+imagem.classList.add('imagemPubli')
+local.appendChild(imagem);
+}
+
+function adicionarTextoPubli(local, textPublicacao) {
+const text = document.createElement("p");
+text.textContent = textPublicacao;
+local.appendChild(text);
 }
