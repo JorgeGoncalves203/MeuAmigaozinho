@@ -249,13 +249,10 @@ editarEmailButton.addEventListener('click', (e) => {
             const newEmail = document.getElementById('emailn').value;
             const user1 = auth.currentUser;
           
-            // Crie uma credencial com a senha atual
             const credential = EmailAuthProvider.credential(user1.email, currentPassword);
           
-            // Reautentique o usuário com a senha atual
             reauthenticateWithCredential(user1, credential)
               .then(() => {
-                // Reautenticação bem-sucedida, agora atualize o email
                 updateEmail(user1, newEmail)
                   .then(() => {
                     usuarioLog(user)
