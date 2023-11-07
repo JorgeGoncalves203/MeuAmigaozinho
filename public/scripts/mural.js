@@ -28,7 +28,7 @@ function adicionarElementos(local, publicacao) {
 const elemento = document.querySelector(local);
 
 const novaPublicacao = document.createElement("div");
-novaPublicacao.classList.add("card");
+novaPublicacao.classList.add("cardPubli");
 
 const infoUser = document.createElement("div");
 infoUser.classList.add('container')
@@ -62,7 +62,7 @@ function adicionarNome(local, nomeDoUsuario) {
 function adicionarImagem(local, nomeDaImagem) {
 const imagem = document.createElement("img");
 imagem.src = nomeDaImagem
-imagem.classList.add('user')
+imagem.classList.add('imagemPubli')
 local.appendChild(imagem);
 }
 
