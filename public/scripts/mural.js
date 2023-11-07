@@ -122,6 +122,7 @@ onAuthStateChanged(auth, (user) => {
             textoPublicacao.rows = '7'
             textoPublicacao.cols = '50'
             textoPublicacao.placeholder = 'Conte sua aventura...'
+            textoPublicacao.maxLength = '500'
             textoPublicacao.required = true
             formPublicacao.appendChild(textoPublicacao)
 
@@ -169,6 +170,7 @@ onAuthStateChanged(auth, (user) => {
 
             formPublicacao.addEventListener('submit', (e) => {
             e.preventDefault()
+            showLoading()
             const userRef = collection(db, 'usuarios')
             const q = query(userRef, where('uid', '==', user.uid))
 
@@ -187,8 +189,13 @@ onAuthStateChanged(auth, (user) => {
 
             
             function criarPubli(userName) {
+                const nomeCompleto = userName.split(' ')
+                const primeiroNomeInteito = nomeCompleto[0]
+                const tamanhoLimite = 12;
+                const primeiroNome = primeiroNomeInteito.slice(0, tamanhoLimite)
+
                 addDoc(collection(db, 'publicacoes'), {
-                    nome: userName,
+                    nome: primeiroNome,
                     text: textoPublicacao.value,
                     uid: user.uid
                 })
@@ -196,7 +203,6 @@ onAuthStateChanged(auth, (user) => {
                     const idDoc = doc.id
                     adicionarImagem(idDoc, adicionarImagemPubli.files[0])
                     formPublicacao.reset()
-                    alert('Publicação feita!')
                 })
             }
             })
@@ -212,9 +218,7 @@ onAuthStateChanged(auth, (user) => {
           
                   const storageRef = ref(storage, `publicacoes/${idDoc}.${fileExtension}`)
                       uploadBytes(storageRef, file).then(() => {
-                          console.log('Uploaded a blob or file!');
                           getDownloadURL(storageRef).then((url) => {
-                              console.log('URL da imagem:', url);
   
                               const publicacaoDocRef = doc(db, "publicacoes", idDoc);
   
@@ -222,11 +226,12 @@ onAuthStateChanged(auth, (user) => {
                                   imagem: url, 
                                 }, { merge: true })
                                   .then(() => {
+                                    hideLoading()
                                     const fundoModal = document.getElementsByClassName('fundoModal');
                                     if (fundoModal.length) {
                                         fundoModal[0].remove();
                                     }
-                                    console.log('URL da imagem adicionada ao documento no Firestore.');
+                                    alert('Publicação feita!')
                                   })
                                   .catch((error) => {
                                     console.error('Erro ao adicionar a URL da imagem ao documento:', error);
