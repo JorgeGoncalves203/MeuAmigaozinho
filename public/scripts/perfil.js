@@ -1,4 +1,4 @@
-import { signOut, onAuthStateChanged, deleteUser } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
+import { signOut, onAuthStateChanged, deleteUser, reauthenticateWithCredential, updatePassword, EmailAuthProvider, updateEmail } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"
 import { collection, getDocs, doc, query, where, onSnapshot, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 import { auth } from "./firebaseConfig.js"
 import { db } from "./firebaseConfig.js";
@@ -180,6 +180,13 @@ editarEmailButton.addEventListener('click', (e) => {
     input.type = 'email'
     input.name = 'email'
     input.id = 'emailn'
+    input.placeholder = 'Digite o novo email'
+
+    const senhaAtual = document.createElement('input')
+    senhaAtual.type = 'password'
+    senhaAtual.name = 'senhaAtual'
+    senhaAtual.id = 'senhaAtual'
+    senhaAtual.placeholder = 'Digite sua senha'
 
     const buttonSalvar = document.createElement('button')
     buttonSalvar.classList.add('botaoSalvar')
@@ -191,6 +198,7 @@ editarEmailButton.addEventListener('click', (e) => {
     buttonFechar.appendChild(img)
     div1.appendChild(formEmail)
     formEmail.appendChild(input)
+    formEmail.appendChild(senhaAtual)
     formEmail.appendChild(buttonSalvar)
     document.body.appendChild(div);
     
@@ -237,7 +245,33 @@ editarEmailButton.addEventListener('click', (e) => {
 
         onAuthStateChanged(auth, (user) => {
         if (user) {
-        usuarioLog(user)
+            const currentPassword = document.getElementById('senhaAtual').value;
+            const newEmail = document.getElementById('emailn').value;
+            const user1 = auth.currentUser;
+          
+            // Crie uma credencial com a senha atual
+            const credential = EmailAuthProvider.credential(user1.email, currentPassword);
+          
+            // Reautentique o usuário com a senha atual
+            reauthenticateWithCredential(user1, credential)
+              .then(() => {
+                // Reautenticação bem-sucedida, agora atualize o email
+                updateEmail(user1, newEmail)
+                  .then(() => {
+                    usuarioLog(user)
+                    const fundoModal = document.getElementsByClassName('fundoModal');
+                        if (fundoModal.length) {
+                        fundoModal[0].remove();
+                        }
+                        alert('Email atualizado com sucesso');
+                  })
+                  .catch((error) => {
+                    console.error('Erro ao atualizar o email:', error);
+                  });
+              })
+              .catch((error) => {
+                console.error('Erro ao reautenticar o usuário:', error);
+              });
         } 
     });
 
@@ -263,10 +297,7 @@ editarEmailButton.addEventListener('click', (e) => {
             email: formEmail.email.value
         })
         .then(() => {
-            const fundoModal = document.getElementsByClassName('fundoModal');
-    if (fundoModal.length) {
-        fundoModal[0].remove();
-    }
+            
     })
     })
     }
@@ -397,6 +428,119 @@ editarTelefoneButton.addEventListener('click', (e) => {
 
 
 })
+
+
+//Editar Senha 
+
+const editarSenhaButton = document.getElementById('editarSenha')
+editarSenhaButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const div = document.createElement('div')
+    div.classList.add('fundoModal')
+    
+    const div1 = document.createElement('div')
+    div1.classList.add('modalEditarNome')
+    
+    const h2 = document.createElement('h3')
+    h2.textContent = 'Altere sua Senha:'
+
+    const buttonFechar = document.createElement('button')
+    buttonFechar.classList.add('botaoFechar')
+
+    const img = document.createElement('img')
+    img.src = `../img/fechar.png`
+
+    const formSenha = document.createElement('form')
+    formSenha.classList.add('formSenha')
+
+    const senhaAntiga = document.createElement('input')
+    senhaAntiga.type = 'password'
+    senhaAntiga.name = 'senhaAntiga'
+    senhaAntiga.id = 'senhaAntiga'
+    senhaAntiga.placeholder = 'Senha Antiga'
+
+
+    const senhaNova = document.createElement('input')
+    senhaNova.type = 'password'
+    senhaNova.name = 'senhaNova'
+    senhaNova.id = 'senhaNova'
+    senhaNova.placeholder = 'Nova Senha'
+
+    const buttonSalvar = document.createElement('button')
+    buttonSalvar.classList.add('botaoSalvar')
+    buttonSalvar.textContent = 'Salvar alterações'
+    
+    div.appendChild(div1)
+    div1.appendChild(h2)
+    div1.appendChild(buttonFechar)
+    buttonFechar.appendChild(img)
+    div1.appendChild(formSenha)
+
+    formSenha.appendChild(senhaAntiga)
+    formSenha.appendChild(senhaNova)
+    formSenha.appendChild(buttonSalvar)
+    document.body.appendChild(div);
+    
+    
+    const fecharButton = document.querySelector('.botaoFechar')
+    fecharButton.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const fundoModal = document.getElementsByClassName('fundoModal');
+    if (fundoModal.length) {
+        fundoModal[0].remove();
+    }
+    })
+
+    const salvarButon = document.querySelector('.botaoSalvar')
+    salvarButon.addEventListener('click', (e) => {
+    e.preventDefault()
+
+        onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const oldPassword = document.getElementById('senhaAntiga').value;
+            const newPassword = document.getElementById('senhaNova').value;
+            const user = auth.currentUser;
+
+            // Crie uma credencial com a senha antiga
+            const credential = EmailAuthProvider.credential(user.email, oldPassword);
+
+            // Reautentique o usuário com a senha antiga
+            reauthenticateWithCredential(user, credential)
+                .then(() => {
+                // Reautenticação bem-sucedida, agora atualize a senha
+                updatePassword(user, newPassword)
+                    .then(() => {
+
+                        const fundoModal = document.getElementsByClassName('fundoModal');
+                            if (fundoModal.length) {
+                            fundoModal[0].remove();
+                        }
+                        
+                    alert('Senha atualizada com sucesso');
+                    })
+                    .catch((error) => {
+                    console.error('Erro ao atualizar a senha:', error);
+                    });
+                })
+                .catch((error) => {
+                if(error.code == 'auth/invalid-login-credentials') {
+                    alert('Senha Incorreta')
+                } else {
+                    console.log(error)
+                }
+                
+                });
+
+
+        } 
+    });
+    })
+
+
+})
+
 
 //Sair
 
