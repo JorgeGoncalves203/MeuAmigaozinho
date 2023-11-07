@@ -30,8 +30,12 @@ signupForm.addEventListener('submit', (e) => {
         signupForm.reset()
     })
     .catch((error) => {
-        //Firebase: Error (auth/email-already-in-use).
-        console.log(error.message)
+        hideLoading()
+        if(error.code == 'auth/email-already-in-use') {
+            alert('Email já cadastrado')
+        } else{
+            console.log(error.message)
+        }
     })
 })
 
