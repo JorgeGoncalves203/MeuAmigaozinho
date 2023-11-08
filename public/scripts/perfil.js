@@ -143,6 +143,12 @@ editarNomeButton.addEventListener('click', (e) => {
             nome: formNome.name.value
         })
         .then(() => {
+            const username = formNome.name.value
+            const nomeCompleto = username.split(' ')
+            const primeiroNomeInteito = nomeCompleto[0]
+            const tamanhoLimite = 12;
+            const primeiroNome = primeiroNomeInteito.slice(0, tamanhoLimite)
+            localStorage.setItem('nomeDoUsuario', primeiroNome);
             const fundoModal = document.getElementsByClassName('fundoModal');
     if (fundoModal.length) {
         fundoModal[0].remove();
