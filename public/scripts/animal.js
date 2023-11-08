@@ -245,7 +245,6 @@ confirmarButton.addEventListener('click', (e) => {
             modalContato.appendChild(aEmail)
 
             const numerosApenas = telefone.replace(/\D/g, '');
-            console.log(numerosApenas)
 
             const aTelefone = document.createElement('a')
             aTelefone.href = `https://api.whatsapp.com/send?phone=55${numerosApenas}`

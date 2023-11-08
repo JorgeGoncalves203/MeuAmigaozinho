@@ -99,9 +99,7 @@ addAnimal.addEventListener('submit', (e) => {
         
                 const storageRef = ref(storage, `animais/${idDoc}.${fileExtension}`)
                     uploadBytes(storageRef, file).then(() => {
-                        console.log('Uploaded a blob or file!');
                         getDownloadURL(storageRef).then((url) => {
-                            console.log('URL da imagem:', url);
 
                             const animalDocRef = doc(db, "animais", idDoc);
 
@@ -109,10 +107,8 @@ addAnimal.addEventListener('submit', (e) => {
                                 imagem: url, 
                               }, { merge: true })
                                 .then(() => {
-                                  console.log('URL da imagem adicionada ao documento no Firestore.');
                                 })
                                 .catch((error) => {
-                                  console.error('Erro ao adicionar a URL da imagem ao documento:', error);
                                 });
                           });
                         

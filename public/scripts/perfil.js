@@ -613,7 +613,6 @@ excluirContaButton.addEventListener('click', (e) => {
                 }); 
                 usuario.forEach(usuario => {
                     const usuarioId = usuario.id
-                    console.log(usuarioId)
                     deletarDocRef(usuarioId)
                 })
             })
@@ -628,7 +627,6 @@ excluirContaButton.addEventListener('click', (e) => {
                 }); 
                 animais.forEach(animal => {
                     const animalId = animal.id
-                    console.log(animalId)
                     deletarAnimaisRef(animalId)
                 })
             })
