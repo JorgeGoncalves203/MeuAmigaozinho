@@ -17,20 +17,29 @@ main{
     flex-wrap: wrap;
 }
 
+#imagem-updade h2 {
+    float: left;
+    font-size: 18px;
+}
+
 #cabecalho-cadastraranimal {
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
 #cabecalho-cadastraranimal1 {
+    max-width: 1700px;
     background-color: #F7A2CB;
     padding: 18px;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgb(125, 125, 125);
+    padding: 60px;
+    margin: 0 auto;
+}
+
+#cabecalho-cadastraranimal1 h1{
+    margin-bottom: 30px;
 }
 
 #formulario-container {
@@ -229,6 +238,15 @@ footer {
     position: relative;
     top: -85px;
     left: 145px;
+ }
+
+ #cabecalho-cadastraranimal1 {
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+
+ #cabecalho-cadastraranimal {
+    text-align: center;
  }
 }
 

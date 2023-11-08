@@ -56,14 +56,14 @@
           <div  id="cabecalho-cadastraranimal">
               <div id="cabecalho-cadastraranimal1">
                   <h1>Cadastro de Animal</h1>
+                  <p>Insira as informações do animal nos campos abaixo para que alguém possa adota-lo.</p>
               </div>
           </div>
           <div id="formulario-container">
             <form id="animalForm" action="process_form.php" method="post">
                 <form id="animalForm" action="process_form.php" method="post">
-                    <h2>Adicione uma Imagem do Animal</h2>
-              
                     <div id="imagem-updade">
+                    <h2>Adicione uma Imagem do Animal</h2>
                     <label for="imagem-animal"><img id="prevImg"/></label>
                   <input type="file" id="imagem-animal" name="imagem-animal" accept="image/png, image/jpeg"  onchange="document.getElementById('prevImg').src = window.URL.createObjectURL(this.files[0])" required/>
                   </div>
